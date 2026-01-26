@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en"><!-- _includes/head.html -->
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <!-- Begin Jekyll SEO tag v2.8.0 -->
+<title>Swarm Cluster on ARM SBCs 2 | Vitor/Mr-76 blog</title>
+<meta name="generator" content="Jekyll v3.10.0" />
+<meta property="og:title" content="Swarm Cluster on ARM SBCs 2" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Now based on this great post: https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/, we are going to install Docker on the 4 devices. That can be done by following that post, or the package manager of the distro already has the Docker package, or you can use, in the case of Armbian, the config tool called armbian-config. After that, use the command:" />
+<meta property="og:description" content="Now based on this great post: https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/, we are going to install Docker on the 4 devices. That can be done by following that post, or the package manager of the distro already has the Docker package, or you can use, in the case of Armbian, the config tool called armbian-config. After that, use the command:" />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2025/05/11/SwARMcluster.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2025/05/11/SwARMcluster.html" />
+<meta property="og:site_name" content="Vitor/Mr-76 blog" />
+<meta property="og:image" content="http://localhost:4000/assets/managernode.png" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2025-05-11T19:49:28-03:00" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta property="twitter:image" content="http://localhost:4000/assets/managernode.png" />
+<meta property="twitter:title" content="Swarm Cluster on ARM SBCs 2" />
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-11T19:49:28-03:00","datePublished":"2025-05-11T19:49:28-03:00","description":"Now based on this great post: https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/, we are going to install Docker on the 4 devices. That can be done by following that post, or the package manager of the distro already has the Docker package, or you can use, in the case of Armbian, the config tool called armbian-config. After that, use the command:","headline":"Swarm Cluster on ARM SBCs 2","image":"http://localhost:4000/assets/managernode.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2025/05/11/SwARMcluster.html"},"url":"http://localhost:4000/jekyll/update/2025/05/11/SwARMcluster.html"}</script>
+<!-- End Jekyll SEO tag -->
+
+  <link rel="stylesheet" href="/assets/main.css" />
+  <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/feed.xml" title="Vitor/Mr-76 blog" /> 
+  
+
+  <link
+    rel="apple-touch-icon"
+    sizes="180x180"
+    href="/apple-touch-icon.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="32x32"
+    href="/favicon-32x32.png"
+  />
+  <link
+    rel="icon"
+    type="image/png"
+    sizes="16x16"
+    href="/favicon-16x16.png"
+  />
+</head>
+<body><header class="site-header" role="banner">
+
+  <div class="wrapper"><a class="site-title" rel="author" href="/">Vitor/Mr-76 blog</a><nav class="site-nav">
+        <input type="checkbox" id="nav-trigger" class="nav-trigger" />
+        <label for="nav-trigger">
+          <span class="menu-icon">
+            <svg viewBox="0 0 18 15" width="18px" height="15px">
+              <path d="M18,1.484c0,0.82-0.665,1.484-1.484,1.484H1.484C0.665,2.969,0,2.304,0,1.484l0,0C0,0.665,0.665,0,1.484,0 h15.032C17.335,0,18,0.665,18,1.484L18,1.484z M18,7.516C18,8.335,17.335,9,16.516,9H1.484C0.665,9,0,8.335,0,7.516l0,0 c0-0.82,0.665-1.484,1.484-1.484h15.032C17.335,6.031,18,6.696,18,7.516L18,7.516z M18,13.516C18,14.335,17.335,15,16.516,15H1.484 C0.665,15,0,14.335,0,13.516l0,0c0-0.82,0.665-1.483,1.484-1.483h15.032C17.335,12.031,18,12.695,18,13.516L18,13.516z"/>
+            </svg>
+          </span>
+        </label>
+
+        <div class="trigger"><a class="page-link" href="/about/">About</a><a class="page-link" href="/"></a><a class="page-link" href="/posts/">All Posts</a><a class="page-link" href="/projects/">Projects</a></div>
+      </nav></div>
+</header>
+<main class="page-content" aria-label="Content">
+      <div class="wrapper">
+        <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">Swarm Cluster on ARM SBCs 2</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="2025-05-11T19:49:28-03:00" itemprop="datePublished">May 11, 2025
+      </time></p>
+  </header>
+
+  <div class="post-content e-content" itemprop="articleBody">
+    <p>Now based on this great post: https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/, we are going to install Docker on the 4 devices. That can be done by following that post, or the package manager of the distro already has the Docker package, or you can use, in the case of Armbian, the config tool called armbian-config. After that, use the command:</p>
+
+<p><code class="language-plaintext highlighter-rouge">sudo usermod -aG docker username</code></p>
+
+<p>a means add, G means group — add the user to the group docker. You may need to log out and back in to take effect.</p>
+
+<hr />
+<h2 id="now-the-docker-versions-listing-for-now">Now the Docker versions listing for now:</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Banana Pi: 27.1.1
+
+Raspberry Pi W: 20.10.24+dfsg1
+
+Raspberry Pi 3B: 20.10.24+dfsg1
+
+Orange Pi: 28.0.4
+</code></pre></div></div>
+
+<p>Now let’s see how to create the actual cluster and then use it with Docker Swarm. A good reference is: https://docs.docker.com/engine/swarm/</p>
+
+<p>It goes into detail about redundancy, number of management nodes, number of worker nodes, load balancing, task reassigning. Since the setup is literally a bunch of USB-connected devices to the same power supply, none of the redundancy talk matters much — if the power supply goes down, everything goes down. But in other scenarios, that’s a very special thing to think about. No-breaks (UPS) can sometimes be a headache — either it’s not properly set up, the batteries are bad, or there’s some kind of circuit problem… but anyway, jumping jumping jumping…</p>
+
+<p>When setting up the 3 workers and 1 manager, they all need static IP addresses. That can be done either by setting a static IP address on the computer or setting that up in the router, which in my case was done quickly in OPNsense’s DHCP server. After that, verify if the ports are open. They are:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Port 2377/TCP for communication with and between manager nodes  
+Port 7946/TCP/UDP for overlay network node discovery  
+Port 4789/UDP (configurable) for overlay network traffic  
+</code></pre></div></div>
+
+<p>Commands to open all ports with iptables:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iptables -A INPUT -p tcp --dport 2377 -j ACCEPT
+iptables -A INPUT -p tcp --dport 7946 -j ACCEPT
+iptables -A INPUT -p udp --dport 7946 -j ACCEPT
+iptables -A INPUT -p udp --dport 4789 -j ACCEPT
+</code></pre></div></div>
+<p>What does each option mean?
+-A appends a rule to the INPUT chain, -p specifies the protocol (TCP or UDP), –dport is the destination port, and -j means the action — it jumps to ACCEPT if matched.</p>
+
+<p>For more details: <a href="https://www.linux.co.cr/distributions/review/2002/red-hat-8.0/rhl-rg/s1-iptables-options.html">iptables-options</a></p>
+
+<hr />
+
+<h2 id="to-start-the-manager-node">To start the manager node:</h2>
+
+<p><code class="language-plaintext highlighter-rouge">docker swarm init --advertise-addr manager_ip_address</code></p>
+
+<p>After that, run:</p>
+
+<p>docker swarm join –token SWMTKN-1-4tkqpfwvmidz3ip3eibkkf03fhynhtsu4kky1iwuzl74kjwdoy-b3vz3te6txomfh7rkr52gjzvr 192.168.0.39:2377</p>
+
+<p>Well, probably better to make a script to pass this command through all the hosts. Sending that command can be done in Bash using a list of IPs, or in a more sophisticated way using Ansible. For this setup, Bash is better since I don’t want to use vaults and the more complex setup of Ansible — especially because I’d have to use a different combination of user and password for each node (so more config to go on each of the nodes).</p>
+
+<p>A simple Bash script:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
+<span class="nv">file</span><span class="o">=</span>ips.txt
+<span class="k">for </span>i <span class="k">in</span> <span class="si">$(</span><span class="nb">cat</span> <span class="nv">$file</span><span class="si">)</span>
+<span class="k">do
+  </span>ssh user@<span class="nv">$i</span> <span class="s2">"docker swarm join --token SWMTKN-1-4tkqpfwvmidz3ip3eibkkf03fhynhtsu4kky1iwuzl74kjwdoy-b3vz3te6txomfh7rkr52gjzvr 192.168.0.39:2377"</span>
+<span class="k">done</span>
+</code></pre></div></div>
+
+<ul>
+  <li>
+    <h4 id="docker-node-ls">docker node ls</h4>
+  </li>
+</ul>
+
+<p>After that we have:</p>
+
+<p>ID                          HOSTNAME        STATUS   AVAILABILITY  MANAGER STATUS  ENGINE VERSION</p>
+<ul>
+  <li>0lqoz9l31vr49qn2ucf2nqmra   bananapim2zero  Ready    Active                      27.1.1</li>
+  <li>ou2gmpss8t2c1yn8c7l9d1h80   clusterZero0    Ready    Active                      20.10.24+dfsg1</li>
+  <li>v3ujlsa2nac5b7ptzh5lcqo9s   orangepizero2w  Ready    Active       Leader         28.0.4</li>
+  <li>kzq1fxgl7yo6lgbqdunk7dym7   pi3b            Ready    Active                      20.10.24+dfsg1</li>
+</ul>
+
+<hr />
+
+<h2 id="now-lets-try-to-deploy-a-simple-test-service">Now let’s try to deploy a simple test service…</h2>
+<p>The test service that Docker suggests is:</p>
+
+<p>docker service create –replicas 1 –name helloworld alpine ping docker.com</p>
+
+<p>Well, that worked:</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REPLICAS  IMAGE         PORTS  
+1/1       alpine:latest  
+Better try to inspect that. Need to see where that is, etc.  
+docker service inspect --pretty helloworld  
+Inspecting does not give us the location, only details about the service itself:  
+ID:             gj257idwkgshjn41qcrzyrdwr  
+Name:           helloworld  
+Service Mode:   Replicated  
+Replicas:       1  
+UpdateConfig:  
+  Parallelism:           1  
+  On failure:            pause  
+  Monitoring Period:     5s  
+  Max failure ratio:     0  
+  Update order:          stop-first  
+RollbackConfig:  
+  Parallelism:           1  
+  On failure:            pause  
+  Monitoring Period:     5s  
+  Max failure ratio:     0  
+  Rollback order:        stop-first  
+ContainerSpec:  
+  Image:         alpine:latest@sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c  
+  Args:          ping docker.com  
+  Init:          false  
+Resources:  
+Endpoint Mode:   vip  
+
+</code></pre></div></div>
+<p>Now to the location:</p>
+
+<p><code class="language-plaintext highlighter-rouge">docker service ps helloworld</code>
+Now we have it:</p>
+<ul>
+  <li>t7w0atmqnpqo  helloworld.1  alpine:latest  orangepizero2w  Running  10 minutes ago<br />
+Well, let’s try more replicas… HEHEHEH<br />
+docker service create –replicas 4 –name helloworld2 alpine ping docker.com</li>
+</ul>
+
+<p>Results in one replica for each:<br />
+ID            NAME              IMAGE          NODE             DESIRED STATE  CURRENT STATE<br />
+llen0o8vnd0a  helloworld2.1     alpine:latest  clusterZero0     Running        35 seconds ago<br />
+yrcbn4p6e60q  helloworld2.2     alpine:latest  orangepizero2w   Running        58 seconds ago<br />
+lh48dbcvfhru  helloworld2.3     alpine:latest  bananapim2zero   Running        44 seconds ago<br />
+9582ztkzdqsn  helloworld2.4     alpine:latest  pi3b             Running        48 seconds ago</p>
+
+<p>Well, I can also alter the scale of it — didn’t know that. Cool stuff.</p>
+
+<p>docker service scale helloworld=5</p>
+
+<p>Five replicas with only four nodes results in… normal stuff — it just duplicates one:</p>
+
+<ul>
+  <li>t7w0atmqnpqo  helloworld.1  alpine:latest  orangepizero2w  Running  17 minutes ago</li>
+  <li>al97od3mn5q0  helloworld.2  alpine:latest  clusterZero0    Running  10 seconds ago</li>
+  <li>6q90nb3wyg8q  helloworld.3  alpine:latest  clusterZero0    Running  10 seconds ago</li>
+  <li>uz8nlmefc4el  helloworld.4  alpine:latest  pi3b            Running  20 seconds ago</li>
+  <li>mev0hauj66pr  helloworld.5  alpine:latest  bananapim2zero  Running  20 seconds ago</li>
+</ul>
+
+<p>Well, now let’s delete all that :)
+docker service ps helloworld<br />
+docker service ps helloworld2</p>
+
+<p>Well, that seems good for now. Next time: going over updates, draining a node (meaning putting it into maintenance), and then trying some of my services to do a stress test and load balancing.</p>
+
+  </div><a class="u-url" href="/jekyll/update/2025/05/11/SwARMcluster.html" hidden></a>
+</article>
+
+      </div>
+    </main><footer class="site-footer h-card">
+  <data class="u-url" href="/"></data>
+
+  <div class="wrapper">
+
+    <h2 class="footer-heading">Vitor/Mr-76 blog</h2>
+
+    <div class="footer-col-wrapper">
+      <div class="footer-col footer-col-1">
+        <ul class="contact-list">
+          <li class="p-name">Vitor/Mr-76 blog</li><li><a class="u-email" href="mailto:vitor.holanda@ccc.ufcg.edu.br">vitor.holanda@ccc.ufcg.edu.br</a></li></ul>
+      </div>
+
+      <div class="footer-col footer-col-2"><ul class="social-media-list"><li><a href="https://github.com/Mr-76"><svg class="svg-icon"><use xlink:href="/assets/minima-social-icons.svg#github"></use></svg> <span class="username">Mr-76</span></a></li></ul>
+</div>
+
+      <div class="footer-col footer-col-3">
+        <p>This website is about anything I find interesting—mostly a  place for me to document things so I can remember them.  Maybe others will find some useful info as I solve my  own problems. I&#39;m interested in DevOps, SRE, coding,  keyboards, and electronics (not that I&#39;m great at it, haha)..</p>
+      </div>
+    </div>
+
+  </div>
+
+</footer>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+<p>This is simply a doc/work-log of my setup for a Docker Swarm with load balancing using 4 single-board computers (SBCs): a Banana Pi M2 Zero W, Orange Pi Zero 2W, Raspberry Pi 3B, and Raspberry Pi Zero W.</p>
+
+<p><img src="/assets/sbcsinfos.png" alt="" /></p>
+
+<p>All but the Raspberry Pi 3B are immersed in direct liquid cooling using mineral oil (I think it’s cool — I like it 😄).</p>
+
+<p>The idea behind this is that I got a bit obsessed with power usage. I wanted to try different solutions that might perform well. I mean, it’s better to have an SBC as your always-on server than an old notebook running 24/7. Even if you put the notebook to sleep when idle, it still uses a fair amount of electricity.</p>
+
+<p>In contrast, these SBCs consume very little power and can run a surprising number of things. Of course, many applications <em>can’t</em> run on ARM architecture, which is another topic — but what can I do? I already have the boards, so I want to test them 😅</p>
+
+<p>The goal here is to set up a Docker Swarm cluster, enable load balancing (if possible), run some stress tests, and measure power usage and thermals. I’ll then compare all that to just using my old notebook as a server — maybe I can finally sell it after this experiment!</p>
+

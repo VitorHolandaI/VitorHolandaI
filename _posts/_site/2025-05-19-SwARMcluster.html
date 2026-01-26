@@ -1,0 +1,172 @@
+<h2 id="stress-testing-the-swarm-cluster">Stress Testing the Swarm Cluster</h2>
+
+<p>Now let’s look into deploying an app to do a stress test.</p>
+
+<p>The first option is to use an old Rust bubble sort app I made a while ago.<br />
+However, it was compiled for <strong>x86</strong>, so it’s not compatible with the ARM architecture of the cluster.<br />
+We’ll need to <strong>rebuild it</strong> for ARM and test it.</p>
+
+<hr />
+
+<h2 id="useful-resources">Useful Resources</h2>
+
+<ul>
+  <li><a href="https://github.com/locnnil/rust_cross_compilation">Rust Cross Compilation Guide</a></li>
+  <li><a href="https://github.com/poi-2024-1/poi-atividade-2-Mr-76/tree/Entrega">Source Repo</a></li>
+  <li><a href="https://doc.rust-lang.org/beta/rustc/platform-support.html">Rust Platform Support</a></li>
+</ul>
+
+<hr />
+
+<h2 id="choosing-a-target-architecture">Choosing a Target Architecture</h2>
+
+<p>To see available Rust targets:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rustc <span class="nt">--print</span> target-list
+</code></pre></div></div>
+
+<p>Here are some relevant ARM targets:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>armv7-linux-androideabi  
+armv7-sony-vita-newlibeabihf  
+armv7-unknown-freebsd  
+armv7-unknown-linux-gnueabi  
+armv7-unknown-linux-gnueabihf  
+armv7-unknown-linux-musleabi  
+armv7-unknown-linux-musleabihf  
+armv7-unknown-linux-ohos  
+armv7-unknown-linux-uclibceabi  
+armv7-unknown-linux-uclibceabihf  
+armv7-unknown-netbsd-eabihf  
+armv7-wrs-vxworks-eabihf  
+armv7a-kmc-solid_asp3-eabi  
+armv7a-kmc-solid_asp3-eabihf  
+armv7a-none-eabi  
+armv7a-none-eabihf  
+armv7k-apple-watchos  
+armv7r-none-eabi  
+armv7r-none-eabihf  
+armv7s-apple-ios  
+armv8r-none-eabihf  
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="sbc-architecture-overview">SBC Architecture Overview</h2>
+
+<p>Using <code class="language-plaintext highlighter-rouge">neofetch</code> or <code class="language-plaintext highlighter-rouge">fetch</code>, here’s what we found:</p>
+
+<ul>
+  <li><strong>Banana Pi</strong> → <code class="language-plaintext highlighter-rouge">armv7l</code></li>
+  <li><strong>Raspberry Pi Zero W</strong> → <code class="language-plaintext highlighter-rouge">ARMv6-compatible</code></li>
+  <li><strong>Raspberry Pi 3B</strong> → <code class="language-plaintext highlighter-rouge">aarch64</code></li>
+  <li><strong>Orange Pi</strong> → <code class="language-plaintext highlighter-rouge">aarch64</code></li>
+</ul>
+
+<p>Because the Pi Zero W uses an <strong>older ARMv6 architecture</strong>, we’ll try to compile for that and test for compatibility on the other devices.</p>
+
+<hr />
+
+<p><img src="/assets/sbcsinfos.png" alt="SBCs Info" /></p>
+
+<hr />
+
+<h2 id="attempting-cross-compilation">Attempting Cross Compilation</h2>
+
+<h3 id="setup-for-armv7">Setup for <code class="language-plaintext highlighter-rouge">armv7</code></h3>
+
+<p>Install necessary tools:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>gcc-arm-linux-gnueabihf
+rustup target add armv7-unknown-linux-gnueabi
+</code></pre></div></div>
+
+<p>Update your <code class="language-plaintext highlighter-rouge">Cargo.toml</code>:</p>
+
+<div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[target.arm-unknown-linux-gnueabi]</span>
+<span class="py">linker</span> <span class="p">=</span> <span class="s">"arm-linux-gnueabi-gcc"</span>
+</code></pre></div></div>
+
+<h3 id="but-it-didnt-work">But… it didn’t work</h3>
+
+<hr />
+
+<h2 id="plan-b-build-on-the-target-device">Plan B: Build on the Target Device</h2>
+
+<p>If cross-compiling fails, install Rust directly on the SBC and build it locally.</p>
+
+<p>Install Rust:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">--proto</span> <span class="s1">'=https'</span> <span class="nt">--tlsv1</span>.2 <span class="nt">-sSf</span> https://sh.rustup.rs | sh
+</code></pre></div></div>
+
+<p>Then clone your repo and build:</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone &lt;your-repo&gt;
+<span class="nb">cd</span> &lt;your-repo&gt;
+cargo build
+</code></pre></div></div>
+
+<p>⚠️ This will take a while —<br />
+We’re working with just <strong>1.2GHz CPU</strong> and <strong>512MB RAM</strong></p>
+
+<h2 id="lets-take-a-look-at-the-app-code-for-reference">Let`s take a look at the app code for reference:</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>use warp::Filter;
+use serde::{Deserialize, Serialize};
+use std::cmp::Ordering;
+use log::info;
+
+#[derive(Deserialize,Serialize,Debug)]
+struct VetorStringRequest {
+    strings: Vec&lt;String&gt;,
+}
+
+
+fn bubble(mut arr: Vec&lt;String&gt;) -&gt; Vec&lt;String&gt; {
+    let len = arr.len();
+    for i in 0..len{
+        for j in i..len - 1 - i {
+            if arr[j].cmp(&amp;arr[j + 1]) == Ordering::Greater{
+                arr.swap(j,j + 1);
+            }
+        }
+    }
+    arr
+}
+
+
+
+#[tokio::main]
+async fn main() {
+    env_logger::builder().filter_level(log::LevelFilter::Info).init();
+    let sorting_r = warp::path("Sort")
+        .and(warp::post())
+        .and(warp::body::json())
+        .map(|req: VetorStringRequest| {
+            info!("Request de lista recebida: {:?}", req.strings);
+            let sorted_strings = bubble(req.strings);
+            info!("Mandando resultado: {:?}", sorted_strings);
+            warp::reply::json(&amp;sorted_strings)
+        });
+
+    warp::serve(sorting_r).run(([127, 0, 0, 1], 3030)).await;
+}
+
+
+</code></pre></div></div>
+
+<p>Using tokio as our web api, what it does is a simple bubble sort based on the input of a list of words and returns the
+sorted list.</p>
+
+<hr />
+<p>And after 2 hours…. it compiled and its working</p>
+
+<p><img src="/assets/compile.png" alt="WebApp" /></p>
+
+<p>and now the results of sorting<br />
+<img src="" alt="WebApp" /></p>
+
+<p>Well after confirming that working the next step will be to create the required docker images to be used on the swarm<br />
+since the nodes kinda differ architectures, probably going to need to build images for each architecture….<br />
+well that it.</p>
