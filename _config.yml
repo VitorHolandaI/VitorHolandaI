@@ -27,9 +27,10 @@ description: >- # this means to ignore newlines until "baseurl:"
   Maybe others will find some useful info as I solve my 
   own problems. I'm interested in DevOps, SRE, coding, 
   keyboards, and electronics (not that I'm great at it, haha)..
-baseurl: / # the subpath of your site, e.g. /blog
-url: https://mr-76.github.io/Mr-76/ # the base hostname & protocol for your site, e.g. http://example.com
-github_username:  Mr-76
+url: https://bitssand.blog
+baseurl: /
+github_username:  VitorHolandaI
+
 
 # Build settings
 theme: minima
