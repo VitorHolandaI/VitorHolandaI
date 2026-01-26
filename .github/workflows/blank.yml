@@ -23,4 +23,4 @@ jobs:
       with:
        context:
        push: true
-       tags: VitorHolandaI/githubaction:latest
+       tags: vitorholanda/website:latest
