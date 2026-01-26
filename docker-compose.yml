@@ -6,7 +6,7 @@ services:
     container_name: vitor_website2
     restart: always
     ports:
-      - "4001:4000"
+      - "4000:4000"
     environment:
       - PAGES_REPO_NWO=VitorHolandaI/VitorHolandaI
     command: jekyll serve --host 0.0.0.0
