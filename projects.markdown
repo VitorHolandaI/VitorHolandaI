@@ -4,20 +4,17 @@ title: Projects
 permalink: /projects/
 ---
 
+{% assign projects = site.posts | where_exp:"post","post.path contains 'projects/'" | sort: "date" | reverse %}
 
+{% for project in projects %}
+## [{{ project.title }}]({{ project.url }})
 
-{% for repo in site.github.public_repositories %}
+{{ project.excerpt }}
 
-{% if true  %}
-
-## [{{ repo.name }}]({{ repo.html_url }})
-
-{{ repo.description }}
-
-Topics: {{ repo.topics | array_to_sentence_string }}
-
-Last updated: {{ repo.updated_at | date_to_string }}
-
+{% if project.technologies %}
+**Technologies:** {{ project.technologies }}
 {% endif %}
 
+<p><a href="{{ project.url }}">Read more →</a></p>
 {% endfor %}
+

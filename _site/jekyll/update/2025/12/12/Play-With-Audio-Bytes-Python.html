@@ -5,23 +5,23 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Swarm Cluster on ARM SBCs 1 | Vitor/Mr-76 blog</title>
+<title>Play With Audio Bytes Python | Vitor/Mr-76 blog</title>
 <meta name="generator" content="Jekyll v3.10.0" />
-<meta property="og:title" content="Swarm Cluster on ARM SBCs 1" />
+<meta property="og:title" content="Play With Audio Bytes Python" />
 <meta property="og:locale" content="en_US" />
-<meta name="description" content="This is simply a doc/work-log of my setup for a Docker Swarm with load balancing using 4 single-board computers (SBCs): a Banana Pi M2 Zero W, Orange Pi Zero 2W, Raspberry Pi 3B, and Raspberry Pi Zero W." />
-<meta property="og:description" content="This is simply a doc/work-log of my setup for a Docker Swarm with load balancing using 4 single-board computers (SBCs): a Banana Pi M2 Zero W, Orange Pi Zero 2W, Raspberry Pi 3B, and Raspberry Pi Zero W." />
-<link rel="canonical" href="http://localhost:4000/jekyll/update/2025/05/05/SwARMcluster.html" />
-<meta property="og:url" content="http://localhost:4000/jekyll/update/2025/05/05/SwARMcluster.html" />
+<meta name="description" content="This website is about anything I find interesting—mostly a place for me to document things so I can remember them. Maybe others will find some useful info as I solve my own problems. I’m interested in DevOps, SRE, coding, keyboards, and electronics (not that I’m great at it, haha).." />
+<meta property="og:description" content="This website is about anything I find interesting—mostly a place for me to document things so I can remember them. Maybe others will find some useful info as I solve my own problems. I’m interested in DevOps, SRE, coding, keyboards, and electronics (not that I’m great at it, haha).." />
+<link rel="canonical" href="http://localhost:4000/jekyll/update/2025/12/12/Play-With-Audio-Bytes-Python.html" />
+<meta property="og:url" content="http://localhost:4000/jekyll/update/2025/12/12/Play-With-Audio-Bytes-Python.html" />
 <meta property="og:site_name" content="Vitor/Mr-76 blog" />
-<meta property="og:image" content="http://localhost:4000/assets/sbcsinfos.png" />
+<meta property="og:image" content="http://localhost:4000/assets/managernode.png" />
 <meta property="og:type" content="article" />
-<meta property="article:published_time" content="2025-05-05T16:59:28-03:00" />
+<meta property="article:published_time" content="2025-12-12T19:49:28-03:00" />
 <meta name="twitter:card" content="summary_large_image" />
-<meta property="twitter:image" content="http://localhost:4000/assets/sbcsinfos.png" />
-<meta property="twitter:title" content="Swarm Cluster on ARM SBCs 1" />
+<meta property="twitter:image" content="http://localhost:4000/assets/managernode.png" />
+<meta property="twitter:title" content="Play With Audio Bytes Python" />
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-05-05T16:59:28-03:00","datePublished":"2025-05-05T16:59:28-03:00","description":"This is simply a doc/work-log of my setup for a Docker Swarm with load balancing using 4 single-board computers (SBCs): a Banana Pi M2 Zero W, Orange Pi Zero 2W, Raspberry Pi 3B, and Raspberry Pi Zero W.","headline":"Swarm Cluster on ARM SBCs 1","image":"http://localhost:4000/assets/sbcsinfos.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2025/05/05/SwARMcluster.html"},"url":"http://localhost:4000/jekyll/update/2025/05/05/SwARMcluster.html"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","dateModified":"2025-12-12T19:49:28-03:00","datePublished":"2025-12-12T19:49:28-03:00","description":"This website is about anything I find interesting—mostly a place for me to document things so I can remember them. Maybe others will find some useful info as I solve my own problems. I’m interested in DevOps, SRE, coding, keyboards, and electronics (not that I’m great at it, haha)..","headline":"Play With Audio Bytes Python","image":"http://localhost:4000/assets/managernode.png","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/jekyll/update/2025/12/12/Play-With-Audio-Bytes-Python.html"},"url":"http://localhost:4000/jekyll/update/2025/12/12/Play-With-Audio-Bytes-Python.html"}</script>
 <!-- End Jekyll SEO tag -->
 
   <link rel="stylesheet" href="/assets/main.css" />
@@ -66,27 +66,16 @@
         <article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
 
   <header class="post-header">
-    <h1 class="post-title p-name" itemprop="name headline">Swarm Cluster on ARM SBCs 1</h1>
+    <h1 class="post-title p-name" itemprop="name headline">Play With Audio Bytes Python</h1>
     <p class="post-meta">
-      <time class="dt-published" datetime="2025-05-05T16:59:28-03:00" itemprop="datePublished">May 5, 2025
+      <time class="dt-published" datetime="2025-12-12T19:49:28-03:00" itemprop="datePublished">Dec 12, 2025
       </time></p>
   </header>
 
   <div class="post-content e-content" itemprop="articleBody">
-    <p>This is simply a doc/work-log of my setup for a Docker Swarm with load balancing using 4 single-board computers (SBCs): a Banana Pi M2 Zero W, Orange Pi Zero 2W, Raspberry Pi 3B, and Raspberry Pi Zero W.</p>
+    
 
-<p><img src="/assets/sbcsinfos.png" alt="" /></p>
-
-<p>All but the Raspberry Pi 3B are immersed in direct liquid cooling using mineral oil (I think it’s cool — I like it 😄).</p>
-
-<p>The idea behind this is that I got a bit obsessed with power usage. I wanted to try different solutions that might perform well. I mean, it’s better to have an SBC as your always-on server than an old notebook running 24/7. Even if you put the notebook to sleep when idle, it still uses a fair amount of electricity.</p>
-
-<p>In contrast, these SBCs consume very little power and can run a surprising number of things. Of course, many applications <em>can’t</em> run on ARM architecture, which is another topic — but what can I do? I already have the boards, so I want to test them 😅</p>
-
-<p>The goal here is to set up a Docker Swarm cluster, enable load balancing (if possible), run some stress tests, and measure power usage and thermals. I’ll then compare all that to just using my old notebook as a server — maybe I can finally sell it after this experiment!</p>
-
-
-  </div><a class="u-url" href="/jekyll/update/2025/05/05/SwARMcluster.html" hidden></a>
+  </div><a class="u-url" href="/jekyll/update/2025/12/12/Play-With-Audio-Bytes-Python.html" hidden></a>
 </article>
 
       </div>
