@@ -136,3 +136,6 @@ Universidade Federal de Campina Grande
 ### 📄 Download
 [Download CV (PDF)](/assets/cv.pdf)
 
+### Projects
+[See my projects](/projects/)
+

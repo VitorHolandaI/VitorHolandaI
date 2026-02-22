@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-01-28T23:25:55-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vitor blog</title><subtitle>This website is about anything I find interesting—mostly a  place for me to document things so I can remember them.  Maybe others will find some useful info as I solve my  own problems. I&apos;m interested in DevOps, SRE, coding,  keyboards, and electronics (not that I&apos;m great at it, haha)..</subtitle><entry><title type="html">Smart LLM Agent</title><link href="http://localhost:4000/projects/smart-llm-agent/" rel="alternate" type="text/html" title="Smart LLM Agent" /><published>2026-01-28T00:00:00-03:00</published><updated>2026-01-28T00:00:00-03:00</updated><id>http://localhost:4000/projects/smart-llm-agent</id><content type="html" xml:base="http://localhost:4000/projects/smart-llm-agent/"><![CDATA[<h1 id="full-project-description">Full Project Description</h1>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.10.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2026-02-22T13:05:51-03:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Vitor blog</title><subtitle>This website is about anything I find interesting—mostly a  place for me to document things so I can remember them.  Maybe others will find some useful info as I solve my  own problems. I&apos;m interested in DevOps, SRE, coding,  keyboards, and electronics (not that I&apos;m great at it, haha)..</subtitle><entry><title type="html">Smart LLM Agent</title><link href="http://localhost:4000/projects/smart-llm-agent/" rel="alternate" type="text/html" title="Smart LLM Agent" /><published>2026-01-28T00:00:00-03:00</published><updated>2026-01-28T00:00:00-03:00</updated><id>http://localhost:4000/projects/smart-llm-agent</id><content type="html" xml:base="http://localhost:4000/projects/smart-llm-agent/"><![CDATA[<h1 id="full-project-description">Full Project Description</h1>
 
 <p>Here you can write your detailed description:</p>
 <ul>
@@ -6,335 +6,96 @@
   <li>Technologies</li>
   <li>Screenshots</li>
   <li>Links</li>
-</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Smart Agetn with voice activation and mcp server.]]></summary></entry><entry><title type="html">Play With Audio Bytes Python</title><link href="http://localhost:4000/jekyll/update/2025/12/12/Play-With-Audio-Bytes-Python.html" rel="alternate" type="text/html" title="Play With Audio Bytes Python" /><published>2025-12-12T19:49:28-03:00</published><updated>2025-12-12T19:49:28-03:00</updated><id>http://localhost:4000/jekyll/update/2025/12/12/Play-With-Audio-Bytes-Python</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/12/12/Play-With-Audio-Bytes-Python.html"><![CDATA[]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/managernode.png" /><media:content medium="image" url="http://localhost:4000/assets/managernode.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">My Update for Today</title><link href="http://localhost:4000/update/2025/12/05/my-new-post.html" rel="alternate" type="text/html" title="My Update for Today" /><published>2025-12-05T00:00:00-03:00</published><updated>2025-12-05T00:00:00-03:00</updated><id>http://localhost:4000/update/2025/12/05/my-new-post</id><content type="html" xml:base="http://localhost:4000/update/2025/12/05/my-new-post.html"><![CDATA[]]></content><author><name></name></author><category term="update" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Swarm Cluster on ARM SBCs 3</title><link href="http://localhost:4000/jekyll/update/2025/05/19/SwARMcluster.html" rel="alternate" type="text/html" title="Swarm Cluster on ARM SBCs 3" /><published>2025-05-19T16:59:28-03:00</published><updated>2025-05-19T16:59:28-03:00</updated><id>http://localhost:4000/jekyll/update/2025/05/19/SwARMcluster</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/05/19/SwARMcluster.html"><![CDATA[<h2 id="stress-testing-the-swarm-cluster">Stress Testing the Swarm Cluster</h2>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Smart Agetn with voice activation and mcp server.]]></summary></entry><entry><title type="html">RC Rover</title><link href="http://localhost:4000/projects/rc-rover/" rel="alternate" type="text/html" title="RC Rover" /><published>2026-01-07T00:00:00-03:00</published><updated>2026-01-07T00:00:00-03:00</updated><id>http://localhost:4000/projects/rc-rover</id><content type="html" xml:base="http://localhost:4000/projects/rc-rover/"><![CDATA[<h1 id="rc-rover">RC Rover</h1>
 
-<p>Now let’s look into deploying an app to do a stress test.</p>
+<p>A remote-controlled rover with 3D-printed structural components and custom firmware.</p>
 
-<p>The first option is to use an old Rust bubble sort app I made a while ago.<br />
-However, it was compiled for <strong>x86</strong>, so it’s not compatible with the ARM architecture of the cluster.<br />
-We’ll need to <strong>rebuild it</strong> for ARM and test it.</p>
+<h2 id="about">About</h2>
 
-<hr />
+<p>This project combines embedded programming with 3D printing to build a custom RC rover from scratch, including design documentation and C++ firmware.</p>
 
-<h2 id="useful-resources">Useful Resources</h2>
+<h2 id="links">Links</h2>
 
 <ul>
-  <li><a href="https://github.com/locnnil/rust_cross_compilation">Rust Cross Compilation Guide</a></li>
-  <li><a href="https://github.com/poi-2024-1/poi-atividade-2-Mr-76/tree/Entrega">Source Repo</a></li>
-  <li><a href="https://doc.rust-lang.org/beta/rustc/platform-support.html">Rust Platform Support</a></li>
-</ul>
+  <li><a href="https://github.com/VitorHolandaI/rc-rover">GitHub Repository</a></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[An RC rover project with 3D-printed parts and embedded C++ firmware.]]></summary></entry><entry><title type="html">Servitor Assistant</title><link href="http://localhost:4000/projects/servitor-assistant/" rel="alternate" type="text/html" title="Servitor Assistant" /><published>2026-01-03T00:00:00-03:00</published><updated>2026-01-03T00:00:00-03:00</updated><id>http://localhost:4000/projects/servitor-assistant</id><content type="html" xml:base="http://localhost:4000/projects/servitor-assistant/"><![CDATA[<h1 id="servitor-assistant">Servitor Assistant</h1>
 
-<hr />
+<p>A simple assistant powered by a Large Language Model (LLM).</p>
 
-<h2 id="choosing-a-target-architecture">Choosing a Target Architecture</h2>
+<h2 id="about">About</h2>
 
-<p>To see available Rust targets:</p>
+<p>This project is a lightweight assistant that leverages LLMs to provide conversational AI capabilities.</p>
 
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rustc <span class="nt">--print</span> target-list
-</code></pre></div></div>
-
-<p>Here are some relevant ARM targets:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>armv7-linux-androideabi  
-armv7-sony-vita-newlibeabihf  
-armv7-unknown-freebsd  
-armv7-unknown-linux-gnueabi  
-armv7-unknown-linux-gnueabihf  
-armv7-unknown-linux-musleabi  
-armv7-unknown-linux-musleabihf  
-armv7-unknown-linux-ohos  
-armv7-unknown-linux-uclibceabi  
-armv7-unknown-linux-uclibceabihf  
-armv7-unknown-netbsd-eabihf  
-armv7-wrs-vxworks-eabihf  
-armv7a-kmc-solid_asp3-eabi  
-armv7a-kmc-solid_asp3-eabihf  
-armv7a-none-eabi  
-armv7a-none-eabihf  
-armv7k-apple-watchos  
-armv7r-none-eabi  
-armv7r-none-eabihf  
-armv7s-apple-ios  
-armv8r-none-eabihf  
-</code></pre></div></div>
-
-<hr />
-
-<h2 id="sbc-architecture-overview">SBC Architecture Overview</h2>
-
-<p>Using <code class="language-plaintext highlighter-rouge">neofetch</code> or <code class="language-plaintext highlighter-rouge">fetch</code>, here’s what we found:</p>
+<h2 id="links">Links</h2>
 
 <ul>
-  <li><strong>Banana Pi</strong> → <code class="language-plaintext highlighter-rouge">armv7l</code></li>
-  <li><strong>Raspberry Pi Zero W</strong> → <code class="language-plaintext highlighter-rouge">ARMv6-compatible</code></li>
-  <li><strong>Raspberry Pi 3B</strong> → <code class="language-plaintext highlighter-rouge">aarch64</code></li>
-  <li><strong>Orange Pi</strong> → <code class="language-plaintext highlighter-rouge">aarch64</code></li>
-</ul>
+  <li><a href="https://github.com/VitorHolandaI/ServitorAssisstant">GitHub Repository</a></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[A simple LLM-powered assistant built in Python.]]></summary></entry><entry><title type="html">Play With Audio Bytes Python</title><link href="http://localhost:4000/jekyll/update/2025/12/12/Play-With-Audio-Bytes-Python.html" rel="alternate" type="text/html" title="Play With Audio Bytes Python" /><published>2025-12-12T19:49:28-03:00</published><updated>2025-12-12T19:49:28-03:00</updated><id>http://localhost:4000/jekyll/update/2025/12/12/Play-With-Audio-Bytes-Python</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/12/12/Play-With-Audio-Bytes-Python.html"><![CDATA[]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/managernode.png" /><media:content medium="image" url="http://localhost:4000/assets/managernode.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">My Update for Today</title><link href="http://localhost:4000/update/2025/12/05/my-new-post.html" rel="alternate" type="text/html" title="My Update for Today" /><published>2025-12-05T00:00:00-03:00</published><updated>2025-12-05T00:00:00-03:00</updated><id>http://localhost:4000/update/2025/12/05/my-new-post</id><content type="html" xml:base="http://localhost:4000/update/2025/12/05/my-new-post.html"><![CDATA[]]></content><author><name></name></author><category term="update" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Custom Keyboards</title><link href="http://localhost:4000/projects/keyboards/" rel="alternate" type="text/html" title="Custom Keyboards" /><published>2025-11-12T00:00:00-03:00</published><updated>2025-11-12T00:00:00-03:00</updated><id>http://localhost:4000/projects/keyboards</id><content type="html" xml:base="http://localhost:4000/projects/keyboards/"><![CDATA[<h1 id="custom-keyboards">Custom Keyboards</h1>
 
-<p>Because the Pi Zero W uses an <strong>older ARMv6 architecture</strong>, we’ll try to compile for that and test for compatibility on the other devices.</p>
+<p>A collection of custom-built mechanical keyboards using KMK firmware.</p>
 
-<hr />
+<h2 id="about">About</h2>
 
-<p><img src="/assets/sbcsinfos.png" alt="SBCs Info" /></p>
+<p>These projects document the design, build, and firmware of custom keyboards using KMK (a Python-based keyboard firmware for microcontrollers).</p>
 
-<hr />
-
-<h2 id="attempting-cross-compilation">Attempting Cross Compilation</h2>
-
-<h3 id="setup-for-armv7">Setup for <code class="language-plaintext highlighter-rouge">armv7</code></h3>
-
-<p>Install necessary tools:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nb">sudo </span>apt <span class="nb">install </span>gcc-arm-linux-gnueabihf
-rustup target add armv7-unknown-linux-gnueabi
-</code></pre></div></div>
-
-<p>Update your <code class="language-plaintext highlighter-rouge">Cargo.toml</code>:</p>
-
-<div class="language-toml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">[target.arm-unknown-linux-gnueabi]</span>
-<span class="py">linker</span> <span class="p">=</span> <span class="s">"arm-linux-gnueabi-gcc"</span>
-</code></pre></div></div>
-
-<h3 id="but-it-didnt-work">But… it didn’t work</h3>
-
-<hr />
-
-<h2 id="plan-b-build-on-the-target-device">Plan B: Build on the Target Device</h2>
-
-<p>If cross-compiling fails, install Rust directly on the SBC and build it locally.</p>
-
-<p>Install Rust:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>curl <span class="nt">--proto</span> <span class="s1">'=https'</span> <span class="nt">--tlsv1</span>.2 <span class="nt">-sSf</span> https://sh.rustup.rs | sh
-</code></pre></div></div>
-
-<p>Then clone your repo and build:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git clone &lt;your-repo&gt;
-<span class="nb">cd</span> &lt;your-repo&gt;
-cargo build
-</code></pre></div></div>
-
-<p>⚠️ This will take a while —<br />
-We’re working with just <strong>1.2GHz CPU</strong> and <strong>512MB RAM</strong></p>
-
-<h2 id="lets-take-a-look-at-the-app-code-for-reference">Let`s take a look at the app code for reference:</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>use warp::Filter;
-use serde::{Deserialize, Serialize};
-use std::cmp::Ordering;
-use log::info;
-
-#[derive(Deserialize,Serialize,Debug)]
-struct VetorStringRequest {
-    strings: Vec&lt;String&gt;,
-}
-
-
-fn bubble(mut arr: Vec&lt;String&gt;) -&gt; Vec&lt;String&gt; {
-    let len = arr.len();
-    for i in 0..len{
-        for j in i..len - 1 - i {
-            if arr[j].cmp(&amp;arr[j + 1]) == Ordering::Greater{
-                arr.swap(j,j + 1);
-            }
-        }
-    }
-    arr
-}
-
-
-
-#[tokio::main]
-async fn main() {
-    env_logger::builder().filter_level(log::LevelFilter::Info).init();
-    let sorting_r = warp::path("Sort")
-        .and(warp::post())
-        .and(warp::body::json())
-        .map(|req: VetorStringRequest| {
-            info!("Request de lista recebida: {:?}", req.strings);
-            let sorted_strings = bubble(req.strings);
-            info!("Mandando resultado: {:?}", sorted_strings);
-            warp::reply::json(&amp;sorted_strings)
-        });
-
-    warp::serve(sorting_r).run(([127, 0, 0, 1], 3030)).await;
-}
-
-
-</code></pre></div></div>
-
-<p>Using tokio as our web api, what it does is a simple bubble sort based on the input of a list of words and returns the
-sorted list.</p>
-
-<hr />
-<p>And after 2 hours…. it compiled and its working</p>
-
-<p><img src="/assets/compile.png" alt="WebApp" /></p>
-
-<p>and now the results of sorting<br />
-<img src="" alt="WebApp" /></p>
-
-<p>Well after confirming that working the next step will be to create the required docker images to be used on the swarm<br />
-since the nodes kinda differ architectures, probably going to need to build images for each architecture….<br />
-well that it.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[Stress Testing the Swarm Cluster]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/sbcsinfos.png" /><media:content medium="image" url="http://localhost:4000/assets/sbcsinfos.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Swarm Cluster on ARM SBCs 2</title><link href="http://localhost:4000/jekyll/update/2025/05/11/SwARMcluster.html" rel="alternate" type="text/html" title="Swarm Cluster on ARM SBCs 2" /><published>2025-05-11T19:49:28-03:00</published><updated>2025-05-11T19:49:28-03:00</updated><id>http://localhost:4000/jekyll/update/2025/05/11/SwARMcluster</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/05/11/SwARMcluster.html"><![CDATA[<p>Now based on this great post: https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/, we are going to install Docker on the 4 devices. That can be done by following that post, or the package manager of the distro already has the Docker package, or you can use, in the case of Armbian, the config tool called armbian-config. After that, use the command:</p>
-
-<p><code class="language-plaintext highlighter-rouge">sudo usermod -aG docker username</code></p>
-
-<p>a means add, G means group — add the user to the group docker. You may need to log out and back in to take effect.</p>
-
-<hr />
-<h2 id="now-the-docker-versions-listing-for-now">Now the Docker versions listing for now:</h2>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Banana Pi: 27.1.1
-
-Raspberry Pi W: 20.10.24+dfsg1
-
-Raspberry Pi 3B: 20.10.24+dfsg1
-
-Orange Pi: 28.0.4
-</code></pre></div></div>
-
-<p>Now let’s see how to create the actual cluster and then use it with Docker Swarm. A good reference is: https://docs.docker.com/engine/swarm/</p>
-
-<p>It goes into detail about redundancy, number of management nodes, number of worker nodes, load balancing, task reassigning. Since the setup is literally a bunch of USB-connected devices to the same power supply, none of the redundancy talk matters much — if the power supply goes down, everything goes down. But in other scenarios, that’s a very special thing to think about. No-breaks (UPS) can sometimes be a headache — either it’s not properly set up, the batteries are bad, or there’s some kind of circuit problem… but anyway, jumping jumping jumping…</p>
-
-<p>When setting up the 3 workers and 1 manager, they all need static IP addresses. That can be done either by setting a static IP address on the computer or setting that up in the router, which in my case was done quickly in OPNsense’s DHCP server. After that, verify if the ports are open. They are:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Port 2377/TCP for communication with and between manager nodes  
-Port 7946/TCP/UDP for overlay network node discovery  
-Port 4789/UDP (configurable) for overlay network traffic  
-</code></pre></div></div>
-
-<p>Commands to open all ports with iptables:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>iptables -A INPUT -p tcp --dport 2377 -j ACCEPT
-iptables -A INPUT -p tcp --dport 7946 -j ACCEPT
-iptables -A INPUT -p udp --dport 7946 -j ACCEPT
-iptables -A INPUT -p udp --dport 4789 -j ACCEPT
-</code></pre></div></div>
-<p>What does each option mean?
--A appends a rule to the INPUT chain, -p specifies the protocol (TCP or UDP), –dport is the destination port, and -j means the action — it jumps to ACCEPT if matched.</p>
-
-<p>For more details: <a href="https://www.linux.co.cr/distributions/review/2002/red-hat-8.0/rhl-rg/s1-iptables-options.html">iptables-options</a></p>
-
-<hr />
-
-<h2 id="to-start-the-manager-node">To start the manager node:</h2>
-
-<p><code class="language-plaintext highlighter-rouge">docker swarm init --advertise-addr manager_ip_address</code></p>
-
-<p>After that, run:</p>
-
-<p>docker swarm join –token SWMTKN-1-4tkqpfwvmidz3ip3eibkkf03fhynhtsu4kky1iwuzl74kjwdoy-b3vz3te6txomfh7rkr52gjzvr 192.168.0.39:2377</p>
-
-<p>Well, probably better to make a script to pass this command through all the hosts. Sending that command can be done in Bash using a list of IPs, or in a more sophisticated way using Ansible. For this setup, Bash is better since I don’t want to use vaults and the more complex setup of Ansible — especially because I’d have to use a different combination of user and password for each node (so more config to go on each of the nodes).</p>
-
-<p>A simple Bash script:</p>
-
-<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">#!/bin/bash</span>
-<span class="nv">file</span><span class="o">=</span>ips.txt
-<span class="k">for </span>i <span class="k">in</span> <span class="si">$(</span><span class="nb">cat</span> <span class="nv">$file</span><span class="si">)</span>
-<span class="k">do
-  </span>ssh user@<span class="nv">$i</span> <span class="s2">"docker swarm join --token SWMTKN-1-4tkqpfwvmidz3ip3eibkkf03fhynhtsu4kky1iwuzl74kjwdoy-b3vz3te6txomfh7rkr52gjzvr 192.168.0.39:2377"</span>
-<span class="k">done</span>
-</code></pre></div></div>
+<h2 id="builds">Builds</h2>
 
 <ul>
-  <li>
-    <h4 id="docker-node-ls">docker node ls</h4>
-  </li>
+  <li><strong>keyboard2</strong> - Keyboard running KMK firmware</li>
+  <li><strong>teclado3</strong> - Third keyboard iteration</li>
 </ul>
 
-<p>After that we have:</p>
-
-<p>ID                          HOSTNAME        STATUS   AVAILABILITY  MANAGER STATUS  ENGINE VERSION</p>
-<ul>
-  <li>0lqoz9l31vr49qn2ucf2nqmra   bananapim2zero  Ready    Active                      27.1.1</li>
-  <li>ou2gmpss8t2c1yn8c7l9d1h80   clusterZero0    Ready    Active                      20.10.24+dfsg1</li>
-  <li>v3ujlsa2nac5b7ptzh5lcqo9s   orangepizero2w  Ready    Active       Leader         28.0.4</li>
-  <li>kzq1fxgl7yo6lgbqdunk7dym7   pi3b            Ready    Active                      20.10.24+dfsg1</li>
-</ul>
-
-<hr />
-
-<h2 id="now-lets-try-to-deploy-a-simple-test-service">Now let’s try to deploy a simple test service…</h2>
-<p>The test service that Docker suggests is:</p>
-
-<p>docker service create –replicas 1 –name helloworld alpine ping docker.com</p>
-
-<p>Well, that worked:</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>REPLICAS  IMAGE         PORTS  
-1/1       alpine:latest  
-Better try to inspect that. Need to see where that is, etc.  
-docker service inspect --pretty helloworld  
-Inspecting does not give us the location, only details about the service itself:  
-ID:             gj257idwkgshjn41qcrzyrdwr  
-Name:           helloworld  
-Service Mode:   Replicated  
-Replicas:       1  
-UpdateConfig:  
-  Parallelism:           1  
-  On failure:            pause  
-  Monitoring Period:     5s  
-  Max failure ratio:     0  
-  Update order:          stop-first  
-RollbackConfig:  
-  Parallelism:           1  
-  On failure:            pause  
-  Monitoring Period:     5s  
-  Max failure ratio:     0  
-  Rollback order:        stop-first  
-ContainerSpec:  
-  Image:         alpine:latest@sha256:a8560b36e8b8210634f77d9f7f9efd7ffa463e380b75e2e74aff4511df3ef88c  
-  Args:          ping docker.com  
-  Init:          false  
-Resources:  
-Endpoint Mode:   vip  
-
-</code></pre></div></div>
-<p>Now to the location:</p>
-
-<p><code class="language-plaintext highlighter-rouge">docker service ps helloworld</code>
-Now we have it:</p>
-<ul>
-  <li>t7w0atmqnpqo  helloworld.1  alpine:latest  orangepizero2w  Running  10 minutes ago<br />
-Well, let’s try more replicas… HEHEHEH<br />
-docker service create –replicas 4 –name helloworld2 alpine ping docker.com</li>
-</ul>
-
-<p>Results in one replica for each:<br />
-ID            NAME              IMAGE          NODE             DESIRED STATE  CURRENT STATE<br />
-llen0o8vnd0a  helloworld2.1     alpine:latest  clusterZero0     Running        35 seconds ago<br />
-yrcbn4p6e60q  helloworld2.2     alpine:latest  orangepizero2w   Running        58 seconds ago<br />
-lh48dbcvfhru  helloworld2.3     alpine:latest  bananapim2zero   Running        44 seconds ago<br />
-9582ztkzdqsn  helloworld2.4     alpine:latest  pi3b             Running        48 seconds ago</p>
-
-<p>Well, I can also alter the scale of it — didn’t know that. Cool stuff.</p>
-
-<p>docker service scale helloworld=5</p>
-
-<p>Five replicas with only four nodes results in… normal stuff — it just duplicates one:</p>
+<h2 id="links">Links</h2>
 
 <ul>
-  <li>t7w0atmqnpqo  helloworld.1  alpine:latest  orangepizero2w  Running  17 minutes ago</li>
-  <li>al97od3mn5q0  helloworld.2  alpine:latest  clusterZero0    Running  10 seconds ago</li>
-  <li>6q90nb3wyg8q  helloworld.3  alpine:latest  clusterZero0    Running  10 seconds ago</li>
-  <li>uz8nlmefc4el  helloworld.4  alpine:latest  pi3b            Running  20 seconds ago</li>
-  <li>mev0hauj66pr  helloworld.5  alpine:latest  bananapim2zero  Running  20 seconds ago</li>
-</ul>
+  <li><a href="https://github.com/VitorHolandaI/keyboard2">keyboard2 - GitHub Repository</a></li>
+  <li><a href="https://github.com/VitorHolandaI/teclado3">teclado3 - GitHub Repository</a></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Custom mechanical keyboard builds using KMK firmware and Python.]]></summary></entry><entry><title type="html">TCC - Undergraduate Thesis</title><link href="http://localhost:4000/projects/tcc/" rel="alternate" type="text/html" title="TCC - Undergraduate Thesis" /><published>2025-11-12T00:00:00-03:00</published><updated>2025-11-12T00:00:00-03:00</updated><id>http://localhost:4000/projects/tcc</id><content type="html" xml:base="http://localhost:4000/projects/tcc/"><![CDATA[<h1 id="tcc---undergraduate-thesis">TCC - Undergraduate Thesis</h1>
 
-<p>Well, now let’s delete all that :)
-docker service ps helloworld<br />
-docker service ps helloworld2</p>
+<p>Repository with code developed for my undergraduate thesis (Trabalho de Conclusão de Curso) at UFCG.</p>
 
-<p>Well, that seems good for now. Next time: going over updates, draining a node (meaning putting it into maintenance), and then trying some of my services to do a stress test and load balancing.</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[Now based on this great post: https://www.docker.com/blog/getting-started-with-docker-for-arm-on-linux/, we are going to install Docker on the 4 devices. That can be done by following that post, or the package manager of the distro already has the Docker package, or you can use, in the case of Armbian, the config tool called armbian-config. After that, use the command:]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/managernode.png" /><media:content medium="image" url="http://localhost:4000/assets/managernode.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Swarm Cluster on ARM SBCs 1</title><link href="http://localhost:4000/jekyll/update/2025/05/05/SwARMcluster.html" rel="alternate" type="text/html" title="Swarm Cluster on ARM SBCs 1" /><published>2025-05-05T16:59:28-03:00</published><updated>2025-05-05T16:59:28-03:00</updated><id>http://localhost:4000/jekyll/update/2025/05/05/SwARMcluster</id><content type="html" xml:base="http://localhost:4000/jekyll/update/2025/05/05/SwARMcluster.html"><![CDATA[<p>This is simply a doc/work-log of my setup for a Docker Swarm with load balancing using 4 single-board computers (SBCs): a Banana Pi M2 Zero W, Orange Pi Zero 2W, Raspberry Pi 3B, and Raspberry Pi Zero W.</p>
+<h2 id="about">About</h2>
 
-<p><img src="/assets/sbcsinfos.png" alt="" /></p>
+<p>This project contains the code, scripts, and resources produced during my undergraduate thesis research.</p>
 
-<p>All but the Raspberry Pi 3B are immersed in direct liquid cooling using mineral oil (I think it’s cool — I like it 😄).</p>
+<h2 id="links">Links</h2>
 
-<p>The idea behind this is that I got a bit obsessed with power usage. I wanted to try different solutions that might perform well. I mean, it’s better to have an SBC as your always-on server than an old notebook running 24/7. Even if you put the notebook to sleep when idle, it still uses a fair amount of electricity.</p>
+<ul>
+  <li><a href="https://github.com/VitorHolandaI/tcc_vitor">GitHub Repository</a></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[Code and resources from my undergraduate thesis (TCC) at UFCG.]]></summary></entry><entry><title type="html">ARM LCC</title><link href="http://localhost:4000/projects/arm-lcc/" rel="alternate" type="text/html" title="ARM LCC" /><published>2025-10-04T00:00:00-03:00</published><updated>2025-10-04T00:00:00-03:00</updated><id>http://localhost:4000/projects/arm-lcc</id><content type="html" xml:base="http://localhost:4000/projects/arm-lcc/"><![CDATA[<h1 id="arm-lcc">ARM LCC</h1>
 
-<p>In contrast, these SBCs consume very little power and can run a surprising number of things. Of course, many applications <em>can’t</em> run on ARM architecture, which is another topic — but what can I do? I already have the boards, so I want to test them 😅</p>
+<p>A script to visualize the <a href="https://lcc.ufcg.edu.br/">LCC UFCG website</a> directly in the terminal.</p>
 
-<p>The goal here is to set up a Docker Swarm cluster, enable load balancing (if possible), run some stress tests, and measure power usage and thermals. I’ll then compare all that to just using my old notebook as a server — maybe I can finally sell it after this experiment!</p>]]></content><author><name></name></author><category term="jekyll" /><category term="update" /><summary type="html"><![CDATA[This is simply a doc/work-log of my setup for a Docker Swarm with load balancing using 4 single-board computers (SBCs): a Banana Pi M2 Zero W, Orange Pi Zero 2W, Raspberry Pi 3B, and Raspberry Pi Zero W.]]></summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/sbcsinfos.png" /><media:content medium="image" url="http://localhost:4000/assets/sbcsinfos.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>
+<h2 id="about">About</h2>
+
+<p>A command-line tool that fetches and renders information from the LCC (Laboratório de Ciência da Computação) UFCG website, making it accessible from the terminal.</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li><a href="https://github.com/VitorHolandaI/arm_lcc">GitHub Repository</a></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[A terminal script to visualize the UFCG LCC website directly from the command line.]]></summary></entry><entry><title type="html">Password Generator</title><link href="http://localhost:4000/projects/pass-generate/" rel="alternate" type="text/html" title="Password Generator" /><published>2025-08-15T00:00:00-03:00</published><updated>2025-08-15T00:00:00-03:00</updated><id>http://localhost:4000/projects/pass-generate</id><content type="html" xml:base="http://localhost:4000/projects/pass-generate/"><![CDATA[<h1 id="password-generator">Password Generator</h1>
+
+<p>A small passphrase generator written in C, inspired by <a href="https://theintercept.com/2015/03/26/passphrases-can-memorize-attackers-cant-guess/">this article on passphrases</a>.</p>
+
+<h2 id="about">About</h2>
+
+<p>A lightweight tool that generates secure, memorable passphrases using the Diceware approach — passphrases you can memorize but attackers can’t guess.</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li><a href="https://github.com/VitorHolandaI/passGenerate">GitHub Repository</a></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[A tiny passphrase generator based on the Diceware method, written in C.]]></summary></entry><entry><title type="html">Recording Arm</title><link href="http://localhost:4000/projects/recording-arm/" rel="alternate" type="text/html" title="Recording Arm" /><published>2025-06-15T00:00:00-03:00</published><updated>2025-06-15T00:00:00-03:00</updated><id>http://localhost:4000/projects/recording-arm</id><content type="html" xml:base="http://localhost:4000/projects/recording-arm/"><![CDATA[<h1 id="recording-arm">Recording Arm</h1>
+
+<p>Files and configuration for a recording setup using a webcam salvaged from a BananaPi notebook.</p>
+
+<h2 id="about">About</h2>
+
+<p>This project documents the setup for repurposing a webcam from a disassembled BananaPi notebook into a functional recording arm.</p>
+
+<h2 id="links">Links</h2>
+
+<ul>
+  <li><a href="https://github.com/VitorHolandaI/recordingArm">GitHub Repository</a></li>
+</ul>]]></content><author><name></name></author><summary type="html"><![CDATA[A setup for recording using a repurposed webcam from a BananaPi notebook.]]></summary></entry></feed>
