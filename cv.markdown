@@ -4,6 +4,8 @@ title: Curriculum
 permalink: /cv/
 ---
 
+🇧🇷 [Versão em Português](/cv-pt/)
+
 ## Vitor Holanda
 
 Contact: vitor.holanda@ccc.ufcg.edu.br · bartmoss77@tutanota.com  
@@ -135,7 +137,7 @@ Universidade Federal de Campina Grande
 ---
 
 ### 📄 Download
-[Download CV (PDF)](/assets/cv.pdf)
+[Download CV (PDF – EN)](/assets/cv-en.pdf)
 
 ### Projects
 [See my projects]([Ver meus projetos](https://bitssand.blog/projects/))
