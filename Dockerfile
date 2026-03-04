@@ -4,13 +4,7 @@ WORKDIR /data
 COPY cv.markdown .
 # Strip Jekyll front matter (--- block) before passing to pandoc,
 # because the --- used as <hr> in the body confuses pandoc's YAML parser.
-RUN awk '
-    NR==1 && /^---$/ { in_fm=1; next }
-    in_fm && /^---$/ { in_fm=0; next }
-    in_fm            { next }
-    /^---$/          { print ""; print "---"; print ""; next }
-    { print }
-' cv.markdown | pandoc \
+RUN awk 'NR==1&&/^---$/{f=1;next} f&&/^---$/{f=0;next} f{next} /^---$/{print"";print"---";print"";next} {print}' cv.markdown | pandoc \
     --from commonmark \
     --pdf-engine=xelatex \
     -V geometry:margin=2cm \
