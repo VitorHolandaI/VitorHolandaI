@@ -7,7 +7,8 @@ permalink: /cv/
 ## Vitor Holanda
 
 Contact: vitor.holanda@ccc.ufcg.edu.br · bartmoss77@tutanota.com  
-[GitHub](https://github.com/VitorHolandaI) · [LinkedIn](https://www.linkedin.com/in/vitor-holanda-465b20259/)
+
+[GitHub](https://github.com/VitorHolandaI) · [LinkedIn](https://www.linkedin.com/in/vitor-holanda-465b20259/) · [Blog](https://bitssand.blog/) · [Projetos](https://bitssand.blog/projects/)
 
 
 ### Education
@@ -137,5 +138,5 @@ Universidade Federal de Campina Grande
 [Download CV (PDF)](/assets/cv.pdf)
 
 ### Projects
-[See my projects](/projects/)
+[See my projects]([Ver meus projetos](https://bitssand.blog/projects/))
 
