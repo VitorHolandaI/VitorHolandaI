@@ -7,14 +7,4 @@ technologies: "Shell, Bash"
 permalink: /projects/horario-controle/
 ---
 
-# Schedule Viewer CLI
-
-A small Bash-based CLI for visualizing your current schedule directly in the terminal.
-
-## About
-
-A lightweight command-line tool that displays your schedule in the terminal. Just run `./main` to see it.
-
-## Links
-
-- [GitHub Repository](https://github.com/VitorHolandaI/horarioControleBash)
+[GitHub Repository](https://github.com/VitorHolandaI/horarioControleBash)

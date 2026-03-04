@@ -7,14 +7,4 @@ technologies: "Shell, Linux"
 permalink: /projects/recording-arm/
 ---
 
-# Recording Arm
-
-Files and configuration for a recording setup using a webcam salvaged from a BananaPi notebook.
-
-## About
-
-This project documents the setup for repurposing a webcam from a disassembled BananaPi notebook into a functional recording arm.
-
-## Links
-
-- [GitHub Repository](https://github.com/VitorHolandaI/recordingArm)
+[GitHub Repository](https://github.com/VitorHolandaI/recordingArm)

@@ -7,14 +7,4 @@ technologies: "C++, Arduino, Electronics"
 permalink: /projects/relogio-arduino/
 ---
 
-# Arduino Clock (Relógio Arduino)
-
-A clock built using Arduino hardware and custom C++ firmware.
-
-## About
-
-An Arduino-based clock project combining embedded programming with electronics.
-
-## Links
-
-- [GitHub Repository](https://github.com/VitorHolandaI/relogio-arduino)
+[GitHub Repository](https://github.com/VitorHolandaI/relogio-arduino)
