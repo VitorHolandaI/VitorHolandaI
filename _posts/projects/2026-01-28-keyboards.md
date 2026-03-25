@@ -5,6 +5,8 @@ date: 2025-11-12
 excerpt: "Custom mechanical keyboard builds — from a handwired split to a Raspberry Pi Pico with LCD and startup sound."
 technologies: "Python, KMK, CircuitPython, Arduino, QMK, Electronics, 3D Printing"
 permalink: /projects/keyboards/
+lang: en
+lang_ref: keyboards
 ---
 
 A series of custom mechanical keyboard builds, each one pushing a bit further than the last.

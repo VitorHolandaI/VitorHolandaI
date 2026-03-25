@@ -5,6 +5,8 @@ date: 2024-07-07
 excerpt: "A tiny CLI tool for visualizing your current schedule in the terminal."
 technologies: "Shell, Bash"
 permalink: /projects/horario-controle/
+lang: en
+lang_ref: horario-controle
 ---
 
 A single Bash script that logs into UFCG's academic portal, downloads your class schedule for a given semester, and renders it straight in the terminal — no browser needed.

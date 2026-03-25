@@ -6,6 +6,19 @@ layout: default
   <h1>{{ page.title }}</h1>
   <p>{{ page.date | date: "%B %d, %Y" }}</p>
 
+  {% if page.lang_ref %}
+    {% assign alt_posts = site.posts | where: "lang_ref", page.lang_ref %}
+    {% for p in alt_posts %}
+      {% unless p.url == page.url %}
+        {% if p.lang == "pt" %}
+          🇧🇷 <a href="{{ p.url }}">Versão em Português</a>
+        {% elsif p.lang == "en" %}
+          🇺🇸 <a href="{{ p.url }}">English version</a>
+        {% endif %}
+      {% endunless %}
+    {% endfor %}
+  {% endif %}
+
   {{ content }}
 
   {% if page.technologies %}
@@ -14,4 +27,3 @@ layout: default
 
   <p><a href="/projects/">← Back to all projects</a></p>
 </article>
-

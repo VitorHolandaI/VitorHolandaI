@@ -5,6 +5,8 @@ date: 2025-05-13
 excerpt: "A falling-sand simulator built with Python and Tkinter."
 technologies: "Python, Tkinter"
 permalink: /projects/sand-simulation/
+lang: en
+lang_ref: sand-simulation
 ---
 
 A falling-sand simulator built entirely in Python using Tkinter — no external libraries. Move the mouse over the window and sand pours out, falls under gravity, and piles up at the bottom or on top of already settled grains.

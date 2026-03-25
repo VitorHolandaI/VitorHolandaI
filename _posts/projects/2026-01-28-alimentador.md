@@ -5,6 +5,8 @@ date: 2024-07-09
 excerpt: "An automated bird feeder built with Arduino and C++."
 technologies: "C++, Arduino, Electronics"
 permalink: /projects/alimentador/
+lang: en
+lang_ref: alimentador
 ---
 
 A personal electronics project born from a simple need: keeping my birds fed even when I'm away from home. Built around an Arduino Uno, this feeder runs entirely on its own schedule — no apps, no internet, no intervention needed.

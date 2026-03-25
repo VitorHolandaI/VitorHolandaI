@@ -5,6 +5,8 @@ date: 2026-03-18
 excerpt: "A distributed voice assistant with a Warhammer 40k Magos personality, running across a PC and a Raspberry Pi."
 technologies: "Python, FastAPI, LangChain, Ollama, Vosk, Piper TTS, React, Raspberry Pi"
 permalink: /projects/servitor-assistant/
+lang: en
+lang_ref: servitor-assistant
 ---
 
 A voice assistant split across two machines: a PC handles all the heavy work — speech recognition, LLM inference, text-to-speech — and a Raspberry Pi acts as the physical interface, listening through a microphone, playing back the response through speakers, and pulsing an LED while it waits.

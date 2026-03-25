@@ -5,6 +5,8 @@ date: 2024-09-07
 excerpt: "A small GUI app for Linux to control fan speed and monitor temperatures on ThinkPad laptops."
 technologies: "Rust, GTK4"
 permalink: /projects/thinkfan-control/
+lang: en
+lang_ref: thinkfan-control
 ---
 
 A small GTK4 desktop app written in Rust for controlling the fan on ThinkPad laptops. It gives you three buttons — INCREASE, DECREASE, and AUTO — to manually set the fan level (0–7) or hand control back to the firmware, and shows the current RPM and fan level updated live every second.

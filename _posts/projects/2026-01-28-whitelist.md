@@ -5,6 +5,8 @@ date: 2023-07-24
 excerpt: "A Bash tool that locks down student machines to only approved websites during exams."
 technologies: "Shell, Bash, iptables, ufw"
 permalink: /projects/whitelist/
+lang: en
+lang_ref: whitelist
 ---
 
 A network access control tool built for university lab environments. The idea is simple: instead of trying to block specific unwanted sites — which is a losing battle — it flips the approach and blocks everything by default, then opens only the domains the teacher has explicitly approved.

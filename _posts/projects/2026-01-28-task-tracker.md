@@ -5,6 +5,8 @@ date: 2025-05-25
 excerpt: "A command-line task tracker built in Nim."
 technologies: "Nim"
 permalink: /projects/task-tracker/
+lang: en
+lang_ref: task-tracker
 ---
 
 A personal command-line task manager written in Nim, called `Doin`. Tasks are stored as plain JSON files under `~/.tasks/`, organized into three folders — active, done, and overdue — so there's no database and the data is always readable.

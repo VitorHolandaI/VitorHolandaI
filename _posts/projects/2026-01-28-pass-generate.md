@@ -5,6 +5,8 @@ date: 2023-10-19
 excerpt: "A tiny passphrase generator based on the Diceware method, written in C."
 technologies: "C"
 permalink: /projects/pass-generate/
+lang: en
+lang_ref: pass-generate
 ---
 
 Inspired by [this article from The Intercept](https://theintercept.com/2015/03/26/passphrases-can-memorize-attackers-cant-guess/) on the diceware method — the idea that a passphrase made of a few random words is both easier to remember and harder to crack than a typical password.
