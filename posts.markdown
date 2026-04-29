@@ -1,17 +1,20 @@
 ---
 layout: page
-title: "All Posts"
+title: "Posts"
 permalink: /posts/
 ---
 
-<h2>All Posts</h2>
+{% assign default_lang = site.default_lang | default: "pt" %}
+
+<h2>Posts</h2>
 
 <ul>
   {% for post in site.posts %}
-    <li>
-      <a href="{{ post.url }}">{{ post.title }}</a>
-      <span>— {{ post.date | date: "%Y-%m-%d" }}</span>
-    </li>
+    {% if post.lang == nil or post.lang == default_lang %}
+      <li>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+        <span>— {{ post.date | date: "%Y-%m-%d" }}</span>
+      </li>
+    {% endif %}
   {% endfor %}
 </ul>
-

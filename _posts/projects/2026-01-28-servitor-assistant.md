@@ -5,6 +5,8 @@ date: 2026-03-18
 excerpt: "A distributed voice assistant with a Warhammer 40k Magos personality, running across a PC and a Raspberry Pi."
 technologies: "Python, FastAPI, LangChain, Ollama, Vosk, Piper TTS, React, Raspberry Pi"
 permalink: /projects/servitor-assistant/
+image: "https://raw.githubusercontent.com/VitorHolandaI/ServitorAssisstant/main/skull.jpg"
+image_alt: "3D-printed skull housing used for the Servitor Assistant"
 lang: en
 lang_ref: servitor-assistant
 ---

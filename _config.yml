@@ -21,6 +21,8 @@
 repository: VitorHolandaI/VitorHolandaI
 title: Vitor blog
 email: vitor.holanda@ccc.ufcg.edu.br
+lang: pt-BR
+default_lang: pt
 description: >- # this means to ignore newlines until "baseurl:"
   This website is about anything I find interesting—mostly a 
   place for me to document things so I can remember them. 
@@ -30,6 +32,12 @@ description: >- # this means to ignore newlines until "baseurl:"
 url: https://bitssand.blog
 baseurl: ""
 github_username:  VitorHolandaI
+
+header_pages:
+  - about.markdown
+  - posts.markdown
+  - projects.markdown
+  - cv.markdown
 
 
 # Build settings

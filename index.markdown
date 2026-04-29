@@ -3,18 +3,18 @@
 # To modify the layout, see https://jekyllrb.com/docs/themes/#overriding-theme-defaults
 
 layout: home
-list_title: Read Latest posts
+list_title: Posts recentes
 title: ''
 ---
 
 
-Welcome to  my blog.
+Bem-vindo ao meu blog.
 
-This site is where I document the problems I’ve faced and how I solved them. I focus on DevOps, infrastructure, firewalls, electronics, and coding, but I also cover other technical areas when needed.
+Este site é onde documento problemas que encontrei e como resolvi cada um. O foco principal fica em DevOps, infraestrutura, firewalls, eletrônica e código, mas também escrevo sobre outras áreas técnicas quando aparece algo útil para registrar.
 
-I don’t just share solutions—I explain what I did, why I did it, and what worked (or didn’t). Whether it's troubleshooting network issues, setting up infrastructure, automating tasks, or experimenting with hardware, this is my space to keep track of what I’ve learned.
+Não quero guardar só a solução final: tento explicar o que fiz, por que fiz e o que funcionou ou não. Seja depurando rede, montando infraestrutura, automatizando tarefas ou experimentando com hardware, este é meu lugar para manter um histórico do que aprendi.
 
-It’s mainly for my own reference, but if it helps someone else along the way, even better!
+É principalmente uma referência pessoal, mas se ajudar mais alguém no caminho, melhor ainda.
 
 
-[here](https://github.com/VitorHolandaI?tab=repositories).
+Meus repositórios estão [aqui](https://github.com/VitorHolandaI?tab=repositories).
