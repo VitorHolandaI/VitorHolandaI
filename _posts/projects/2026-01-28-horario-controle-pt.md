@@ -9,7 +9,7 @@ lang: pt
 lang_ref: horario-controle
 ---
 
-Um único script Bash que faz login no portal acadêmico da UFCG, baixa o horário de aulas de um semestre específico e exibe tudo direto no terminal — sem precisar abrir navegador.
+Um único script Bash que faz login no portal acadêmico da UFCG, baixa o horário de aulas de um semestre específico e exibe tudo direto no terminal. Não precisa abrir o navegador.
 
 Você informa suas credenciais, o ano e o período. O script faz o POST no portal, salva o cookie de sessão, baixa a página do horário, extrai apenas a tabela com `awk` e abre o resultado no `elinks` para você ler sem sair do terminal. Os arquivos temporários são apagados automaticamente ao final.
 

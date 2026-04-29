@@ -2,7 +2,7 @@
 layout: project
 title: "Mesh System Pager"
 date: 2026-04-06
-excerpt: "Uma ferramenta em Python que transmite métricas do sistema — CPU, RAM, rede e disco — em tempo real por uma rede mesh Meshtastic LoRa."
+excerpt: "Uma ferramenta em Python que transmite métricas de CPU, RAM, rede e disco em tempo real por uma rede mesh Meshtastic LoRa."
 technologies: "Python, Meshtastic, psutil, LoRa"
 permalink: /projects/mesh-system-pager-pt/
 lang: pt
@@ -15,7 +15,7 @@ Três relatórios são enviados em sequência a cada ciclo: CPU (uso por núcleo
 
 A ferramenta se conecta via serial a um dispositivo Meshtastic local e entra em loop indefinidamente. Handlers de sinal para `SIGINT` e `SIGTERM` fecham a interface corretamente ao sair.
 
-O caso de uso é monitoramento remoto de uma máquina — um servidor doméstico, um Raspberry Pi em campo, ou qualquer máquina headless — sem precisar de Wi-Fi, celular ou conexão com a internet. Enquanto houver um nó Meshtastic dentro do alcance LoRa, é possível puxar as métricas de qualquer lugar.
+O caso de uso é monitoramento remoto de uma máquina, como um servidor doméstico, um Raspberry Pi em campo ou qualquer máquina headless. Não precisa de Wi-Fi, celular ou conexão com a internet. Enquanto houver um nó Meshtastic dentro do alcance LoRa, é possível puxar as métricas de qualquer lugar.
 
 **Stack:** Python, Meshtastic Python SDK, psutil.
 

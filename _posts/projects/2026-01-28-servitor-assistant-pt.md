@@ -11,9 +11,9 @@ lang: pt
 lang_ref: servitor-assistant
 ---
 
-Um assistente de voz dividido entre duas máquinas: um PC faz todo o trabalho pesado — reconhecimento de fala, inferência do LLM, síntese de voz — e um Raspberry Pi serve como interface física, ouvindo pelo microfone, reproduzindo a resposta nos alto-falantes e pulsando um LED enquanto aguarda.
+Um assistente de voz dividido entre duas máquinas: um PC faz o trabalho pesado, incluindo reconhecimento de fala, inferência do LLM e síntese de voz. Um Raspberry Pi serve como interface física, ouvindo pelo microfone, reproduzindo a resposta nos alto-falantes e pulsando um LED enquanto aguarda.
 
-O assistente tem personalidade de Adeptus Mechanicus do Warhammer 40k. Fala como um Magos do Imperium — breve, curioso, levemente perturbador.
+O assistente tem personalidade de Adeptus Mechanicus do Warhammer 40k. Ele fala como um Magos do Imperium: breve, curioso e levemente perturbador.
 
 Por baixo dos panos, a fala é transcrita offline com Vosk, enviada a um agente LangChain com um modelo local Ollama, e a resposta é sintetizada com Piper TTS. O áudio passa pelo SoX no Pi para adicionar overdrive e reverb que combinam com o efeito de voz. Há também um frontend de chat web em React que faz stream das respostas via SSE e pode opcionalmente acionar o mesmo pipeline de TTS no Pi.
 

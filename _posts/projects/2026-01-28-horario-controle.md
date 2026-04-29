@@ -9,7 +9,7 @@ lang: en
 lang_ref: horario-controle
 ---
 
-A single Bash script that logs into UFCG's academic portal, downloads your class schedule for a given semester, and renders it straight in the terminal — no browser needed.
+A single Bash script that logs into UFCG's academic portal, downloads your class schedule for a given semester, and renders it straight in the terminal. No browser needed.
 
 You enter your credentials, the year, and the semester period. The script posts to the portal, saves the session cookie, downloads the schedule page, strips it down to just the timetable with `awk`, and opens the result in `elinks` so you can read it without leaving the terminal. Temp files are cleaned up automatically when done.
 

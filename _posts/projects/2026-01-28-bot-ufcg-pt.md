@@ -9,7 +9,7 @@ lang: pt
 lang_ref: bot-ufcg
 ---
 
-Um bot simples para Discord criado para ajudar a se localizar no campus da UFCG. Você digita o ID de um bloco — como `BlocoAB` ou `BlocoBW` — e o bot responde com uma foto daquele bloco para você saber exatamente o que é e onde fica.
+Um bot simples para Discord criado para ajudar a se localizar no campus da UFCG. Você digita o ID de um bloco, como `BlocoAB` ou `BlocoBW`, e o bot responde com uma foto daquele bloco para você saber exatamente o que é e onde fica.
 
 Feito em Java, o projeto nasceu como uma ferramenta prática para alunos que ainda não conhecem bem o layout do campus.
 

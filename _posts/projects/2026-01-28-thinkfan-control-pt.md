@@ -9,7 +9,7 @@ lang: pt
 lang_ref: thinkfan-control
 ---
 
-Um pequeno app de desktop GTK4 escrito em Rust para controlar o fan em laptops ThinkPad. Oferece três botões — AUMENTAR, DIMINUIR e AUTO — para definir manualmente o nível do fan (0–7) ou devolver o controle ao firmware, e mostra o RPM atual e o nível do fan atualizado ao vivo a cada segundo.
+Um pequeno app de desktop GTK4 escrito em Rust para controlar o fan em laptops ThinkPad. Ele oferece três botões: AUMENTAR, DIMINUIR e AUTO. Com eles, dá para definir manualmente o nível do fan, de 0 a 7, ou devolver o controle ao firmware. O app também mostra o RPM atual e o nível do fan atualizado ao vivo a cada segundo.
 
 Sem daemon necessário. Fala diretamente com o kernel Linux via `/proc/acpi/ibm/fan`, lendo o estado atual e gravando as mudanças de velocidade diretamente nesse arquivo. Precisa de `sudo` para alterar a velocidade e de uma configuração de uma linha no módulo do kernel para liberar o controle do fan.
 

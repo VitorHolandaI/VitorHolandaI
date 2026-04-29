@@ -9,11 +9,11 @@ lang: en
 lang_ref: whitelist
 ---
 
-A network access control tool built for university lab environments. The idea is simple: instead of trying to block specific unwanted sites — which is a losing battle — it flips the approach and blocks everything by default, then opens only the domains the teacher has explicitly approved.
+A network access control tool built for university lab environments. The idea is simple: instead of trying to block specific unwanted sites, which is a losing battle, it flips the approach and blocks everything by default. Only the domains explicitly approved by the teacher are opened.
 
 A `domains.txt` file holds the allowed domains. The script resolves each one to an IP via `dig` and uses `iptables` or `ufw` to drop all other traffic. The teacher can deploy and reset the rules on student machines remotely via SSH, keeping full control without being physically at each machine.
 
-Two implementations are included — one using raw `iptables` and one using `ufw` — developed together with a classmate.
+Two implementations are included: one using raw `iptables` and one using `ufw`. Both were developed together with a classmate.
 
 **Stack:** Bash, iptables, ufw.
 
