@@ -5,6 +5,8 @@ date: 2025-11-12
 excerpt: "Builds de teclados mecânicos customizados, indo de um split handwired a um Raspberry Pi Pico com LCD e som de inicialização."
 technologies: "Python, KMK, CircuitPython, Arduino, QMK, Electronics, 3D Printing"
 permalink: /projects/keyboards-pt/
+image: "https://raw.githubusercontent.com/VitorHolandaI/teclado3/main/images/image.png"
+image_alt: "Teclado customizado de 65 teclas com Raspberry Pi Pico e display LCD"
 lang: pt
 lang_ref: keyboards
 ---
