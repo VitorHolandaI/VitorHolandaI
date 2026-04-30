@@ -5,6 +5,8 @@ date: 2024-07-09
 excerpt: "An automated bird feeder built with Arduino and C++."
 technologies: "C++, Arduino, Electronics"
 permalink: /projects/alimentador/
+image: "https://raw.githubusercontent.com/VitorHolandaI/alimentador_def/master/alimentador_principal/history/photos/lastOneModel.jpeg"
+image_alt: "Automated bird feeder built with PVC pipes and electronics"
 lang: en
 lang_ref: alimentador
 ---

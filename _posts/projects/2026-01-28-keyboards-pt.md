@@ -5,6 +5,8 @@ date: 2025-11-12
 excerpt: "Builds de teclados mecânicos customizados, indo de um split handwired a um Raspberry Pi Pico com LCD e som de inicialização."
 technologies: "Python, KMK, CircuitPython, Arduino, QMK, Electronics, 3D Printing"
 permalink: /projects/keyboards-pt/
+image: "https://raw.githubusercontent.com/VitorHolandaI/teclado3/main/images/image.png"
+image_alt: "Teclado customizado de 65 teclas com Raspberry Pi Pico e display LCD"
 lang: pt
 lang_ref: keyboards
 ---
@@ -18,6 +20,8 @@ Uma série de builds de teclados mecânicos customizados, cada um indo um pouco 
 O primeiro build foi um teclado split handwired feito quase inteiramente com peças reaproveitadas. As 60 teclas e switches azuis vieram de um teclado wireless quebrado, e o fio de cobre foi retirado do motor de uma esmerilhadeira antiga. Todas as peças estruturais foram impressas em 3D em filamento amarelo a partir de um design próprio modelado no OnShape.
 
 Com apenas um Arduino Pro Micro disponível, um split cabeado de verdade não era possível, então as duas metades foram ligadas de volta a um único controlador em layout ortolinear. O firmware roda em QMK usando o perfil `boardsource 5x12` como base.
+
+![Teclado mecanico split handwired](https://raw.githubusercontent.com/Mr-76/split_mecanico/master/Photos/img1.jpg)
 
 [GitHub Repository](https://github.com/VitorHolandaI/split_mecanico)
 

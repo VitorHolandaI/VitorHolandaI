@@ -5,6 +5,8 @@ date: 2024-07-09
 excerpt: "Um alimentador automático de pássaros feito com Arduino e C++."
 technologies: "C++, Arduino, Electronics"
 permalink: /projects/alimentador-pt/
+image: "https://raw.githubusercontent.com/VitorHolandaI/alimentador_def/master/alimentador_principal/history/photos/lastOneModel.jpeg"
+image_alt: "Alimentador automatico de passaros feito com canos PVC e eletronica"
 lang: pt
 lang_ref: alimentador
 ---

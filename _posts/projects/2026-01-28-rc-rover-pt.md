@@ -5,6 +5,8 @@ date: 2026-01-07
 excerpt: "Um rover controlado remotamente com chassi impresso em 3D, ESP32 e vídeo ao vivo transmitido por um smartphone."
 technologies: "C++, ESP32, Arduino, Nginx, 3D Printing"
 permalink: /projects/rc-rover-pt/
+image: "https://raw.githubusercontent.com/VitorHolandaI/rc-rover/master/roverPhone.jpg"
+image_alt: "RC rover com smartphone montado para video ao vivo"
 lang: pt
 lang_ref: rc-rover
 ---

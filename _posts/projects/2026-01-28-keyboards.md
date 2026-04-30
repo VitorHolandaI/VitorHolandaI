@@ -5,6 +5,8 @@ date: 2025-11-12
 excerpt: "Custom mechanical keyboard builds, from a handwired split to a Raspberry Pi Pico with LCD and startup sound."
 technologies: "Python, KMK, CircuitPython, Arduino, QMK, Electronics, 3D Printing"
 permalink: /projects/keyboards/
+image: "https://raw.githubusercontent.com/VitorHolandaI/teclado3/main/images/image.png"
+image_alt: "65-key custom keyboard with Raspberry Pi Pico and LCD display"
 lang: en
 lang_ref: keyboards
 ---
@@ -18,6 +20,8 @@ A series of custom mechanical keyboard builds, each one pushing a bit further th
 The first build was a handwired split keyboard made almost entirely from salvaged parts. The 60 keys and blue switches came from a broken wireless keyboard, and the copper wire was pulled from an old angle grinder motor. All structural parts were 3D printed in yellow filament from scratch using a custom design modeled in OnShape.
 
 With only one Arduino Pro Micro available, a true wired split wasn't possible, so the two halves are wired back to a single controller in an ortholinear layout. The firmware runs on QMK using the `boardsource 5x12` profile as a base.
+
+![Handwired split mechanical keyboard](https://raw.githubusercontent.com/Mr-76/split_mecanico/master/Photos/img1.jpg)
 
 [GitHub Repository](https://github.com/VitorHolandaI/split_mecanico)
 
