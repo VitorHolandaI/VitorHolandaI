@@ -5,6 +5,10 @@ date: 2025-05-13
 excerpt: "Um simulador de areia caindo feito com Python e Tkinter."
 technologies: "Python, Tkinter"
 permalink: /projects/sand-simulation-pt/
+image: "https://img.youtube.com/vi/potHMb-icls/hqdefault.jpg"
+image_alt: "Thumbnail do demo da simulação de areia"
+youtube_id: "potHMb-icls"
+youtube_title: "Demo da Simulação de Areia"
 lang: pt
 lang_ref: sand-simulation
 ---

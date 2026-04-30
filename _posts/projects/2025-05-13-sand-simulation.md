@@ -5,6 +5,10 @@ date: 2025-05-13
 excerpt: "A falling-sand simulator built with Python and Tkinter."
 technologies: "Python, Tkinter"
 permalink: /projects/sand-simulation/
+image: "https://img.youtube.com/vi/potHMb-icls/hqdefault.jpg"
+image_alt: "Sand simulation demo thumbnail"
+youtube_id: "potHMb-icls"
+youtube_title: "Sand Simulation demo"
 lang: en
 lang_ref: sand-simulation
 ---

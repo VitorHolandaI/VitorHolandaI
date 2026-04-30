@@ -94,6 +94,15 @@
   background: #f7f7f7;
 }
 
+.project-video iframe {
+  width: 100%;
+  display: block;
+  aspect-ratio: 16 / 9;
+  border: 1px solid #e8e8e8;
+  border-radius: 6px;
+  background: #111;
+}
+
 .project-hero figcaption {
   margin-top: 0.35rem;
   color: #666;

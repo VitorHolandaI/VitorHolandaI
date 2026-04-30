@@ -21,7 +21,20 @@ layout: default
     </nav>
   {% endif %}
 
-  {% if page.image %}
+  {% if page.youtube_id %}
+    <figure class="project-hero project-video">
+      <iframe
+        src="https://www.youtube-nocookie.com/embed/{{ page.youtube_id }}"
+        title="{{ page.youtube_title | default: page.title | escape }}"
+        loading="lazy"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        allowfullscreen>
+      </iframe>
+      {% if page.video_caption %}
+        <figcaption>{{ page.video_caption }}</figcaption>
+      {% endif %}
+    </figure>
+  {% elsif page.image %}
     {% assign image_src = page.image %}
     {% unless image_src contains "://" %}
       {% assign image_src = image_src | relative_url %}
