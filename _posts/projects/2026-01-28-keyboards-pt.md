@@ -5,8 +5,6 @@ date: 2025-11-12
 excerpt: "Builds de teclados mecânicos customizados, indo de um split handwired a um Raspberry Pi Pico com LCD e som de inicialização."
 technologies: "Python, KMK, CircuitPython, Arduino, QMK, Electronics, 3D Printing"
 permalink: /projects/keyboards-pt/
-image: "https://raw.githubusercontent.com/VitorHolandaI/teclado3/main/images/image.png"
-image_alt: "Teclado customizado de 65 teclas com Raspberry Pi Pico e display LCD"
 lang: pt
 lang_ref: keyboards
 ---
@@ -32,5 +30,7 @@ Com apenas um Arduino Pro Micro disponível, um split cabeado de verdade não er
 O build mais recente é um teclado de 65 teclas rodando num Raspberry Pi Pico com CircuitPython e firmware KMK. Tem um display LCD 16x2 que mostra a layer ativa em tempo real, e toca um jingle MP3 na inicialização.
 
 Duas layers são definidas: um layout QWERTY padrão e uma layer de funções com F1 a F12 e teclas de navegação. Há também um macro escondido na layer de funções que imprime um enorme ASCII art de um doge feito de caracteres Braille.
+
+![Teclado customizado de 65 teclas com Raspberry Pi Pico e display LCD](https://raw.githubusercontent.com/VitorHolandaI/teclado3/main/images/image.png)
 
 [GitHub Repository](https://github.com/VitorHolandaI/teclado3)

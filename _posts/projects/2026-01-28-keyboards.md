@@ -5,8 +5,6 @@ date: 2025-11-12
 excerpt: "Custom mechanical keyboard builds, from a handwired split to a Raspberry Pi Pico with LCD and startup sound."
 technologies: "Python, KMK, CircuitPython, Arduino, QMK, Electronics, 3D Printing"
 permalink: /projects/keyboards/
-image: "https://raw.githubusercontent.com/VitorHolandaI/teclado3/main/images/image.png"
-image_alt: "65-key custom keyboard with Raspberry Pi Pico and LCD display"
 lang: en
 lang_ref: keyboards
 ---
@@ -32,5 +30,7 @@ With only one Arduino Pro Micro available, a true wired split wasn't possible, s
 The latest build is a 65-key keyboard running on a Raspberry Pi Pico with CircuitPython and KMK firmware. It has a 16x2 LCD display that shows the active layer in real time, and plays an MP3 startup jingle on boot.
 
 Two layers are defined: a standard QWERTY layout and a function layer with F1 through F12 and navigation keys. There's also a hidden macro on the function layer that prints a large ASCII art doge face made of Braille block characters.
+
+![65-key custom keyboard with Raspberry Pi Pico and LCD display](https://raw.githubusercontent.com/VitorHolandaI/teclado3/main/images/image.png)
 
 [GitHub Repository](https://github.com/VitorHolandaI/teclado3)
