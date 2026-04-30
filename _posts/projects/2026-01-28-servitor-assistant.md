@@ -17,6 +17,8 @@ The assistant has a Warhammer 40k Adeptus Mechanicus personality. It talks like 
 
 Under the hood, speech is transcribed offline with Vosk, sent to a LangChain agent backed by a local Ollama model, and the response is synthesized with Piper TTS. Audio passes through SoX on the Pi for some overdrive and reverb to sell the voice effect. There's also a web chat frontend in React that streams responses via SSE and can optionally trigger the same TTS pipeline on the Pi.
 
+![Servitor Assistant web chat interface](/assets/projects/servitor-assistant-web-chat.png)
+
 The agent has access to tools through an MCP server: weather for Campina Grande, a full task manager with recurring task support backed by SQLite, and basic math. A reminder loop polls every minute and sends an audio alert to the Pi when a task comes due.
 
 The whole thing is housed inside a 3D-printed skull.

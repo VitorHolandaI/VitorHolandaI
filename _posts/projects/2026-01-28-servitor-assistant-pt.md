@@ -17,6 +17,8 @@ O assistente tem personalidade de Adeptus Mechanicus do Warhammer 40k. Ele fala 
 
 Por baixo dos panos, a fala é transcrita offline com Vosk, enviada a um agente LangChain com um modelo local Ollama, e a resposta é sintetizada com Piper TTS. O áudio passa pelo SoX no Pi para adicionar overdrive e reverb que combinam com o efeito de voz. Há também um frontend de chat web em React que faz stream das respostas via SSE e pode opcionalmente acionar o mesmo pipeline de TTS no Pi.
 
+![Interface de chat web do Servitor Assistant](/assets/projects/servitor-assistant-web-chat.png)
+
 O agente tem acesso a ferramentas via servidor MCP: clima de Campina Grande, gerenciador de tarefas completo com suporte a tarefas recorrentes em SQLite, e matemática básica. Um loop de lembretes verifica a cada minuto e envia um alerta de áudio ao Pi quando uma tarefa vence.
 
 Tudo isso está dentro de uma caveira impressa em 3D.
