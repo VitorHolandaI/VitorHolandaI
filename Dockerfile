@@ -32,5 +32,4 @@ WORKDIR /srv/jekyll
 COPY --chown=jekyll:jekyll . .
 COPY --from=pdf-builder --chown=jekyll:jekyll /data/cv-en.pdf assets/cv-en.pdf
 COPY --from=pdf-builder --chown=jekyll:jekyll /data/cv-pt.pdf assets/cv-pt.pdf
-RUN rm -f Gemfile.lock
 RUN bundle install
