@@ -4,7 +4,9 @@ title: Currículo
 permalink: /cv-pt/
 ---
 
+<div class="cv-no-print" markdown="1">
 🇺🇸 [English version](/cv/)
+</div>
 
 ## Vitor Holanda
 
@@ -136,8 +138,13 @@ Universidade Federal de Campina Grande
 
 ---
 
+<div class="cv-no-print" markdown="1">
 ### 📄 Download
-[Download Currículo (PDF – PT)](/assets/cv-pt.pdf)
+
+<button type="button" class="cv-print-btn" onclick="window.print()">Salvar como PDF</button>
+
+Dica: no diálogo de impressão do navegador, escolha "Salvar como PDF" e desabilite cabeçalhos/rodapés para um resultado limpo.
 
 ### Projetos
 [Ver meus projetos](https://bitssand.blog/projects/)
+</div>
