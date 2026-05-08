@@ -27,9 +27,12 @@ RUN awk 'NR==1&&/^---$/{f=1;next} f&&/^---$/{f=0;next} f{next} /^---$/{print"";p
     -o cv-pt.pdf
 
 # Stage 2: Build Jekyll site with the generated PDFs available as static assets
-FROM jekyll/jekyll:latest
+FROM ruby:3.3-slim
 WORKDIR /srv/jekyll
-COPY --chown=jekyll:jekyll . .
-COPY --from=pdf-builder --chown=jekyll:jekyll /data/cv-en.pdf assets/cv-en.pdf
-COPY --from=pdf-builder --chown=jekyll:jekyll /data/cv-pt.pdf assets/cv-pt.pdf
+RUN apt-get update && apt-get install -y --no-install-recommends build-essential git && rm -rf /var/lib/apt/lists/*
+COPY Gemfile Gemfile.lock ./
 RUN bundle install
+COPY . .
+COPY --from=pdf-builder /data/cv-en.pdf assets/cv-en.pdf
+COPY --from=pdf-builder /data/cv-pt.pdf assets/cv-pt.pdf
+EXPOSE 4000
