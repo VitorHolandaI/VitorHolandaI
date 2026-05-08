@@ -15,6 +15,12 @@ gem "minima", "~> 2.5"
 gem "github-pages", group: :jekyll_plugins
 # Pin nokogiri to a patched version (libxml2 CVEs, CSS regex backtracking, XSLT memory leak, xmlC14NExecute)
 gem "nokogiri", ">= 1.19.3"
+# Security pins for transitive deps flagged by Dependabot
+gem "addressable", ">= 2.8.8"          # ReDoS in templates
+gem "activesupport", ">= 8.0.2"        # ReDoS number_to_delimited, DoS number helpers, XSS SafeBuffer#%
+gem "faraday", ">= 2.13.1"             # SSRF via protocol-relative URL
+gem "uri", ">= 1.0.4"                  # CVE-2025-27221 credential leakage bypass
+gem "rexml", ">= 3.4.1"                # DoS on malformed XML
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
