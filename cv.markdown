@@ -15,10 +15,19 @@ Contact: vitor.holanda@ccc.ufcg.edu.br · bartmoss77@tutanota.com
 [GitHub](https://github.com/VitorHolandaI) · [LinkedIn](https://www.linkedin.com/in/vitor-holanda-465b20259/) · [Blog](https://bitssand.blog/) · [Projetos](https://bitssand.blog/projects/)
 
 
+### Technical Skills & Technologies
+
+- **Operating Systems:** Linux, FreeBSD
+- **Containers & DevOps:** Docker, Podman, Git
+- **Networking & Systems:** Network administration, system administration, virtualization (KVM, Proxmox)
+- **Programming & Development:** Python (Flask, FastAPI), C++, Java, Haskell, Prolog, React
+- **Embedded Systems & Hardware:** SBCs, microcontrollers, embedded programming
+
+
 ### Education
 
 ---
-**BSc in Computer Science**  
+**BSc in Computer Science**
 Universidade Federal de Campina Grande
 2020 – 2026
 
@@ -28,6 +37,11 @@ Universidade Federal de Campina Grande
 ---
 
 ### **System Administrator / Systems Analyst** – SPLab, UFCG (Part-time) Nov 2023 - April 2025
+
+Sole sysadmin responsible for the full IT infrastructure of a ~20-room
+building (~10 faculty offices plus postgraduate research projects and
+university initiatives), covering servers, networking, virtualization,
+firewalling, monitoring, and end-user support.
 
 #### Infrastructure & Virtualization
 - Designed and implemented infrastructure to host services for the laboratory community.
@@ -62,7 +76,7 @@ Universidade Federal de Campina Grande
 - Mitigated internet downtime during power failures by extending UPS capacity for a centralized university internet concentrator, enabling approximately **1 hour of continued connectivity**.
 
 #### Automation, Containers & Platforms
-- Deployed and managed services using **Docker** for containerized workloads and service isolation.
+- Deployed and managed services using **Docker** for containerized workloads and service isolation; also explored **Podman** as a daemonless alternative.
 
 #### General Systems Administration
 - Performed general system administration tasks, including:
@@ -70,8 +84,14 @@ Universidade Federal de Campina Grande
   - Maintenance of notebooks, desktops, printers, projectors, UPS units, and power supplies
 
 
-### **Smart Agents & Research Developer** – LSD-DELL, UFCG  
+### **Software Engineer & Applied Researcher (LLM Systems)** – LSD-DELL, UFCG
 *April 2025 – Present (Part-time)*
+
+Part of a cross-functional team building LLM agents for Dell customer
+support. Hybrid engineering + applied research role: development in
+Agile sprints with peer code review via Pull Requests and integration
+through Dell's internal CI/CD pipeline, alongside benchmarking, model
+evaluation, and literature-driven experimentation.
 
 #### LLM Agents & Applied Research
 - Assisted in the development of **smart agents** aimed at improving Dell customer support workflows.
@@ -125,15 +145,6 @@ Universidade Federal de Campina Grande
 - Developed a **Bash-based access control solution** using `iptables` and `dig` to enforce a **custom domain whitelist/blacklist**, limiting network access to approved domains during assessments.
 - Actively supported day-to-day maintenance activities across multiple computer labs, ensuring system availability and reliability.
 
-
-
-### **Technical Skills & Technologies**
-
-- **Operating Systems:** Linux, FreeBSD
-- **Containers & DevOps:** Docker, Git
-- **Networking & Systems:** Network administration, system administration, virtualization (KVM, Proxmox)
-- **Programming & Development:** Python (Flask, FastAPI), C++, Java, Haskell, Prolog, React
-- **Embedded Systems & Hardware:** SBCs, microcontrollers, embedded programming
 
 
 ---
