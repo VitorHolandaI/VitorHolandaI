@@ -15,6 +15,15 @@ Contato: vitor.holanda@ccc.ufcg.edu.br · bartmoss77@tutanota.com
 [GitHub](https://github.com/VitorHolandaI) · [LinkedIn](https://www.linkedin.com/in/vitor-holanda-465b20259/) · [Blog](https://bitssand.blog/) · [Projetos](https://bitssand.blog/projects/)
 
 
+### Habilidades Técnicas & Tecnologias
+
+- **Sistemas Operacionais:** Linux, FreeBSD
+- **Containers & DevOps:** Docker, Podman, Git
+- **Redes & Sistemas:** Administração de redes, administração de sistemas, virtualização (KVM, Proxmox)
+- **Programação & Desenvolvimento:** Python (Flask, FastAPI), C++, Java, Haskell, Prolog, React
+- **Sistemas Embarcados & Hardware:** SBCs, microcontroladores, programação embarcada
+
+
 ### Formação
 
 ---
@@ -28,6 +37,12 @@ Universidade Federal de Campina Grande
 ---
 
 ### **Administrador de Sistemas / Analista de Sistemas** – SPLab, UFCG (Meio período) Nov 2023 – Abril 2025
+
+Único administrador de sistemas responsável pela infraestrutura de TI
+de um bloco com ~20 salas (~10 salas de professores, demais ocupadas
+por projetos de pós-graduação e iniciativas universitárias), cobrindo
+servidores, redes, virtualização, firewall, monitoramento e suporte
+aos usuários.
 
 #### Infraestrutura & Virtualização
 - Projetei e implantei infraestrutura para hospedar serviços para a comunidade do laboratório.
@@ -62,7 +77,7 @@ Universidade Federal de Campina Grande
 - Mitigei quedas de internet durante falhas de energia estendendo a capacidade do UPS para o concentrador de internet da universidade, garantindo aproximadamente **1 hora de conectividade contínua**.
 
 #### Automação, Containers & Plataformas
-- Implantei e gerenciei serviços usando **Docker** para cargas de trabalho containerizadas e isolamento de serviços.
+- Implantei e gerenciei serviços usando **Docker** para cargas de trabalho containerizadas e isolamento de serviços; também explorei **Podman** como alternativa sem daemon.
 
 #### Administração Geral de Sistemas
 - Realizei tarefas gerais de administração de sistemas, incluindo:
@@ -70,8 +85,15 @@ Universidade Federal de Campina Grande
   - Manutenção de notebooks, desktops, impressoras, projetores, no-breaks e fontes de alimentação
 
 
-### **Desenvolvedor de Agentes Inteligentes & Pesquisa** – LSD-DELL, UFCG
+### **Engenheiro de Software & Pesquisador Aplicado (Sistemas LLM)** – LSD-DELL, UFCG
 *Abril 2025 – Presente (Meio período)*
+
+Parte de uma equipe multifuncional construindo agentes LLM para o
+atendimento ao cliente da Dell. Função híbrida de engenharia +
+pesquisa aplicada: desenvolvimento em sprints Ágeis com revisão de
+código por pares via Pull Requests e integração através do pipeline
+interno de CI/CD da Dell, além de benchmarking, avaliação de modelos
+e experimentação baseada em literatura.
 
 #### Agentes LLM & Pesquisa Aplicada
 - Auxiliei no desenvolvimento de **agentes inteligentes** para melhorar fluxos de atendimento ao cliente da Dell.
@@ -125,15 +147,6 @@ Universidade Federal de Campina Grande
 - Desenvolvi uma **solução de controle de acesso em Bash** usando `iptables` e `dig` para impor uma **lista de permissão/bloqueio de domínios**, limitando o acesso à rede a domínios aprovados durante avaliações.
 - Apoiei ativamente atividades de manutenção cotidiana em múltiplos laboratórios de informática, garantindo disponibilidade e confiabilidade dos sistemas.
 
-
-
-### **Habilidades Técnicas & Tecnologias**
-
-- **Sistemas Operacionais:** Linux, FreeBSD
-- **Containers & DevOps:** Docker, Git
-- **Redes & Sistemas:** Administração de redes, administração de sistemas, virtualização (KVM, Proxmox)
-- **Programação & Desenvolvimento:** Python (Flask, FastAPI), C++, Java, Haskell, Prolog, React
-- **Sistemas Embarcados & Hardware:** SBCs, microcontroladores, programação embarcada
 
 
 ---
