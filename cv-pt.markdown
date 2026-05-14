@@ -27,9 +27,15 @@ Contato: vitor.holanda@ccc.ufcg.edu.br · bartmoss77@tutanota.com
 ### Formação
 
 ---
-**Bacharelado em Ciência da Computação**
+**Bacharelado em Ciência da Computação** — Concluído
 Universidade Federal de Campina Grande
 2020 – 2026
+
+
+### Idiomas
+
+- **Português:** Nativo
+- **Inglês:** Avançado
 
 
 ### Experiência
@@ -86,7 +92,7 @@ aos usuários.
 
 
 ### **Engenheiro de Software & Pesquisador Aplicado (Sistemas LLM)** – LSD-DELL, UFCG
-*Abril 2025 – Presente (Meio período)*
+*Abril 2025 – Abril 2026 (Meio período)*
 
 Parte de uma equipe multifuncional construindo agentes LLM para o
 atendimento ao cliente da Dell. Função híbrida de engenharia +
