@@ -18,7 +18,7 @@ Contact: vitor.holanda@ccc.ufcg.edu.br · bartmoss77@tutanota.com
 ### Technical Skills & Technologies
 
 - **Operating Systems:** Linux, FreeBSD
-- **Containers & DevOps:** Docker, Podman, Git
+- **Containers & DevOps:** Docker, Podman, Git, Kubernetes (academic use: app deployment and load testing)
 - **Networking & Systems:** Network administration, system administration, virtualization (KVM, Proxmox)
 - **Programming & Development:** Python (Flask, FastAPI), C++, Java, Haskell, Prolog, React
 - **Embedded Systems & Hardware:** SBCs, microcontrollers, embedded programming
@@ -30,6 +30,8 @@ Contact: vitor.holanda@ccc.ufcg.edu.br · bartmoss77@tutanota.com
 **BSc in Computer Science** — Graduated
 Universidade Federal de Campina Grande
 2020 – 2026
+
+*Relevant coursework:* **Infrastructure Operations** — deployed applications on **Kubernetes** and performed **load testing** as part of course projects.
 
 
 ### Languages

@@ -18,7 +18,7 @@ Contato: vitor.holanda@ccc.ufcg.edu.br · bartmoss77@tutanota.com
 ### Habilidades Técnicas & Tecnologias
 
 - **Sistemas Operacionais:** Linux, FreeBSD
-- **Containers & DevOps:** Docker, Podman, Git
+- **Containers & DevOps:** Docker, Podman, Git, Kubernetes (uso acadêmico: deploy de aplicações e testes de carga)
 - **Redes & Sistemas:** Administração de redes, administração de sistemas, virtualização (KVM, Proxmox)
 - **Programação & Desenvolvimento:** Python (Flask, FastAPI), C++, Java, Haskell, Prolog, React
 - **Sistemas Embarcados & Hardware:** SBCs, microcontroladores, programação embarcada
@@ -30,6 +30,8 @@ Contato: vitor.holanda@ccc.ufcg.edu.br · bartmoss77@tutanota.com
 **Bacharelado em Ciência da Computação** — Concluído
 Universidade Federal de Campina Grande
 2020 – 2026
+
+*Disciplina relevante:* **Operação de Infraestrutura** — deploy de aplicações em **Kubernetes** e **testes de carga** como parte dos projetos da disciplina.
 
 
 ### Idiomas
