@@ -27,9 +27,15 @@ Contact: vitor.holanda@ccc.ufcg.edu.br · bartmoss77@tutanota.com
 ### Education
 
 ---
-**BSc in Computer Science**
+**BSc in Computer Science** — Graduated
 Universidade Federal de Campina Grande
 2020 – 2026
+
+
+### Languages
+
+- **Portuguese:** Native
+- **English:** Advanced
 
 
 ### Experience
@@ -85,7 +91,7 @@ firewalling, monitoring, and end-user support.
 
 
 ### **Software Engineer & Applied Researcher (LLM Systems)** – LSD-DELL, UFCG
-*April 2025 – Present (Part-time)*
+*April 2025 – April 2026 (Part-time)*
 
 Part of a cross-functional team building LLM agents for Dell customer
 support. Hybrid engineering + applied research role: development in
