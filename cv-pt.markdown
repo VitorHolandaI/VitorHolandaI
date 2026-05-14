@@ -61,6 +61,7 @@ aos usuários.
 - Implantei um servidor de backup customizado com seis drives de 2,5" em **RAID 10**, montados em um **suporte impresso em 3D**, garantindo alta redundância e integridade dos dados.
 
 #### Redes & Conectividade
+- Gerenciei toda a **stack de DNS** do laboratório, incluindo zonas internas e resolução para serviços e VMs do lab.
 - Simulei e validei topologias de rede usando **Cisco Packet Tracer**.
 - Padronizei e reorganizei a infraestrutura do rack de servidores, incluindo **cabeamento estruturado** com arquitetura em cascata, melhorando o design de rede, throughput e manutenibilidade.
 - Atualizei a infraestrutura de rede de **links instáveis de 100 Mb/s para conectividade estável de 1 Gb/s**, permitindo utilização plena da banda disponível.
@@ -78,17 +79,20 @@ aos usuários.
 
 #### Monitoramento, Gestão de Ativos & Continuidade de Energia
 - Implantei e gerenciei sistemas de monitoramento, incluindo **Zabbix**, **Checkmk**, **UniFi Manager** e ferramentas de gerenciamento de virtualização.
-- Implementei **rastreamento de ativos** mantendo inventário de números de série para identificar e gerenciar equipamentos do laboratório.
+- Implementei **rastreamento de ativos e controle patrimonial** mantendo inventário de números de série e plaquetas de patrimônio da universidade, dando suporte a auditorias e identificação de equipamentos do laboratório.
 - Desenvolvi um **dashboard de monitoramento** (Python, HTML, CSS) para acompanhar o **status de no-breaks (UPS)** durante quedas de energia.
 - Mitigei quedas de internet durante falhas de energia estendendo a capacidade do UPS para o concentrador de internet da universidade, garantindo aproximadamente **1 hora de conectividade contínua**.
 
 #### Automação, Containers & Plataformas
 - Implantei e gerenciei serviços usando **Docker** para cargas de trabalho containerizadas e isolamento de serviços; também explorei **Podman** como alternativa sem daemon.
 
-#### Administração Geral de Sistemas
+#### Administração Geral de Sistemas & Suporte ao Usuário
 - Realizei tarefas gerais de administração de sistemas, incluindo:
-  - Planejamento orçamentário e aquisição de equipamentos para o laboratório
+  - **Planejamento orçamentário, cotação com fornecedores e aquisição** de equipamentos de TI para o laboratório
+  - Elaboração de especificações técnicas e comparativos de preço para apoiar decisões de compra
   - Manutenção de notebooks, desktops, impressoras, projetores, no-breaks e fontes de alimentação
+- Prestei **suporte direto ao usuário final** para docentes e membros do laboratório: instalação de software, troubleshooting de PCs, troca de projetores e montagem/desmontagem de equipamentos in loco.
+- Diagnostiquei e **consertei um DVR quebrado** recebido sem funcionamento, restaurando-o à operação plena e evitando custo de substituição.
 
 
 ### **Engenheiro de Software & Pesquisador Aplicado (Sistemas LLM)** – LSD-DELL, UFCG

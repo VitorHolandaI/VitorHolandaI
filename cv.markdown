@@ -60,6 +60,7 @@ firewalling, monitoring, and end-user support.
 - Deployed a custom backup server using six 2.5" drives in **RAID 10**, mounted in a **custom 3D-printed drive holder**, ensuring high redundancy and data integrity.
 
 #### Networking & Connectivity
+- Managed the laboratory's full **DNS stack**, including internal zones and resolution for lab services and VMs.
 - Simulated and validated network topologies using **Cisco Packet Tracer**.
 - Standardized and reorganized server rack infrastructure, including **structured cabling** with a cascading architecture, improving network design, throughput, and maintainability.
 - Upgraded network infrastructure from inconsistent **100 Mb/s links to stable 1 Gb/s connectivity**, enabling full utilization of available bandwidth.
@@ -77,17 +78,20 @@ firewalling, monitoring, and end-user support.
 
 #### Monitoring, Asset Management & Power Continuity
 - Deployed and managed monitoring systems, including **Zabbix**, **Checkmk**, **UniFi Manager**, and virtualization management tools.
-- Implemented **asset tracking** by maintaining an inventory of system serial numbers to identify and manage laboratory-owned equipment.
+- Implemented **asset tracking and property accounting (patrimônio)** by maintaining an inventory of serial numbers and university asset tags, supporting audits and identification of laboratory-owned equipment.
 - Developed a **monitoring dashboard** (Python, HTML, CSS) to track **UPS system status** during power outages.
 - Mitigated internet downtime during power failures by extending UPS capacity for a centralized university internet concentrator, enabling approximately **1 hour of continued connectivity**.
 
 #### Automation, Containers & Platforms
 - Deployed and managed services using **Docker** for containerized workloads and service isolation; also explored **Podman** as a daemonless alternative.
 
-#### General Systems Administration
+#### General Systems Administration & End-User Support
 - Performed general system administration tasks, including:
-  - Budget planning and procurement of laboratory equipment
+  - **Budget planning, vendor quotations, and procurement** of IT equipment for the laboratory
+  - Preparation of technical specifications and price comparisons to support purchase decisions
   - Maintenance of notebooks, desktops, printers, projectors, UPS units, and power supplies
+- Provided **hands-on end-user support** for faculty and lab members: software installation, PC troubleshooting, projector swaps, and on-site equipment setup/teardown.
+- Diagnosed and **repaired a broken DVR** received non-functional, restoring it to working condition and avoiding replacement cost.
 
 
 ### **Software Engineer & Applied Researcher (LLM Systems)** – LSD-DELL, UFCG
