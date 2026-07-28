@@ -1,0 +1,9 @@
+.bundle
+.git
+.github
+.jekyll-cache
+_site
+_posts/_site
+Session.vim
+text.txt
+vendor
