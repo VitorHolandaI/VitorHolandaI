@@ -210,10 +210,10 @@ h1.post-title {
    -------------------------------------------------------------------------- */
 code, pre, kbd, samp { font-family: var(--np-mono); }
 
-code.highlighter-rouge,
-p > code,
-li > code,
-td > code {
+/* `code` simples em vez de enumerar pai: enumerar deixava de fora código
+   inline dentro de citação, título ou lista aninhada, que continuava #eef.
+   O reset de `pre code` logo abaixo impede que isso vaze pro bloco. */
+code {
   background: var(--np-panel);
   border: 1px solid var(--np-hairline);
   border-radius: 2px;
@@ -237,7 +237,7 @@ pre {
   overflow-x: auto;
 }
 
-pre > code {
+pre code, pre > code, .highlight code {
   background: none;
   border: 0;
   padding: 0;
@@ -512,3 +512,53 @@ hr,
   table th { background: #f0f0f0 !important; color: #000 !important; }
   table th, table td { border: 1px solid #bbb !important; }
 }
+
+/* ==========================================================================
+   Correções de especificidade.
+
+   O minima e o main.scss cravam fundo claro com seletores mais específicos do
+   que os que este arquivo usava. Carregar depois NÃO basta: a regra perdedora
+   continua perdendo. Cada caso abaixo é disso, e a lista veio de varrer o
+   main.css gerado atrás de `background: #fff/#eef/#f7f7f7/...`.
+
+   Ao adicionar regra nova aqui, confira o seletor do lado claro antes.
+   ========================================================================== */
+
+/* O pior: `.highlighter-rouge .highlight` (0,2,0) vencia `div.highlight`
+   (0,1,1), então todo bloco de código ficava #eef com texto claro em cima. */
+.highlighter-rouge .highlight,
+div.highlighter-rouge div.highlight {
+  background: var(--np-void);
+}
+
+/* Chips de diff e erro do rouge: fundo claro com texto preto cravado. */
+.highlight .err,
+.highlight .gd, .highlight .gd .x,
+.highlight .gi, .highlight .gi .x {
+  background-color: transparent;
+}
+.highlight .err,
+.highlight .gd, .highlight .gd .x { color: #c56b6b; }
+.highlight .gi, .highlight .gi .x { color: #a8b58c; }
+
+/* Pílulas: as regras claras miram o `span` filho (0,1,1); as minhas miravam
+   só o contêiner (0,1,0), então a pílula continuava clara. */
+.project-card__tech span,
+.github-repo-card__meta span,
+.github-activity-row__facts span {
+  border-color: var(--np-hairline-2);
+  background: var(--np-panel);
+  color: var(--np-text-dim);
+}
+
+/* Mesma história com imagem: o fundo claro está no `img`, não no contêiner.
+   Aparece em qualquer PNG com transparência. */
+.project-hero img,
+.project-card__media img,
+.github-stats-cards img {
+  background: var(--np-panel);
+  border-color: var(--np-hairline);
+}
+
+/* A faixa zebrada pinta o `tr`; eu só tinha pintado o `td`. */
+table tr:nth-child(even) { background-color: transparent; }
