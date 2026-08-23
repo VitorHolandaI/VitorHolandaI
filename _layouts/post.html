@@ -1,0 +1,47 @@
+---
+layout: default
+---
+{%- comment -%}
+  Cópia do _layouts/post.html do minima 2.5.1, com o seletor de idioma que já
+  existia só em _layouts/project.html. Posts sem `lang_ref` renderizam igual
+  ao original, então os posts antigos não mudam.
+{%- endcomment -%}
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+  <header class="post-header">
+    <h1 class="post-title p-name" itemprop="name headline">{{ page.title | escape }}</h1>
+    <p class="post-meta">
+      <time class="dt-published" datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">
+        {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        {{ page.date | date: date_format }}
+      </time>
+      {%- if page.author -%}
+        • <span itemprop="author" itemscope itemtype="http://schema.org/Person"><span class="p-author h-card" itemprop="name">{{ page.author }}</span></span>
+      {%- endif -%}</p>
+  </header>
+
+  {% assign alt_posts = site.posts | where: "lang_ref", page.lang_ref %}
+  {% if page.lang_ref and alt_posts.size > 1 %}
+    <nav class="project-language-switcher" aria-label="Idioma do post">
+      {% for p in alt_posts %}
+        {% unless p.url == page.url %}
+          {% if p.lang == "pt" %}
+            <a href="{{ p.url | relative_url }}" lang="pt-BR">Versão em Português</a>
+          {% elsif p.lang == "en" %}
+            <a href="{{ p.url | relative_url }}" lang="en">English version</a>
+          {% endif %}
+        {% endunless %}
+      {% endfor %}
+    </nav>
+  {% endif %}
+
+  <div class="post-content e-content" itemprop="articleBody">
+    {{ content }}
+  </div>
+
+  {%- if site.disqus.shortname -%}
+    {%- include disqus_comments.html -%}
+  {%- endif -%}
+
+  <a class="u-url" href="{{ page.url | relative_url }}" hidden></a>
+</article>

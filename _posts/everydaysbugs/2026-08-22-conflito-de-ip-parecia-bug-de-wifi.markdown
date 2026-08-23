@@ -2,7 +2,9 @@
 layout: post
 title:  "bem deboa mas ai o ip estatico me fud30"
 date:   2026-08-22 18:30:00 -0300
-categories: jekyll update
+categories: everydaysbugs
+lang: pt
+lang_ref: conflito-de-ip
 ---
 
 > Resumo: passei a tarde investigando um bug de driver de wifi que não existia.
@@ -376,8 +378,9 @@ Ou seja: tu manda o probe, o AP devolve o teu próprio probe pra ti, e tu conclu
 que tem conflito onde não tem. Ligar isso por default quebraria máquina em rede
 que funciona perfeitamente. O motivo é esse, não os 7 segundos.
 
-Conclusão: liga. O custo é café, e os itens 1 e 2 continuam sendo a correção de
-verdade.
+Conclusão: liga se quiser. O custo é café, e agora tu sabe o que tá comprando
+por esse café. Eu vou ligar aqui. Mas não confunde seguro com conserto: os itens
+1 e 2 continuam sendo a correção de verdade.
 
 ---
 

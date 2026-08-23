@@ -36,6 +36,7 @@ github_username:  VitorHolandaI
 header_pages:
   - about.markdown
   - posts.markdown
+  - everydaysbugs.markdown
   - projects.markdown
   - github.markdown
   - cv.markdown
