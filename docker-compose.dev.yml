@@ -1,0 +1,43 @@
+# Dev only: live-reloading Jekyll served straight off the source tree.
+# Not the deploy path — docker-compose.yml builds the hardened static nginx
+# image. Run with: docker compose -f docker-compose.dev.yml up
+#
+# Reuses the Dockerfile's `site-builder` stage so the bundle is already
+# installed. That stage runs `bundle config set deployment true`, which puts
+# the gems in ./vendor/bundle — inside the tree we bind-mount over. The named
+# volume below shadows ./vendor with the image's copy so they stay reachable.
+# After changing the Gemfile: `docker compose -f docker-compose.dev.yml down -v`
+# to drop the stale volume, then rebuild.
+services:
+  jekyll-dev:
+    build:
+      context: .
+      target: site-builder
+    image: vitorholanda/website:dev
+    container_name: vitor_website_dev
+    user: "1000:1000"
+    working_dir: /srv/jekyll
+    environment:
+      # bundler and jekyll both want a writable HOME; uid 1000 has none here
+      HOME: /tmp
+    volumes:
+      - .:/srv/jekyll
+      - dev-vendor:/srv/jekyll/vendor
+    ports:
+      - "127.0.0.1:4001:4000"
+      # livereload websocket the injected script connects back to
+      - "127.0.0.1:35729:35729"
+    # Build into /tmp/dev-site so the container never writes into the repo.
+    # (/tmp/site already exists from the build stage, root-owned — uid 1000
+    # cannot write there.)
+    # force_polling: inotify is unreliable across the bind mount for editors
+    # that save by atomic rename.
+    command: >
+      bundle exec jekyll serve
+      --host 0.0.0.0
+      --destination /tmp/dev-site
+      --livereload
+      --force_polling
+
+volumes:
+  dev-vendor:

@@ -64,6 +64,7 @@ exclude:
   - Gemfile.lock
   - README.md
   - Session.vim
+  - docker-compose.dev.yml
   - docker-compose.yml
   - nginx-default.conf
   - nginx-security-headers.conf
