@@ -1,0 +1,514 @@
+/* ==========================================================================
+   neuropunk: tema experimental, carregado só quando site.experimental_theme
+   está setado (ver _config.dev.yml). Sobrepõe o minima, que é claro.
+
+   Referência é a prosa do Gibson, não o cyberpunk de pôster: o céu cor de
+   televisão sintonizada num canal morto. Preto fosco, grão de estática,
+   vapor de sódio como único acento quente, e o azul frio da chuva de Chiba
+   nos links. Sem magenta, sem glow, sem scanline.
+   ========================================================================== */
+
+:root {
+  /* canal morto */
+  --np-void:      #08090a;
+  --np-ground:    #0f1113;
+  --np-panel:     #15181b;
+  --np-hairline:  #23282c;
+  --np-hairline-2:#2e3439;
+
+  /* papel encardido, nunca branco puro */
+  --np-text:      #c4c0b6;
+  --np-text-dim:  #8b877d;
+  --np-static:    #5d615f;
+
+  /* poste de sódio: o único calor da rua inteira */
+  --np-sodium:    #e0952f;
+  --np-sodium-dim:#8c5d1f;
+
+  /* chuva */
+  --np-ice:       #8fb0bd;
+  --np-ice-dim:   #5c7681;
+
+  --np-mono: "IBM Plex Mono", "SFMono-Regular", Menlo, Consolas, monospace;
+  --np-body: "Spectral", Georgia, "Times New Roman", serif;
+}
+
+/* --------------------------------------------------------------------------
+   O grão. Turbulência SVG em opacidade baixa, fixa na viewport, com uma
+   deriva lenta: canal morto não é estático parado, ele respira.
+   -------------------------------------------------------------------------- */
+body::before {
+  content: "";
+  position: fixed;
+  inset: -50%;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)'/%3E%3C/svg%3E");
+  animation: np-drift 8s steps(6) infinite;
+}
+
+@keyframes np-drift {
+  0%   { transform: translate(0, 0); }
+  20%  { transform: translate(-3%, 2%); }
+  40%  { transform: translate(2%, -3%); }
+  60%  { transform: translate(-2%, -2%); }
+  80%  { transform: translate(3%, 1%); }
+  100% { transform: translate(0, 0); }
+}
+
+/* vinheta: a rua some nas bordas */
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background: radial-gradient(ellipse at 50% 0%, transparent 45%, rgba(0,0,0,0.55) 100%);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
+}
+
+/* --------------------------------------------------------------------------
+   Base
+   -------------------------------------------------------------------------- */
+html { background: var(--np-void); }
+
+body {
+  background: var(--np-ground);
+  color: var(--np-text);
+  font-family: var(--np-body);
+  font-size: 17px;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* tudo que é conteúdo fica acima do grão */
+.site-header,
+.page-content,
+.site-footer { position: relative; z-index: 1; }
+
+::selection { background: var(--np-sodium); color: var(--np-void); }
+
+a {
+  color: var(--np-ice);
+  text-decoration: underline;
+  text-decoration-color: var(--np-ice-dim);
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+  transition: color 120ms linear, text-decoration-color 120ms linear;
+}
+a:hover,
+a:focus-visible {
+  color: var(--np-sodium);
+  text-decoration-color: var(--np-sodium);
+}
+
+/* --------------------------------------------------------------------------
+   Cabeçalho: barra de console, não menu de blog
+   -------------------------------------------------------------------------- */
+.site-header {
+  background: rgba(10, 11, 13, 0.82);
+  backdrop-filter: blur(6px);
+  border-top: none;
+  border-bottom: 1px solid var(--np-hairline);
+}
+
+.site-title,
+.site-title:visited {
+  font-family: var(--np-mono);
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--np-text);
+  text-decoration: none;
+}
+.site-title:hover { color: var(--np-sodium); }
+
+.site-nav .page-link,
+.site-nav .page-link:visited {
+  font-family: var(--np-mono);
+  font-size: 0.76rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--np-text-dim);
+  text-decoration: none;
+}
+.site-nav .page-link:hover { color: var(--np-sodium); }
+
+.site-nav { background: transparent; border: none; }
+
+@media screen and (max-width: 600px) {
+  .site-nav {
+    background: var(--np-panel);
+    border: 1px solid var(--np-hairline);
+    border-radius: 2px;
+  }
+  .site-nav .menu-icon > svg path { fill: var(--np-text-dim); }
+}
+
+/* --------------------------------------------------------------------------
+   Títulos: cabeçalho de capítulo batido a máquina
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--np-mono);
+  font-weight: 600;
+  color: var(--np-text);
+  letter-spacing: 0.01em;
+  line-height: 1.25;
+}
+
+.post-title,
+.post-list > li > h2 > a,
+h1.post-title {
+  font-size: 2.1rem;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.post-content h2 {
+  margin-top: 2.8rem;
+  padding-bottom: 0.4rem;
+  font-size: 1.35rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border-bottom: 1px solid var(--np-hairline);
+}
+
+/* a marca de sódio na margem: a única luz acesa da quadra */
+.post-content h2::before {
+  content: "";
+  display: inline-block;
+  width: 3px;
+  height: 0.85em;
+  margin-right: 0.6em;
+  vertical-align: -0.05em;
+  background: var(--np-sodium);
+}
+
+.post-content h3 {
+  margin-top: 2rem;
+  font-size: 1.05rem;
+  color: var(--np-sodium);
+  letter-spacing: 0.04em;
+}
+
+.post-meta {
+  font-family: var(--np-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--np-static);
+}
+
+/* --------------------------------------------------------------------------
+   Código: o terminal é o único lugar limpo do prédio
+   -------------------------------------------------------------------------- */
+code, pre, kbd, samp { font-family: var(--np-mono); }
+
+code.highlighter-rouge,
+p > code,
+li > code,
+td > code {
+  background: var(--np-panel);
+  border: 1px solid var(--np-hairline);
+  border-radius: 2px;
+  padding: 0.1em 0.35em;
+  font-size: 0.85em;
+  color: var(--np-sodium);
+}
+
+pre, div.highlight, figure.highlight {
+  background: var(--np-void);
+  border: 1px solid var(--np-hairline);
+  border-left: 2px solid var(--np-sodium-dim);
+  border-radius: 0;
+  color: var(--np-text);
+}
+
+pre {
+  padding: 1rem 1.1rem;
+  font-size: 0.82rem;
+  line-height: 1.6;
+  overflow-x: auto;
+}
+
+pre > code {
+  background: none;
+  border: 0;
+  padding: 0;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* rouge, em tons de rua molhada: sem arco-íris */
+.highlight .c, .highlight .c1, .highlight .cm { color: var(--np-static); font-style: italic; }
+.highlight .k, .highlight .kd, .highlight .kn { color: var(--np-ice); }
+.highlight .s, .highlight .s1, .highlight .s2 { color: #a8b58c; }
+.highlight .nv, .highlight .vg { color: var(--np-sodium); }
+.highlight .nb, .highlight .nf { color: var(--np-text); }
+.highlight .mi, .highlight .mf { color: #c9a26b; }
+.highlight .gp { color: var(--np-sodium-dim); }
+
+/* --------------------------------------------------------------------------
+   Tabelas: grade fina, como leitura de instrumento
+   -------------------------------------------------------------------------- */
+table {
+  display: block;
+  overflow-x: auto;
+  width: 100%;
+  border: 1px solid var(--np-hairline);
+  border-collapse: collapse;
+  background: transparent;
+  color: var(--np-text);
+  font-size: 0.9rem;
+}
+
+table th {
+  background: var(--np-panel);
+  border: 1px solid var(--np-hairline);
+  border-bottom: 1px solid var(--np-sodium-dim);
+  font-family: var(--np-mono);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--np-text-dim);
+  text-align: left;
+  padding: 0.6rem 0.75rem;
+}
+
+table td {
+  border: 1px solid var(--np-hairline);
+  padding: 0.6rem 0.75rem;
+  vertical-align: top;
+}
+
+table tr:nth-child(even) td { background: rgba(255, 255, 255, 0.012); }
+
+/* --------------------------------------------------------------------------
+   Citação: voz de outro alguém, mais baixa
+   -------------------------------------------------------------------------- */
+blockquote {
+  border-left: 2px solid var(--np-sodium-dim);
+  background: linear-gradient(90deg, rgba(224, 149, 47, 0.045), transparent 60%);
+  color: var(--np-text-dim);
+  font-style: italic;
+  letter-spacing: 0;
+  padding: 0.65rem 0 0.65rem 1.1rem;
+}
+blockquote > :last-child { margin-bottom: 0; }
+blockquote strong { color: var(--np-text); }
+
+strong { color: #ddd8cc; font-weight: 600; }
+
+/* régua: interferência, não linha */
+hr,
+.post-content hr {
+  height: 1px;
+  border: 0;
+  background: repeating-linear-gradient(
+    90deg,
+    var(--np-hairline-2) 0 3px,
+    transparent 3px 8px
+  );
+  margin: 3rem 0;
+}
+
+/* --------------------------------------------------------------------------
+   Listas de post
+   -------------------------------------------------------------------------- */
+.post-list > li { border-bottom: 1px solid var(--np-hairline); padding-bottom: 1rem; }
+
+.page-content ul li span,
+.post-list-heading { color: var(--np-text-dim); }
+
+.page-content > .wrapper > ul > li > span {
+  font-family: var(--np-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--np-static);
+}
+
+/* --------------------------------------------------------------------------
+   Cartões de projeto (vêm do main.scss, com borda clara)
+   -------------------------------------------------------------------------- */
+.project-card { border-bottom: 1px solid var(--np-hairline); }
+.project-card__media {
+  border: 1px solid var(--np-hairline);
+  background: var(--np-panel);
+  border-radius: 2px;
+}
+
+/* --------------------------------------------------------------------------
+   Rodapé
+   -------------------------------------------------------------------------- */
+.site-footer {
+  border-top: 1px solid var(--np-hairline);
+  background: var(--np-void);
+  color: var(--np-static);
+}
+.site-footer .footer-heading,
+.site-footer h2 {
+  font-family: var(--np-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--np-text-dim);
+}
+.site-footer a { color: var(--np-ice-dim); }
+.site-footer .svg-icon { fill: var(--np-static); }
+
+/* --------------------------------------------------------------------------
+   Entrada: o post materializa em vez de simplesmente estar lá
+   -------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: no-preference) {
+  .post-header, .post-content > * {
+    animation: np-in 420ms ease-out both;
+  }
+  .post-header { animation-delay: 40ms; }
+  .post-content > *:nth-child(-n+6) { animation-delay: 90ms; }
+}
+
+@keyframes np-in {
+  from { opacity: 0; transform: translateY(6px); }
+  to   { opacity: 1; transform: none; }
+}
+
+/* ==========================================================================
+   Cobertura das páginas próprias (main.scss veste tudo isso com cinza claro:
+   #e8e8e8, #f7f7f7, #fff, #e1e4e8). Sem estas regras, /projects/, /github/ e
+   /cv/ ficam com cartão branco flutuando no preto.
+   ========================================================================== */
+
+/* --- projetos ------------------------------------------------------------ */
+.project-date {
+  font-family: var(--np-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--np-static);
+}
+
+.project-card__tech {
+  border: 1px solid var(--np-hairline-2);
+  background: var(--np-panel);
+  color: var(--np-text-dim);
+  font-family: var(--np-mono);
+  font-size: 0.72rem;
+}
+
+.project-hero {
+  border: 1px solid var(--np-hairline);
+  background: var(--np-panel);
+  border-radius: 2px;
+}
+.project-hero figcaption {
+  color: var(--np-static);
+  font-family: var(--np-mono);
+  font-size: 0.74rem;
+}
+
+/* seletor de idioma: interruptor de console, não bandeirinha */
+.project-language-switcher a {
+  display: inline-block;
+  padding: 0.25rem 0.7rem;
+  border: 1px solid var(--np-hairline-2);
+  border-radius: 2px;
+  background: var(--np-panel);
+  font-family: var(--np-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--np-text-dim);
+  text-decoration: none;
+}
+.project-language-switcher a:hover {
+  border-color: var(--np-sodium-dim);
+  color: var(--np-sodium);
+}
+
+/* --- github -------------------------------------------------------------- */
+.github-profile { border-bottom: 1px solid var(--np-hairline); }
+
+.github-profile__avatar {
+  border: 1px solid var(--np-hairline);
+  background: var(--np-panel);
+}
+
+.github-profile__eyebrow,
+.github-section__heading {
+  font-family: var(--np-mono);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--np-text-dim);
+}
+
+.github-repo-card,
+.github-activity-row,
+.github-stats-cards,
+.github-loading {
+  border: 1px solid var(--np-hairline);
+  border-radius: 2px;
+  background: var(--np-panel);
+  color: var(--np-text);
+}
+
+.github-repo-card__meta,
+.github-activity-row__facts,
+.github-loading {
+  color: var(--np-text-dim);
+}
+
+.github-repo-card:hover { border-color: var(--np-sodium-dim); }
+
+/* --- cv ------------------------------------------------------------------ */
+.cv-print-btn {
+  border: 1px solid var(--np-hairline-2);
+  border-radius: 2px;
+  background: var(--np-panel);
+  color: var(--np-text);
+  font-family: var(--np-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+.cv-print-btn:hover {
+  background: var(--np-hairline);
+  border-color: var(--np-sodium-dim);
+  color: var(--np-sodium);
+}
+
+/* --- feed ---------------------------------------------------------------- */
+.rss-subscribe,
+.post-list-heading {
+  font-family: var(--np-mono);
+  font-size: 0.8rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--np-text-dim);
+}
+
+/* --------------------------------------------------------------------------
+   Impressão: o main.scss já força preto no branco pro CV. O grão e a vinheta
+   são fixed e sairiam por cima, então somem aqui.
+   -------------------------------------------------------------------------- */
+@media print {
+  body::before, body::after { display: none !important; }
+  html, body { background: #fff !important; color: #000 !important; }
+  h1, h2, h3, h4, h5, h6 { color: #000 !important; }
+  .post-content h2 { border-bottom: 1px solid #bbb; }
+  .post-content h2::before { display: none; }
+  a { color: #000 !important; }
+  pre, div.highlight, figure.highlight {
+    background: #fff !important;
+    border: 1px solid #bbb !important;
+    color: #000 !important;
+  }
+  table th { background: #f0f0f0 !important; color: #000 !important; }
+  table th, table td { border: 1px solid #bbb !important; }
+}
