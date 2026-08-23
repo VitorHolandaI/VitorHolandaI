@@ -18,13 +18,13 @@ Contato: vitor.holanda@ccc.ufcg.edu.br · bartmoss77@tutanota.com
 ### Resumo
 
 Bacharel em Ciência da Computação (UFCG). Como **único sysadmin** de um prédio
-de pesquisa de ~20 salas, não herdei uma infraestrutura: construí a que não
+de pesquisa de ~20 salas, não herdei uma infraestrutura. Construí a que não
 existia: backup do zero com teste de restore, ~20 VLANs onde a rede era plana,
 cofre de senhas no lugar de pasta no Drive, rede de 100 Mb/s para 1 Gb/s
 estável. Depois um ano em **engenharia de IA/LLM**, com agentes, RAG e pipelines
 de avaliação para o atendimento da Dell, e hoje **liderança técnica** de um time
-de engenharia de IA num projeto do setor público. Do cabo no rack até
-a métrica de avaliação.
+de engenharia de IA num projeto do setor público. Monto o rack e a rede
+embaixo, e construo o sistema de IA que roda em cima.
 
 
 ### Habilidades Técnicas & Tecnologias
@@ -33,7 +33,7 @@ a métrica de avaliação.
 - **Avaliação & Observabilidade de LLMs:** Arize Phoenix, métricas de avaliação customizadas, tracing, análise de custo em tokens & throughput
 - **Sistemas Operacionais:** Linux, FreeBSD (via pfSense)
 - **Containers & DevOps:** Docker, Podman, Git, Kubernetes (uso acadêmico e pessoal: deploy de aplicações e testes de carga), Ansible (gerência de configuração em ~10 hosts do laboratório)
-- **SRE & Confiabilidade:** Resposta a incidentes, runbooks/playbooks, post-mortems, failover (cutover manual para standby pré-configurado), disaster recovery (DR) drills, alta disponibilidade (HA), observabilidade (Zabbix, Checkmk), monitoramento de disponibilidade de host/serviço
+- **SRE & Confiabilidade:** Resposta a incidentes, runbooks/playbooks, post-mortems, failover (cutover manual para standby pré-configurado), disaster recovery (DR) drills, observabilidade (Zabbix, Checkmk), monitoramento de disponibilidade de host/serviço
 - **Redes & Sistemas:** Administração de redes, administração de sistemas, virtualização (KVM, Proxmox), gerência de stack DNS, firewalls pfSense
 - **Programação & Desenvolvimento:** Python (Flask, FastAPI), C++ (projetos pessoais), Java (projetos de disciplina), Haskell e Prolog (projetos de disciplina)
 - **Sistemas Embarcados & Hardware:** SBCs, microcontroladores, programação embarcada
@@ -99,7 +99,7 @@ dono único.
   - **Métricas de avaliação customizadas** para qualidade específica da tarefa
   - Análise de **comportamento dos agentes**, **qualidade de resposta**, **throughput** e **custo em tokens**
   - Tracing das execuções dos agentes para depurar caminhos de uso de ferramentas e recuperação
-- Rodei **benchmarks públicos de LLM** para **seleção de modelos baseada em dados**, incluindo um **benchmark multilíngue geral** e um **específico de matemática**, para escolher modelos para tradução.
+- Rodei **benchmarks públicos de LLM** para **seleção de modelos baseada em dados**: **MMMLU** para conhecimento geral multilíngue e **MGSM** para matemática escolar multilíngue, para escolher modelos para tradução.
 - Realizei **análise estatística descritiva** em datasets de avaliação, incluindo **profiling de uso de tokens** em prompts e respostas para otimização de custo.
 
 #### Engenharia de Dados & Expansão de Dataset

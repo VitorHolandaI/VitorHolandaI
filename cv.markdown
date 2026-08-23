@@ -24,8 +24,8 @@ was missing: backups from zero with restore drills, ~20 VLANs where the network
 was flat, a password vault replacing a shared Drive folder, 100 Mb/s links
 brought up to a stable 1 Gb/s. Then a year in **AI/LLM engineering**: agents,
 RAG, and evaluation pipelines for Dell customer support, and now **technical
-lead** of an AI engineering team on a public-sector project. From
-the cable in the rack to the eval metric.
+lead** of an AI engineering team on a public-sector project. I build the rack
+and the network underneath, and the AI system that runs on top of them.
 
 
 ### Technical Skills & Technologies
@@ -34,7 +34,7 @@ the cable in the rack to the eval metric.
 - **LLM Evaluation & Observability:** Arize Phoenix, custom evaluation metrics, tracing, token-cost & throughput analysis
 - **Operating Systems:** Linux, FreeBSD (via pfSense)
 - **Containers & DevOps:** Docker, Podman, Git, Kubernetes (academic and personal use: app deployment and load testing), Ansible (configuration management across ~10 lab hosts)
-- **SRE & Reliability:** Incident response, runbooks/playbooks, post-mortems, failover (manual cutover to a pre-configured standby), disaster recovery (DR) drills, high availability (HA), observability (Zabbix, Checkmk), host/service availability monitoring
+- **SRE & Reliability:** Incident response, runbooks/playbooks, post-mortems, failover (manual cutover to a pre-configured standby), disaster recovery (DR) drills, observability (Zabbix, Checkmk), host/service availability monitoring
 - **Networking & Systems:** Network administration, system administration, virtualization (KVM, Proxmox), DNS stack management, pfSense firewalls
 - **Programming & Development:** Python (Flask, FastAPI), C++ (personal projects), Java (coursework projects), Haskell and Prolog (coursework projects)
 - **Embedded Systems & Hardware:** SBCs, microcontrollers, embedded programming
@@ -99,7 +99,7 @@ separate, individually-owned tracks.
   - **Custom evaluation metrics** for task-specific quality
   - Analysis of **agent behavior**, **response quality**, **throughput**, and **token-cost** trade-offs
   - Tracing of agent runs to debug tool-use and retrieval paths
-- Ran published **LLM benchmarks** for **data-driven model selection**, including a **general multilingual benchmark** and a **mathematics-specific** one, to choose models for translation work.
+- Ran published **LLM benchmarks** for **data-driven model selection**: **MMMLU** for multilingual general knowledge and **MGSM** for multilingual grade-school math, to choose models for translation work.
 - Performed **descriptive statistical analysis** on evaluation datasets, including **prompt/response token-usage** profiling for cost optimization.
 
 #### Data Engineering & Dataset Expansion
