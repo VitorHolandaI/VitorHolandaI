@@ -245,14 +245,6 @@ pre code, pre > code, .highlight code {
   font-size: inherit;
 }
 
-/* rouge, em tons de rua molhada: sem arco-íris */
-.highlight .c, .highlight .c1, .highlight .cm { color: var(--np-static); font-style: italic; }
-.highlight .k, .highlight .kd, .highlight .kn { color: var(--np-ice); }
-.highlight .s, .highlight .s1, .highlight .s2 { color: #a8b58c; }
-.highlight .nv, .highlight .vg { color: var(--np-sodium); }
-.highlight .nb, .highlight .nf { color: var(--np-text); }
-.highlight .mi, .highlight .mf { color: #c9a26b; }
-.highlight .gp { color: var(--np-sodium-dim); }
 
 /* --------------------------------------------------------------------------
    Tabelas: grade fina, como leitura de instrumento
@@ -531,15 +523,6 @@ div.highlighter-rouge div.highlight {
   background: var(--np-void);
 }
 
-/* Chips de diff e erro do rouge: fundo claro com texto preto cravado. */
-.highlight .err,
-.highlight .gd, .highlight .gd .x,
-.highlight .gi, .highlight .gi .x {
-  background-color: transparent;
-}
-.highlight .err,
-.highlight .gd, .highlight .gd .x { color: #c56b6b; }
-.highlight .gi, .highlight .gi .x { color: #a8b58c; }
 
 /* Pílulas: as regras claras miram o `span` filho (0,1,1); as minhas miravam
    só o contêiner (0,1,0), então a pílula continuava clara. */
@@ -562,3 +545,128 @@ div.highlighter-rouge div.highlight {
 
 /* A faixa zebrada pinta o `tr`; eu só tinha pintado o `td`. */
 table tr:nth-child(even) { background-color: transparent; }
+
+/* ==========================================================================
+   Coloração do rouge, reescrita.
+
+   O markup do rouge aninha `.highlighter-rouge > .highlight > pre.highlight`.
+   Se mais de um desses ganhar borda, aparecem duas caixas, uma dentro da
+   outra. A caixa fica no `.highlight` (e no `pre` solto, fora do rouge); o
+   `pre` de dentro fica sem borda e sem fundo.
+
+   As cores vêm do tema claro do minima e várias são escuras demais para
+   fundo preto: `.nt` é navy, `.nn` é #555, `.si` e `.se` são #d14. Em vez de
+   caçar uma a uma, a lista abaixo reseta TODAS as classes do rouge para a cor
+   de texto do tema e só depois aplica a paleta. Classe nova que apareça num
+   post futuro cai no reset e continua legível.
+   ========================================================================== */
+
+/* caixa única */
+.highlight pre,
+pre.highlight {
+  background: none;
+  border: 0;
+  margin: 0;
+}
+
+/* reset: 57 classes lidas do main.css */
+.highlight .bp,
+.highlight .c,
+.highlight .c1,
+.highlight .cm,
+.highlight .cp,
+.highlight .cs,
+.highlight .err,
+.highlight .gd,
+.highlight .ge,
+.highlight .gh,
+.highlight .gi,
+.highlight .go,
+.highlight .gp,
+.highlight .gr,
+.highlight .gs,
+.highlight .gt,
+.highlight .gu,
+.highlight .il,
+.highlight .k,
+.highlight .kc,
+.highlight .kd,
+.highlight .kp,
+.highlight .kr,
+.highlight .kt,
+.highlight .m,
+.highlight .mf,
+.highlight .mh,
+.highlight .mi,
+.highlight .mo,
+.highlight .na,
+.highlight .nb,
+.highlight .nc,
+.highlight .ne,
+.highlight .nf,
+.highlight .ni,
+.highlight .nn,
+.highlight .no,
+.highlight .nt,
+.highlight .nv,
+.highlight .o,
+.highlight .ow,
+.highlight .s,
+.highlight .s1,
+.highlight .s2,
+.highlight .sb,
+.highlight .sc,
+.highlight .sd,
+.highlight .se,
+.highlight .sh,
+.highlight .si,
+.highlight .sr,
+.highlight .ss,
+.highlight .sx,
+.highlight .vc,
+.highlight .vg,
+.highlight .vi,
+.highlight .w {
+  color: var(--np-text);
+  background-color: transparent;
+  font-style: normal;
+}
+
+/* comentario */
+.highlight .c, .highlight .c1, .highlight .cm, .highlight .cs, .highlight .cp, .highlight .cd { color: var(--np-static); font-style: italic; }
+
+/* palavrachave */
+.highlight .k, .highlight .kc, .highlight .kd, .highlight .kn, .highlight .kp, .highlight .kr, .highlight .kt, .highlight .ow { color: var(--np-ice); }
+
+/* string */
+.highlight .s, .highlight .s1, .highlight .s2, .highlight .sb, .highlight .sc, .highlight .sd, .highlight .sh, .highlight .sx, .highlight .sr, .highlight .ss, .highlight .se, .highlight .si { color: #a8b58c; }
+
+/* numero */
+.highlight .m, .highlight .mf, .highlight .mh, .highlight .mi, .highlight .mo, .highlight .il { color: #c9a26b; }
+
+/* variavel */
+.highlight .nv, .highlight .vc, .highlight .vg, .highlight .vi { color: var(--np-sodium); }
+
+/* flag/tag */
+.highlight .nt, .highlight .na { color: var(--np-sodium); }
+
+/* nome */
+.highlight .nb, .highlight .bp, .highlight .nf, .highlight .nc, .highlight .ne, .highlight .ni, .highlight .no, .highlight .nn, .highlight .py { color: var(--np-text); }
+
+/* operador */
+.highlight .o, .highlight .p, .highlight .w { color: var(--np-text-dim); }
+
+/* prompt */
+.highlight .gp { color: var(--np-sodium-dim); }
+
+/* saida */
+.highlight .go { color: var(--np-text-dim); }
+
+/* diff-menos */
+.highlight .gd, .highlight .gr, .highlight .gt, .highlight .err { color: #c56b6b; background-color: transparent; }
+
+/* diff-mais */
+.highlight .gi { color: #a8b58c; background-color: transparent; }
+
+/* titulo-diff */
+.highlight .gh, .highlight .gu { color: var(--np-sodium-dim); }
