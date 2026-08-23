@@ -1,23 +1,17 @@
-## Vitor Holanda
+## vitor
 
-Infrastructure and AI engineering. I build the rack and the network underneath,
-and the AI system that runs on top of them.
+I run things at home that have no business being run at home, and I write down
+what breaks.
 
-Currently technical lead of an AI engineering team on a public-sector project.
-Before that, AI/LLM engineering for Dell customer support, and sole sysadmin of
-a ~20-room research building.
+Mostly Linux, networks, self-hosted everything, LLM plumbing, microcontrollers,
+and keyboards I keep rebuilding instead of finishing.
 
-### [bitssand.blog](https://bitssand.blog/)
+### [everydaysbugs](https://bitssand.blog/everydaysbugs/)
 
-- **[Everydaysbugs](https://bitssand.blog/everydaysbugs/)**: bugs I chased,
-  written down so I stop re-learning them. The whole wrong path, not just the
-  answer.
-- **[Projects](https://bitssand.blog/projects/)**: what I build outside work.
-- **[CV](https://bitssand.blog/cv/)**
+The bugs that ate an afternoon. I publish the wrong path too, because the wrong
+path is the part worth reading. Last one: a Wi-Fi driver bug that turned out to
+be a tablet in the living room holding my IP.
 
-Networking (switches, routers, servers), Linux, DevOps and SRE, LLM systems,
-embedded programming, and keyboards.
-
-<img src="header.svg" width="800" height="400">
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=VitorHolandaI&langs_count=10&layout=compact&theme=midnight-purple)](https://github.com/anuraghazra/github-readme-stats)
+Everything else is at [bitssand.blog](https://bitssand.blog/):
+[projects](https://bitssand.blog/projects/) and a
+[cv](https://bitssand.blog/cv/), if that is what you came for.
