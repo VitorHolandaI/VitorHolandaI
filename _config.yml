@@ -39,7 +39,7 @@ header_pages:
   - everydaysbugs.markdown
   - projects.markdown
   - github.markdown
-  - cv.markdown
+  - cv-pt.markdown
 
 
 # Build settings
