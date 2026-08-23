@@ -24,7 +24,7 @@ email: vitor.holanda@ccc.ufcg.edu.br
 lang: pt-BR
 default_lang: pt
 description: >- # this means to ignore newlines until "baseurl:"
-  This website is about anything I find interesting—mostly a 
+  This website is about anything I find interesting, mostly a 
   place for me to document things so I can remember them. 
   Maybe others will find some useful info as I solve my 
   own problems. I'm interested in DevOps, SRE, coding, 
@@ -38,6 +38,7 @@ header_pages:
   - posts.markdown
   - everydaysbugs.markdown
   - projects.markdown
+  - infra.markdown
   - github.markdown
   - cv-pt.markdown
 

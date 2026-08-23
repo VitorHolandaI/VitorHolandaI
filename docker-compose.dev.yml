@@ -1,10 +1,10 @@
 # Dev only: live-reloading Jekyll served straight off the source tree.
-# Not the deploy path — docker-compose.yml builds the hardened static nginx
+# Not the deploy path. docker-compose.yml builds the hardened static nginx
 # image. Run with: docker compose -f docker-compose.dev.yml up
 #
 # Reuses the Dockerfile's `site-builder` stage so the bundle is already
 # installed. That stage runs `bundle config set deployment true`, which puts
-# the gems in ./vendor/bundle — inside the tree we bind-mount over. The named
+# the gems in ./vendor/bundle, inside the tree we bind-mount over. The named
 # volume below shadows ./vendor with the image's copy so they stay reachable.
 # After changing the Gemfile: `docker compose -f docker-compose.dev.yml down -v`
 # to drop the stale volume, then rebuild.
@@ -28,7 +28,7 @@ services:
       # livereload websocket the injected script connects back to
       - "127.0.0.1:35729:35729"
     # Build into /tmp/dev-site so the container never writes into the repo.
-    # (/tmp/site already exists from the build stage, root-owned — uid 1000
+    # (/tmp/site already exists from the build stage, root-owned, so uid 1000
     # cannot write there.)
     # force_polling: inotify is unreliable across the bind mount for editors
     # that save by atomic rename.
