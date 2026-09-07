@@ -11,7 +11,6 @@ The bugs that ate an afternoon. I publish the wrong path too, because the wrong 
 ### [bitssand.blog](https://bitssand.blog/)
 
 - **[Projects](https://bitssand.blog/projects/)**: homelab, hardware, and tools built outside work.
-- **👾 [Space Invaders (Ruby WASM)](https://bitssand.blog/invaders/)**: classic arcade mini-game running Ruby 3.3 in WebAssembly directly in your browser.
 
 <p align="center">
   <img src="https://github-stats-extended.vercel.app/api?username=VitorHolandaI&show_icons=true&theme=midnight-purple" alt="Vitor's GitHub Stats" />
@@ -19,7 +18,7 @@ The bugs that ate an afternoon. I publish the wrong path too, because the wrong 
 </p>
 
 <p align="center">
-  <a href="https://bitssand.blog/invaders/">
+  <a href="https://bitssand.blog/">
     <img src="header.svg" width="600" height="300" alt="Cyber Wall" />
   </a>
 </p>
