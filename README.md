@@ -1,3 +1,7 @@
+<a href="https://bitssand.blog/invaders/">
+  <img src="header.svg" width="800" height="400" alt="Space Invaders" />
+</a>
+
 ## vitor
 
 I run things at home that have no business being run at home, and I write down
@@ -13,9 +17,6 @@ path is the part worth reading. Last one: a Wi-Fi driver bug that turned out to
 be a tablet in the living room holding my IP.
 
 Everything else is at [bitssand.blog](https://bitssand.blog/):
-[projects](https://bitssand.blog/projects/) and a
-[cv](https://bitssand.blog/cv/), if that is what you came for.
-
-<img src="header.svg" width="800" height="400" />
+[projects](https://bitssand.blog/projects/) and a mini [Space Invaders (Ruby WASM)](https://bitssand.blog/invaders/) arcade.
 
 <img src="https://komarev.com/ghpvc/?username=VitorHolandaI" width="1" height="1" alt="" style="display:none;" />
