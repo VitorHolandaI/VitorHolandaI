@@ -15,7 +15,7 @@ The bugs that ate an afternoon. I publish the wrong path too, because the wrong 
 
 <p align="center">
   <img src="https://github-stats-extended.vercel.app/api?username=VitorHolandaI&show_icons=true&theme=midnight-purple" alt="Vitor's GitHub Stats" />
-  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=VitorHolandaI&layout=compact&theme=midnight-purple&exclude_repo=leWatch" alt="Top Languages" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=VitorHolandaI&layout=compact&theme=midnight-purple&exclude_repo=leWatch&hide=html,css&langs_count=8" alt="Top Languages" />
 </p>
 
 <p align="center">
