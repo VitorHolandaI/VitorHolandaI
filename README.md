@@ -13,7 +13,7 @@ The bugs that ate an afternoon. I publish the wrong path too, because the wrong 
 - **[perfo](https://github.com/VitorHolandaI/perfo)**: Linux system performance monitor and TUI built in Rust with **Ratatui**, direct procfs/hwmon telemetry, and native `ptrace` syscall tracing.
 - **[ServitorAssisstant](https://github.com/VitorHolandaI/ServitorAssisstant)**: self-hosted voice assistant with local LLM tool-calling via **FastMCP**, token metering, and Raspberry Pi edge hardware.
 - **[poscomp_ai](https://github.com/VitorHolandaI/poscomp_ai)**: study platform and pipeline classifying 1,600+ POSCOMP exam questions across 23 years using local LLMs (Ollama) with custom mock exam generation.
-- **[labooke](https://github.com/VitorHolandaI/labooke)**: lightweight self-hosted library featuring local semantic search (BGE embeddings via Ollama) backed by 17 Architecture Decision Records (ADRs).
+- **[relogio-arduino](https://github.com/VitorHolandaI/relogio-arduino)**: custom Arduino C++ digital watch featuring GPS, RTC, stopwatch, RF module for building gate remote control, and laser.
 
 ### [bitssand.blog](https://bitssand.blog/)
 
