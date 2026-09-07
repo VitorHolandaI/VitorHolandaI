@@ -16,7 +16,17 @@ The bugs that ate an afternoon. I publish the wrong path too, because the wrong
 path is the part worth reading. Last one: a Wi-Fi driver bug that turned out to
 be a tablet in the living room holding my IP.
 
-Everything else is at [bitssand.blog](https://bitssand.blog/):
-[projects](https://bitssand.blog/projects/) and a mini [Space Invaders (Ruby WASM)](https://bitssand.blog/invaders/) arcade.
+---
+
+### [bitssand.blog](https://bitssand.blog/)
+
+All notes, [projects](https://bitssand.blog/projects/), and a playable [Space Invaders (Ruby WASM)](https://bitssand.blog/invaders/) arcade.
+
+---
+
+<p align="center">
+  <img src="https://github-stats-extended.vercel.app/api?username=VitorHolandaI&show_icons=true&theme=midnight-purple" alt="Vitor's GitHub Stats" />
+  <img src="https://github-stats-extended.vercel.app/api/top-langs/?username=VitorHolandaI&layout=compact&theme=midnight-purple" alt="Top Languages" />
+</p>
 
 <img src="https://komarev.com/ghpvc/?username=VitorHolandaI" width="1" height="1" alt="" style="display:none;" />
