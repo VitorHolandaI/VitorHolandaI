@@ -18,32 +18,164 @@ Contact: vitor.holanda@ccc.ufcg.edu.br · bartmoss77@tutanota.com
 
 ### Summary
 
-Computer Science graduate (UFCG). As the **sole sysadmin** of a ~20-room
-research building, I did not inherit an infrastructure. I built the one that
-was missing: backups from zero with restore drills, ~20 VLANs where the network
-was flat, a password vault replacing a shared Drive folder, 100 Mb/s links
-brought up to a stable 1 Gb/s. Then a year in **AI/LLM engineering**: agents,
-RAG, and evaluation pipelines for Dell customer support, and now **technical
-lead** of an AI engineering team on a public-sector project. I build the rack
-and the network underneath, and the AI system that runs on top of them.
+Computer Science graduate (UFCG) combining deep hands-on expertise across critical infrastructure, systems reliability, and production AI engineering:
+
+- **Infrastructure, SRE & Reliability (~1.5 years):** As the sole sysadmin and primary on-call operator of a ~20-room research facility (SPLab), I built the infrastructure from zero. Designed and deployed ~20 VLANs across a previously flat network, upgraded cabling to stable 1 Gb/s, assembled physical servers on Proxmox/KVM, implemented deduplicated encrypted backup pipelines with Restic and ZFS RAID 10 (with recurring restore validation drills), maintained pfSense cold-standby failover, and operated observability via Checkmk and a custom NUT telemetry dashboard with 255k+ log lines collected during real power outages. Owned the full operational lifecycle: from hands-on helpdesk and hardware repairs to critical incident response and postmortem runbooks.
+- **Production AI & LLM Engineering (1 year):** Worked at LSD-DELL building enterprise-grade LLM agents for customer support. Shipped production Python integrated into corporate CI/CD pipelines, implementing tool calling, MCP servers, advanced RAG architectures with hybrid retrieval (BM25 + dense vector + RRF) and cross-encoder reranking, full tracing and evaluation via Arize Phoenix, and prompt-injection security hardening.
+- **Technical Leadership (Present):** Currently tech lead of an AI engineering team on a public-sector initiative, driving the architecture of multi-agent workflows orchestrated with LangGraph, self-hosted local LLM inference (Ollama and llama.cpp), code review standards, test coverage, and hands-on technical mentoring.
+
+Complete ownership from the ground up: I build the physical rack and network underneath, operate the platform reliability in the middle, and engineer the production AI systems on top.
 
 
 ### Technical Skills & Technologies
 
-- **AI / LLM Engineering:** LangChain, LangGraph, MCP (Model Context Protocol), tool calling, agentic workflows, RAG (Retrieval-Augmented Generation), hybrid search (semantic + lexical), reranking (BGE-reranker, cross-encoder), embeddings, vector databases, prompt engineering, prompt-injection testing (guardrail bypass), structured outputs with Pydantic, OpenAI-compatible APIs
-- **LLM Evaluation & Observability:** Arize Phoenix, custom evaluation metrics, tracing, token-cost & throughput analysis
-- **Operating Systems:** Linux, FreeBSD (via pfSense)
-- **Containers & DevOps:** Docker, Podman, Git, Kubernetes (academic and personal use: app deployment and load testing), Ansible (configuration management across ~10 lab hosts)
-- **SRE & Reliability:** Incident response, runbooks/playbooks, post-mortems, failover (manual cutover to a pre-configured standby), disaster recovery (DR) drills, observability (Zabbix, Checkmk), host/service availability monitoring
-- **Networking & Systems:** Network administration, system administration, virtualization (KVM, Proxmox), DNS stack management, pfSense firewalls
-- **Programming & Development:** Python (Flask, FastAPI), C++ (personal projects), Java (coursework projects), Haskell and Prolog (coursework projects)
-- **Embedded Systems & Hardware:** SBCs, microcontrollers, embedded programming
+- **Reliability & Incident:** On-call (primary operator), incident response, runbook authoring, disaster recovery (DR) drills, encrypted restore validation (Restic), failover procedures, postmortem follow-up, toil reduction
+- **Observability:** Checkmk, Zabbix, ntopng, NUT (Network UPS Tools), custom telemetry dashboards (Python/Flask); Prometheus & Grafana (in progress)
+- **Containers & Virtualization:** Docker, Docker Compose, Podman, KVM, Proxmox, Kubernetes (lab / k3s in progress), container hardening
+- **Infrastructure as Code & Automation:** Ansible, Terraform (lab), Bash scripting, Python automation
+- **CI/CD:** GitHub Actions (test, build, and release pipelines)
+- **Networking:** VLANs (802.1Q), trunking, link aggregation (LAG), pfSense, DNS stack, OpenWrt, UniFi Controller, TCP/IP
+- **Security:** Default-deny firewall policies, Suricata (IDS/IPS), OpenVAS, Bitwarden (secrets management), secrets hygiene, prompt-injection testing
+- **Cloud & Platforms:** On-prem / self-hosted systems, Linux (Debian, Ubuntu, Rocky Linux), FreeBSD (pfSense), AWS (VPC, IAM, EC2, S3 in progress)
+- **Programming Languages:** Python (production), Bash, C++, Rust, TypeScript, Java; Go (in progress)
+- **AI & LLM Engineering:** LangChain, LangGraph (multi-agent systems), local models (Ollama, llama.cpp), MCP (Model Context Protocol), RAG, hybrid search (BM25 + dense + RRF), BGE-reranker, vector databases, Pydantic structured outputs, Arize Phoenix (evals & tracing)
 
+
+### Experience
+
+---
+
+### **Tech Lead, AI Engineering** – LSD, UFCG (project with a Brazilian government agency)
+*May 2026 – Present*  
+**Stack:** Python · LangGraph (Multi-Agent Systems) · Ollama · llama.cpp · Local LLMs · Pydantic · Git
+
+Technical lead of a small AI engineering team on a public-sector project, working alongside a professor and a project manager. Domain and internal project details are under confidentiality.
+
+- Architected and guided the project's technical stack: **Python**, **local LLMs**, self-hosted inference via **Ollama** and **llama.cpp**, and **multi-agent systems orchestrated with LangGraph**.
+- Set technical direction, system design, and architectural decisions for agent execution and pipeline reliability.
+- Conduct thorough code reviews across the codebase to ensure consistency, test coverage, and reliability.
+- Manage task breakdowns, sprint planning, and provide direct technical guidance to the engineering team.
+
+### **AI / LLM Engineer & Applied Researcher** – LSD-DELL, UFCG
+*April 2025 – April 2026 (Part-time)*  
+**Stack:** Python · LangChain · LangGraph · MCP · RAG · Arize Phoenix · BM25 / RRF · BGE-reranker · Pydantic · CI/CD
+
+Part of a cross-functional team building **LLM-powered agents** for Dell customer support. Hybrid AI engineering + applied research role: **Python**-based development in Agile sprints with peer code review via Pull Requests and integration through Dell's internal CI/CD pipeline, alongside benchmarking, model evaluation, and literature-driven experimentation.
+
+#### LLM Agents, Tool Use & Applied Research
+- Built **LLM-powered agents** in **Python** using **LangChain** and **LangGraph**, including **tool calling**, **agentic workflows**, and experiments with **MCP (Model Context Protocol) servers** for extensible tool integration.
+- Consumed Dell's **internally hosted LLMs** via an **OpenAI-compatible API** (standard `openai` SDK pattern, internal `base_url`), ensuring client code remained portable across providers.
+- Implemented **structured outputs** with **Pydantic models** as response schemas (`response_model`-style), ensuring strict type validation of LLM outputs and reliable downstream parsing.
+- Applied **input/output validation via Pydantic** as a lightweight guardrail layer to reject malformed or out-of-schema responses before they reached downstream systems.
+- Executed **prompt-injection tests** against the agents, specifically targeting guardrail bypass and behavioral boundaries; reported vulnerability cases and contributed hardening fixes.
+- Built and deployed an **internal web-based testing interface** for LLM APIs and services when remote VDI environments restricted tooling, enabling fast experimentation across the team.
+
+#### Retrieval-Augmented Generation (RAG) & Hybrid Search
+- Developed an enterprise **FAQ system on Retrieval-Augmented Generation (RAG)** using a **vector database** for similarity search over customer-support documentation.
+- Integrated **internally hosted embedding models** (served via the OpenAI-compatible API) to encode documents and queries.
+- Implemented and benchmarked **hybrid search**: combining **BM25** (lexical) with dense vector retrieval, fused via **RRF (Reciprocal Rank Fusion)**, measured against earlier retrieval baselines.
+- Integrated **reranking** with **BGE-reranker / cross-encoder** models over initial retrieval stages, significantly boosting top-k precision before passing context to the LLM.
+- Authored evaluation reports on RAG system performance, retrieval quality, and implementation status.
+
+#### LLM Evaluation, Benchmarking & Observability
+- Designed and ran comprehensive **LLM evaluations** using **Arize Phoenix** as the observability/eval platform:
+  - Developed **custom evaluation metrics** for domain-specific response quality.
+  - Analyzed **agent behavior**, **response quality**, **throughput**, and **token-cost** trade-offs.
+  - Profiled execution tracing across agent steps to debug tool-use and retrieval paths.
+- Evaluated open and proprietary models on public benchmarks (**MMMLU** for multilingual general knowledge, **MGSM** for multilingual math reasoning) to guide data-driven model selection.
+- Authored new questions expanding the internal evaluation dataset from **42 to over 120 questions**, increasing evaluation coverage and test variability.
+
+### **System Administrator / Reliability Engineer (Sole on-call operator)** – SPLab, UFCG (Part-time)
+*Nov 2023 – April 2025*  
+**Stack:** Linux (Rocky/Debian) · ZFS (RAID 10) · Restic · Proxmox/KVM · pfSense · VLANs (802.1Q) · Checkmk · Docker · Ansible · Bitwarden · NUT (Python)
+
+Sole sysadmin and on-call operator responsible for the full IT infrastructure of a ~20-room research building (~10 faculty offices plus postgraduate research projects and external partnerships with private companies and government agencies), covering servers, networking, virtualization, firewalling, observability, incident response, and operational reliability.
+
+Being the sole person meant platform engineering and physical operations were the same role. A typical day spanned designing VLAN segmentation and structured cabling to debugging printer drivers, onboarding new researchers, installing workstations, or replacing ceiling-mounted hardware on a ladder. Everything below was architected and built between those operational interruptions, not in isolation.
+
+#### Infrastructure & Virtualization
+- Planned and deployed KVM-based virtualization stacks from scratch, expanding service hosting capacity and flexibility across the building.
+- Expanded compute capacity: the lab originally ran a single server with VMs. Specified, assembled, and provisioned **two additional physical servers** (one dedicated to production workloads, one dedicated to VM backup storage) managed alongside workstations via **Proxmox** and **KVM**.
+- Provisioned on-demand environments and testbeds for researchers and partner projects, selecting hardware, assembling physical nodes, and provisioning VMs with delegated self-management while retaining platform ownership and escalation support.
+
+#### Storage, Backup, Reliability & Disaster Recovery
+- Designed and built the laboratory's backup capability from zero: deployed an initial TrueNAS setup, followed by a **custom Rocky Linux 9 backup server** with a **ZFS pool in RAID 10 (striped mirrors)** assembled from on-site drives in a custom 3D-printed bracket. Selected ZFS for **end-to-end checksums** to actively catch and prevent silent bit rot.
+- Deployed **Restic** to run automated, deduplicated, and encrypted backups across critical systems, establishing snapshot retention policies and secure repository verification.
+- Evaluated candidate drives by running diagnostics and analyzing **SMART attributes (including power-on hours)** to select the lowest-wear disks for the production array.
+- Executed recurring **disaster recovery (DR) drills**, validating **encrypted restore procedures with Restic and VM snapshots** to ensure backup archives were reliably recoverable, not just written.
+- Defined and managed **VM snapshot policies** as part of the DR strategy, enabling rapid rollback across updates and maintenance windows.
+
+#### Networking & Connectivity
+- Designed and built **~20 VLANs from scratch** with 802.1Q port assignments, trunking, and link aggregation (LAG) across a previously flat network, isolating services and tenant traffic.
+- Factory-reset and reconfigured undocumented legacy switches to bring the entire switching fabric under active structured management.
+- Validated and simulated network topologies using **Cisco Packet Tracer** prior to deployment.
+- Replaced disorganized cabling and legacy 100 Mb/s links with a **standardized structured cabling architecture** in a cascading layout, upgrading the facility to **stable 1 Gb/s connectivity**.
+- Managed the laboratory's full **DNS stack**, including internal zones and resolution for services and virtual machines.
+- Administered **Ubiquiti UniFi access points** and UniFi Controller; repurposed legacy routers with **OpenWrt** to extend hardware lifecycles and reduce procurement costs.
+
+#### Observability & Monitoring
+- Built and operated the observability stack: migrated from a broken, unmaintained Zabbix install to **Checkmk**, complemented by **ntopng** for traffic inspection, providing host and service availability metrics.
+- Configured **alerting and on-call notification workflows** for host and service disruptions, reducing time to detection.
+- Developed a custom **monitoring dashboard** (Python, Flask, Chart.js) on top of **NUT (Network UPS Tools)**, accumulating 255k+ log lines to track battery telemetry and runtime during live utility outages.
+- Extended UPS battery runtime for the campus internet concentrator, sustaining ~1 hour of continuous connectivity during blackouts (stopwatch-timed).
+
+#### Security & Access Control
+- Replaced an insecure legacy backup script storing plaintext credentials with documented, secure, encrypted configuration backups.
+- Replaced an inadequate, insecure workflow where lab credentials and keys were saved in a shared Google Drive folder: deployed and managed a **self-hosted Bitwarden** instance as a dedicated password and secrets manager, establishing per-user role-based access control (RBAC), end-to-end encrypted vaults, and audit logs.
+- Deployed perimeter and vulnerability tooling: **Suricata** (IDS/IPS at the pfSense boundary), **OpenVAS** vulnerability scanning, and **darkstat** traffic accounting.
+- Maintained a physical cold-standby pfSense firewall (pre-configured, bootable via Wake-on-LAN) as a resilient failover path. Evaluated running pfSense inside a Proxmox VM, but observed network link instability, deliberately retaining the physical standby based on observed production reliability.
+- Built a working prototype for camera-based access control with edge person identification for secure laboratory entry.
+
+#### Incident Response & Operational Reliability
+- Owned **incident response** as the sole on-call operator for ~20 rooms: triage, live mitigation, communication, and recovery across hosts, network links, and firewall services.
+- Authored post-incident **runbooks and playbooks** in the laboratory wiki, recording root causes, mitigation procedures, and preventative follow-ups so operational knowledge persisted.
+- **UPS short-circuit incident**: executed live mitigation by isolating the failed machine and failing over to a physical **cold-standby firewall via Wake-on-LAN** with a manual optical uplink move, bounding total recovery time to two discrete steps.
+- **pfSense silent failure diagnosis**: resolved a condition where cold power cycles reset firewall configuration to defaults with clean logs. Diagnosed root cause as a virtual interface whose parent NIC re-enumerated under a different name on cold boot; resolved with a one-line configuration fix after complete root-cause tracing.
+- Handled power instability and grid surges proactively, isolating critical hardware and cutting panel breakers when conditions threatened equipment integrity.
+- Designed an emergency visibility system when the building DVR failed: assembled an improvised monitoring unit using a **Banana Pi M2 Zero** and a scavenged laptop webcam to maintain physical visibility of the server room at zero cost.
+
+#### Asset Management & Practical Tooling Decisions
+- Maintained laboratory hardware inventories, tracking university asset tags (patrimônio) and serial numbers to support audits and equipment allocation.
+- Deployed **GLPI** for asset management and formal ticketing, and later deliberately retired it: with a single on-site operator, lab members continuously engaged directly in person rather than through tickets, so retiring the system eliminated recurring maintenance overhead without impacting operational delivery.
+
+#### Automation, Platforms & Configuration
+- Automated configuration management across **~10 physical hosts and virtual machines** using **Ansible** (lightweight IaC).
+- Deployed containerized workloads using **Docker** and Docker Compose; explored **Podman** for daemonless execution, and evaluated Portainer for container visibility.
+- Stood up an internal **Otter Wiki** documenting network topology, system configurations, and operational runbooks.
+
+#### Systems Administration, Hardware Repair & Support
+- Managed technical budgeting, supplier quotes, and hardware specifications to support laboratory procurement decisions.
+- Provided **hands-on end-user support and helpdesk** for faculty, researchers, and students: OS re-installation, software troubleshooting, hardware diagnostics, and physical equipment setup, including **ceiling projector swaps on a ladder (single-handed)**.
+- Maintained departmental workstations, notebooks, power supplies, UPS units, and print servers via **CUPS**.
+- Diagnosed and repaired a non-functional video recorder (DVR), restoring it to working order and avoiding hardware replacement expenses.
+- Authored **custom Python tooling** to parse and concatenate fragmented video exports from Intelbras DVR units into single continuous files, turning a manual retrieval task into an automated, repeatable script.
+
+---
+
+### **Volunteer IT Support & Systems Maintenance** – Guardians Group, UFCG
+*2023 – Present*  
+**Stack:** Linux · Bash · iptables · SonicWall · Structured Cabling · Hardware Diagnostics
+
+- Provided systems troubleshooting and maintenance for the Computer Science department, supporting faculty, researchers, and students.
+- Participated in the **"Imagem Prova" (Exam Image)** project: a hardened custom Linux boot image restricting unapproved resources during academic exams.
+- Built a Bash-based access-control tool using `iptables` and `dig` to enforce dynamic domain whitelists and blacklists during assessments.
+- Recovered an abandoned SonicWall firewall, configuring it as a practical networking sandbox for students.
+- Supported hardware re-imaging, cabling, and general infrastructure across departmental computer labs.
+
+### **Academic Tutoring (Teaching Assistant)** – UFCG
+*2023*  
+**Focus:** Graph Theory · Concurrent Programming · Algorithm Design · Academic Mentoring
+
+- Assisted professors during practical laboratory sessions and coursework.
+- Guided students through algorithm design, graph theoretical problem-solving, and concurrent programming concepts.
+- Reviewed student assignments and provided technical feedback.
+
+---
 
 ### Education
 
 ---
-**BSc in Computer Science** · Graduated · Universidade Federal de Campina Grande · 2022 – 2026
+**BSc in Computer Science** · Universidade Federal de Campina Grande · 2022 – 2026
 
 
 ### Languages
@@ -52,176 +184,13 @@ and the network underneath, and the AI system that runs on top of them.
 - **English:** Advanced
 
 
-### Experience
-
----
-
-### **Tech Lead, AI Engineering** – LSD, UFCG (project with a Brazilian government agency)
-*May 2026 – Present*
-
-Technical lead of a small AI engineering team on a public-sector project,
-working alongside a professor and a project manager. The domain and the work
-itself are under confidentiality and are not described here.
-
-- Technical lead for the team: architecture decisions and technical direction for what gets built.
-- **Code review** across the team's work, looking for bugs and holding the codebase to a consistent standard.
-- **Create and assign the team's tasks** most of the time, and keep the two engineers unblocked by answering the questions that come up so they can carry on implementing.
-
-### **AI / LLM Engineer & Applied Researcher** – LSD-DELL, UFCG
-*April 2025 – April 2026 (Part-time)*
-
-Part of a cross-functional team building **LLM-powered agents** for
-Dell customer support. Hybrid AI engineering + applied research role:
-**Python**-based development in Agile sprints with peer code review
-via Pull Requests and integration through Dell's internal CI/CD
-pipeline, alongside benchmarking, model evaluation, and
-literature-driven experimentation. It was a research team with shared
-ownership, so the work below was done in collaboration rather than in
-separate, individually-owned tracks.
-
-#### LLM Agents, Tool Use & Applied Research
-- Built **LLM-powered agents** in **Python** using **LangChain** and **LangGraph**, including **tool calling**, **agentic workflows**, and experiments with **MCP (Model Context Protocol) servers** for extensible tool integration.
-- Consumed Dell's **internally hosted LLMs** via an **OpenAI-compatible API** (same `openai` SDK pattern, internal `base_url`), so all client code remained portable across providers.
-- Implemented **structured outputs** with **Pydantic models** as response schemas (`response_model`-style), ensuring strict type validation of LLM outputs and reliable downstream parsing.
-- Applied **input/output validation via Pydantic** as a lightweight guardrail layer to reject malformed or out-of-schema responses before they reached downstream systems.
-- Ran **prompt-injection tests** against the agents, focused on one class: making the agent break out of its assigned behaviour and bypass its guardrail. Reported the cases found and contributed fixes.
-- Deployed a **web-based interface** for testing LLM APIs and services when remote VDI environments restricted required tooling, unblocking the team's experimentation workflow.
-
-#### Retrieval-Augmented Generation (RAG) & Hybrid Search
-- Worked on a **FAQ system built on Retrieval-Augmented Generation (RAG)** using a **vector database** for similarity search over a knowledge base of customer-support content.
-- Used **internally hosted embedding models** (served via the same OpenAI-compatible API) to encode documents and queries.
-- Modified and tested **hybrid search**, **BM25** combined with dense retrieval and fused with **RRF (Reciprocal Rank Fusion)**, measured against the previous retrieval baseline. Numbers are internal to Dell and are not reproduced here.
-- Integrated **reranking** with **BGE-reranker / cross-encoder** models on top of the initial retrieval stage to lift top-k precision before passing context to the LLM.
-- Produced evaluation reports on RAG system quality and implementation status.
-
-#### LLM Evaluation, Benchmarking & Model Selection
-- Designed and ran **LLM evaluations** using **Arize Phoenix** as the observability/eval platform, including:
-  - **Custom evaluation metrics** for task-specific quality
-  - Analysis of **agent behavior**, **response quality**, **throughput**, and **token-cost** trade-offs
-  - Tracing of agent runs to debug tool-use and retrieval paths
-- Ran published **LLM benchmarks** for **data-driven model selection**: **MMMLU** for multilingual general knowledge and **MGSM** for multilingual grade-school math, to choose models for translation work.
-- Performed **descriptive statistical analysis** on evaluation datasets, including **prompt/response token-usage** profiling for cost optimization.
-
-#### Data Engineering & Dataset Expansion
-- **Authored** the new items that grew an evaluation dataset from **42 to over 120 questions**, increasing coverage and variability for LLM agent testing.
-- Contributed as part of the team to **multilingual dataset translation** using LLMs to enable evaluation across different languages.
-- Researched, reviewed, and implemented benchmarking methodologies from state-of-the-art academic literature on machine translation and LLM evaluation.
-
-### **System Administrator / Systems Analyst (SRE-adjacent)** – SPLab, UFCG (Part-time) Nov 2023 - April 2025
-
-Sole sysadmin responsible for the full IT infrastructure of a ~20-room
-building (~10 faculty offices plus postgraduate research projects and
-**projects in partnership with private companies and other public
-entities**), covering servers, networking, virtualization,
-firewalling, observability, incident response, and end-user support.
-
-Being the only person meant the platform work and the helpdesk were the same
-job. A single day could hold VLAN segmentation planning and then walking
-somebody through a printer driver, installing an OS for a new arrival,
-activating a piece of software for someone stuck, or swapping a projector alone
-on a ladder. Everything below was built **between** those interruptions, not
-instead of them.
-
-#### Infrastructure & Virtualization
-- Designed and implemented infrastructure to host services for the laboratory community.
-- Planned and deployed **KVM-based virtualization stacks** from scratch, significantly expanding service capacity and flexibility.
-- **The lab ran a single server with VMs on it and nothing else.** Specified, assembled, and put into service **two more physical servers** (one for production workloads, one dedicated to VM backups) and managed them alongside workstations, using **Proxmox** and **KVM**.
-- Built and configured **on-demand machines and test-lab environments** for lab members (researchers, students, partner projects), specifying hardware, assembling, and provisioning systems according to each use case. Research projects were handed **their own VMs to self-manage**, with me owning the platform underneath and every technical escalation on top.
-
-#### Storage, Backup, Reliability & Disaster Recovery
-- Designed and implemented **backup infrastructure** for KVM virtual machines and file-based workloads, including **encrypted backup validation tests** (restore drills) to verify that backups were actually recoverable, not just written successfully.
-- Configured and managed **Dell servers** and general-purpose servers.
-- **There was no backup at all before this.** Built the capability from zero: first a **TrueNAS-based setup**, then a **fully custom backup server** assembled in-house from drives already on site, giving more control and capacity without buying an appliance.
-- For the custom server, **evaluated all candidate drives** available at the lab, running diagnostics and inspecting **SMART data (including power-on hours / drive uptime)**, to select the disks with the lowest wear for the array.
-- Built the final server on **Rocky Linux 9**, six 2.5" drives in a **ZFS pool in RAID 10 (striped mirrors)**, mounted in a **custom 3D-printed drive holder**. ZFS was the deliberate choice for **end-to-end checksums**: on a backup target, silent corruption has to be detected, not faithfully copied.
-- Maintained **VM snapshot policies** as part of the lab's **disaster recovery (DR)** strategy, enabling rapid rollback after failed updates or hardware events.
-
-#### Networking & Connectivity
-- Performed **network planning and design** for the lab, including segmentation, growth capacity, and rack/distribution layout.
-- Administered and configured **network switches**. **There was no VLAN segmentation in place: designed and built the lab's ~20 VLANs from scratch**, together with port assignments, trunking, and link aggregation, isolating traffic across services and tenants. Several switches had no usable credentials on record and had to be factory-reset before they could be brought under management at all.
-- Managed the laboratory's full **DNS stack**, including internal zones and resolution for lab services and VMs.
-- Simulated and validated network topologies using **Cisco Packet Tracer**.
-- Standardized and reorganized server rack infrastructure. **There was no topology standard to follow, so I defined one**: **structured cabling** in a cascading architecture, improving network design, throughput, and maintainability.
-- Identified and resolved a pre-existing bottleneck caused by **disorganized cabling and outdated 100 Mb/s links**, upgrading the network to **stable 1 Gb/s connectivity** and enabling full utilization of available bandwidth.
-- Configured and optimized **Ubiquiti UniFi access points** and administered the **UniFi Controller** to maximize wireless coverage and performance.
-- Repurposed legacy networking equipment by installing **OpenWrt** on older routers, extending hardware lifecycle and reducing costs.
-
-#### Security, Firewalling & Access Control
-- Administered and secured **pfSense firewalls**, including:
-  - Replaced an **insecure legacy backup script that stored credentials in plaintext** with **documented best practices** and **secure, encrypted configuration backups**
-  - Management of VPNs, threat detection, monitoring, and advisory systems
-- Ended the practice of keeping the lab's shared credentials in **Google Drive**, standing up a **self-hosted Bitwarden** vault instead: secrets moved from a shared cloud folder to per-user access with an audit trail.
-- Deployed and maintained **security and monitoring tools**: **OpenVAS** for vulnerability scanning, **Suricata** as IDS/IPS at the pfSense edge, and **darkstat** for traffic accounting.
-- Built and ran a **camera-based access-control prototype** (AI person identification) for controlled laboratory access. It worked end to end; the ceiling was the **existing cameras' image quality**, not the model, which is what killed accuracy in practice.
-- Maintained a **physical cold-standby firewall**: a second machine, plugged in but powered down, with the pfSense configuration pre-loaded and brought up by **Wake-on-LAN**. Cutover was deliberately manual rather than CARP-based HA, because the optical converter had no spare port and the uplink cable had to be moved by hand. Exercised in a real incident (UPS short-circuit, see Incident Response below).
-- Also evaluated running pfSense inside a **Proxmox VM** for centralized management, but the network link proved unstable in that configuration, so the **physical standby machine remained the production failover path**: a deliberate choice based on observed reliability rather than convenience.
-
-#### Observability, Monitoring & Power Continuity
-- Built and operated the lab's **observability stack**, initially with **Zabbix** and later **migrating to Checkmk** as the primary monitoring system (the inherited Zabbix install was broken and carried no documentation, so rebuilding on Checkmk cost less than reverse-engineering it), complemented by **ntopng** for traffic analysis, **UniFi Manager**, and virtualization management tools, providing **host and service availability metrics** for lab-hosted services.
-- Configured **alerting and on-call notification** flows for service and host failures, enabling early detection and faster **incident response**.
-- Developed a **monitoring dashboard** (Python, HTML, CSS) on top of **NUT (Network UPS Tools)** to track **UPS (no-break) status** during power outages, surfacing battery state and runtime to support operator decisions.
-- Mitigated internet downtime during power failures by extending UPS capacity for a centralized university internet concentrator, sustaining approximately **1 hour of continued connectivity**, timed with a stopwatch during real outages.
-
-#### Incident Response & Operational Reliability
-- Owned **incident response** for the lab as the single on-call operator: triage, mitigation, communication, and recovery for outages affecting servers, network, firewall, and end-user services.
-- **Documented post-incident runbooks/playbooks** after each significant event, capturing root cause, mitigation steps, and follow-up actions to speed up recovery on recurrence. These lived in the lab wiki, so they outlasted my own access.
-- Example incident: **UPS short-circuit** that tripped the room's circuit breakers. Executed live mitigation by cutting power to the affected machine (damaged inside the UPS), then **failed the firewall over to the standby**: Wake-on-LAN to boot it, plus a manual uplink cable move, since the optical converter had no free port. Recovery time was bounded by those two steps.
-- Diagnosed a **silent pfSense failure** where a **power cycle**, but never a warm reboot, dropped the entire configuration back to defaults: interfaces came up passing no traffic, with nothing in the logs. Root cause was a **virtual interface whose parent NIC enumerated under a different name on a cold boot**, on a machine with two NICs of different origins (onboard plus an add-in card). Deleting the orphaned virtual interface fixed it. The fix was one line; finding which line was the whole job.
-- Handled recurring **power-grid variations and surges** as a preventive operator: when conditions looked unsafe, **proactively alerted the entire lab to disconnect equipment** or **cut power at the breaker panel**, protecting sensitive hardware from damage.
-- Performed periodic **disaster recovery drills**, including restore validation of **encrypted VM backups** to confirm the backup pipeline produced recoverable artifacts (not just successful writes).
-- While the lab's **DVR was broken and no surveillance cameras were available**, designed and built an **improvised camera system** for the support room (where all critical equipment was stored), using a **Banana Pi M2 Zero** and a **scavenged notebook webcam**, restoring basic on-site visibility from spare parts at zero cost.
-
-#### Asset Management & Procurement
-- Implemented **asset tracking and property accounting (patrimônio)** by maintaining an inventory of serial numbers and university asset tags, supporting audits and identification of laboratory-owned equipment.
-- Deployed **GLPI** (asset management plus helpdesk) to formalise inventory and ticketing, then **took it back down**. With a single on-site operator, people kept walking into the support room instead of opening tickets, so the tool cost maintenance without changing behaviour. Retiring it was the cheaper call.
-
-#### Automation, Configuration Management & Platforms
-- Deployed and managed services using **Docker** for containerized workloads and service isolation, including a **small in-house scheduling service** written for specific faculty members; also explored **Podman** as a daemonless alternative. **Portainer** went up for container visibility but stayed marginal, since **Checkmk** already covered host and service monitoring.
-- Used **Ansible** for repeatable configuration across **~10 physical hosts and VMs** (lightweight IaC).
-- Stood up an **Otter Wiki** as the lab's documentation home, having inherited systems with none. The Zabbix install was the worst case. Runbooks, network topology, and service notes went there instead of staying in one person's head.
-
-#### General Systems Administration & End-User Support
-- Performed general system administration tasks, including:
-  - **Budget planning, vendor quotations, and procurement** of IT equipment for the laboratory
-  - Preparation of technical specifications and price comparisons to support purchase decisions
-  - Maintenance of notebooks, desktops, printers (**CUPS** print server administration), projectors, UPS units, and power supplies
-- Provided **hands-on end-user support** for faculty and lab members: software installation, PC troubleshooting, projector swaps (ladder included, single-handed), and on-site equipment setup/teardown.
-- Diagnosed and **repaired a broken DVR** received non-functional, restoring it to working condition and avoiding replacement cost.
-- Wrote **Python tooling to reassemble DVR footage**: there was no procedure for pulling a usable recording, and the Intelbras recorders export video split into segments, so the scripts stitched the segments back into a single file and turned an ad-hoc retrieval into a repeatable one.
-
----
-
-### **Volunteer IT Support & Systems Maintenance** – Guardians Group, UFCG · 2023 – Present
-
-**Volunteer – Computer Science Department**
-
-- Provided general IT maintenance and troubleshooting for the Computer Science department, supporting faculty, staff, and students.
-- Assisted with deployment and reinstallation of **Linux and Windows operating systems** on laboratory and staff machines.
-- Helped with **network cabling, basic network setup**, and device organization across laboratories.
-- Maintained and updated inventories of departmental equipment, including desktops, notebooks, projectors, and peripherals.
-- Recovered and repurposed an **abandoned SonicWall firewall**, configuring it as a sandbox and learning playground for students.
-- Participated in **“Imagem Prova”, version 1** (exam boot image): a **customized Linux image** used during exams to ensure fairness by restricting unauthorized tools and resources.
-- Developed a **Bash-based access control solution** using `iptables` and `dig` to enforce a **custom domain whitelist/blacklist**, limiting network access to approved domains during assessments.
-- Actively supported day-to-day maintenance activities across multiple computer labs, ensuring system availability and reliability.
-
-### **Academic Tutoring (Volunteer Work)** – UFCG · 2023
-
-**Teaching Assistant (Volunteer)**  
-*Graph Theory & Concurrent Programming*
-
-- Assisted professors during laboratory and practical sessions for undergraduate courses.
-- Supported students with problem-solving, algorithm design, and theoretical concepts in **Graph Theory**.
-- Helped students during hands-on activities, clarifying assignments and providing technical guidance.
-- Assisted in the correction and review of student assignments and exercises.
-- Acted as a bridge between students and faculty, reinforcing course content and improving learning outcomes.
-
 ### Selected Projects
 
-- **[UPS Energy Monitor](https://bitssand.blog/projects/power-ups-front/)**: Python, Flask, Chart.js, NUT, Docker. The UPS dashboard described in the SPLab role above.
-- **[Servitor Assistant](https://bitssand.blog/projects/servitor-assistant/)**: Python, FastAPI, LangChain, Ollama, Vosk, Piper TTS, Raspberry Pi. Self-hosted voice assistant.
-- **[WhiteList](https://bitssand.blog/projects/whitelist/)**: Bash, iptables, ufw. The exam-time domain whitelist described in the Guardians role above.
+- **[UPS Energy Monitor](https://bitssand.blog/projects/power-ups-front/)**: Python, Flask, Chart.js, NUT, Docker. Monitoring and telemetry dashboard with 255k+ real log entries tracking battery health and runtime through power outages.
+- **[WhiteList](https://bitssand.blog/projects/whitelist/)**: Bash, iptables, ufw. Exam-time default-deny firewall orchestrating dynamic domain whitelisting and access enforcement.
+- **[Servitor Assistant](https://bitssand.blog/projects/servitor-assistant/)**: Python, FastAPI, LangChain, Ollama, Vosk, Piper TTS, Raspberry Pi. Self-hosted edge voice assistant with local LLM inference.
 
-[All projects](https://bitssand.blog/projects/)
+[All projects](https://bitssand.blog/projects/) · Technical postmortems and incident write-ups at [bitssand.blog/everydaysbugs](https://bitssand.blog/everydaysbugs/)
 
 ---
 

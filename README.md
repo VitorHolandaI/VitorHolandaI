@@ -15,3 +15,5 @@ be a tablet in the living room holding my IP.
 Everything else is at [bitssand.blog](https://bitssand.blog/):
 [projects](https://bitssand.blog/projects/) and a
 [cv](https://bitssand.blog/cv/), if that is what you came for.
+
+<img src="https://komarev.com/ghpvc/?username=VitorHolandaI" width="1" height="1" alt="" style="display:none;" />
