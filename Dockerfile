@@ -38,7 +38,7 @@ COPY --from=pdf-builder /data/cv-pt.pdf assets/cv-pt.pdf
 RUN JEKYLL_ENV=production bundle exec jekyll build --destination /tmp/site
 
 # Stage 3: Serve only generated static files from an unprivileged nginx
-FROM nginxinc/nginx-unprivileged:1.28-alpine@sha256:7377697a821c131a924a7105fafbe7414db4e9fcc77a6f08f776f33f141ec3f8
+FROM nginxinc/nginx-unprivileged:1.30.4-alpine@sha256:442753882674b49ae2c1de83ed67896131c0777f56df5005e356e62bc3f7e7ce
 COPY --chown=101:101 nginx-default.conf /etc/nginx/conf.d/default.conf
 COPY --chown=101:101 nginx-security-headers.conf /etc/nginx/security-headers.conf
 COPY --from=site-builder --chown=101:101 /tmp/site /usr/share/nginx/html
