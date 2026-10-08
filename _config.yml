@@ -37,6 +37,7 @@ header_pages:
   - about.markdown
   - posts.markdown
   - everydaysbugs.markdown
+  - ci.markdown
   - projects.markdown
   - infra.markdown
   - github.markdown
