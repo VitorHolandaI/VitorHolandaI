@@ -252,7 +252,10 @@ pre code, pre > code, .highlight code {
 table {
   display: block;
   overflow-x: auto;
-  width: 100%;
+  /* fit-content pra tabela estreita nao esticar a borda pela largura toda;
+     o max-width segura a tabela larga dentro do texto, com scroll horizontal. */
+  width: fit-content;
+  max-width: 100%;
   border: 1px solid var(--np-hairline);
   border-collapse: collapse;
   background: transparent;
