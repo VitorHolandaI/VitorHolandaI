@@ -21,6 +21,8 @@ jobs:
     - name: Build and push to dockerhub
       uses: docker/build-push-action@v7
       with:
-       context:
+       # o workspace do checkout; sem isso a action busca o contexto Git
+       # sozinha e clona o repo de novo, ignorando o passo de checkout
+       context: .
        push: true
        tags: vitorholanda/website:latest
