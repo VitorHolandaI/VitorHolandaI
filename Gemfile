@@ -1,29 +1,28 @@
 source "https://rubygems.org"
-# Hello! This is where you manage which Jekyll version is used to run.
-# When you want to use a different version, change it below, save the
-# file and run `bundle install`. Run Jekyll with `bundle exec`, like so:
-#
-#     bundle exec jekyll serve
-#
-# This will help ensure the proper Jekyll version is running.
-# Happy Jekylling!
-#gem "jekyll", "~> 4.3.4"
-# This is the default theme for new Jekyll sites. You may change this to anything you like.
+
+# O site é publicado pelo Dockerfile deste repo (jekyll build + nginx), não pelo
+# GitHub Pages. A gem `github-pages` saiu daqui porque ela trazia
+# jekyll-remote-theme — que este site não usa — e com ele rubyzip < 3.0,
+# vulnerável a path traversal (CVE-2026-85396). O jekyll continua no 3.10 que a
+# github-pages 232 fixava; minima e jekyll-seo-tag sobem de patch (2.5.1 -> 2.5.2
+# e 2.8.0 -> 2.9.1) porque só o guarda-chuva os segurava.
+gem "jekyll", "~> 3.10"
 gem "minima", "~> 2.5"
-# If you want to use GitHub Pages, remove the "gem "jekyll"" above and
-# uncomment the line below. To upgrade, run `bundle update github-pages`.
-gem "github-pages", group: :jekyll_plugins
-# Pin nokogiri to a patched version (libxml2 CVEs, CSS regex backtracking, XSLT memory leak, xmlC14NExecute)
-gem "nokogiri", ">= 1.19.3"
-# Security pins for transitive deps flagged by Dependabot
-gem "addressable", ">= 2.8.8"          # ReDoS in templates
-gem "activesupport", ">= 8.0.2"        # ReDoS number_to_delimited, DoS number helpers, XSS SafeBuffer#%
-gem "faraday", ">= 2.13.1"             # SSRF via protocol-relative URL
+# O jekyll 3 usa kramdown com input GFM por padrão, e o parser mora numa gem
+# separada desde o kramdown 2. Vinha de carona na github-pages.
+gem "kramdown-parser-gfm", "~> 1.1"
+
+# Security pins for transitive deps flagged by Dependabot. Os pins de nokogiri,
+# activesupport e faraday saíram junto com a github-pages: nenhuma gem da árvore
+# atual depende deles, então fixá-los só instalaria gem que o site não usa.
+gem "addressable", ">= 2.8.8"          # ReDoS in templates (vem do jekyll)
+gem "rexml", ">= 3.4.1"                # DoS on malformed XML (vem do kramdown)
 gem "uri", ">= 1.0.4"                  # CVE-2025-27221 credential leakage bypass
-gem "rexml", ">= 3.4.1"                # DoS on malformed XML
+
 # If you have any plugins, put them here!
 group :jekyll_plugins do
   gem "jekyll-feed", "~> 0.12"
+  gem "jekyll-seo-tag", "~> 2.8"       # a tag {% seo %} em _includes/head.html
 end
 
 # Windows and JRuby does not include zoneinfo files, so bundle the tzinfo-data gem
