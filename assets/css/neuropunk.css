@@ -90,6 +90,12 @@ body {
 .page-content,
 .site-footer { position: relative; z-index: 1; }
 
+/* e o cabeçalho acima do resto: no mobile o menu aberto é um painel absoluto
+   dentro do .site-header, e com z-index empatado quem pinta por cima é o
+   .page-content, que vem depois no DOM. O painel aparecia, mas os toques
+   caíam no conteúdo atrás dele. */
+.site-header { z-index: 3; }
+
 ::selection { background: var(--np-sodium); color: var(--np-void); }
 
 a {
