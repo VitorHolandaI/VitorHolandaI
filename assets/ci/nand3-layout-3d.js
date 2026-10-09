@@ -58,7 +58,7 @@ chans.forEach(h=>h.m.visible=vis.ch!==false&&h.on);}
 ['A','B','C'].forEach(n=>document.getElementById('n3-b'+n).onclick=()=>{inp[n]^=1;logic()});
 function upd(){for(const k in L){if(k=='cur'||k=='sdg')continue;L[k].forEach(m=>{if(k=='cont'){const a=0.02+off('diff'),b=3+off('metal');m.scale.y=(b-a)/2.98;m.position.y=(a+b)/2}else m.position.y=(m.userData.h0+m.userData.h1)/2+off(k)})}}
 document.getElementById('n3-ex').oninput=e=>{ex=+e.target.value;upd()};
-document.querySelectorAll('#n3-vis [data-l]').forEach(c=>{const f=()=>{vis[c.dataset.l]=c.checked;if(c.dataset.l!='cur')L[c.dataset.l].forEach(m=>m.visible=c.checked);if(c.dataset.l=='ch')chans.forEach(h=>h.m.visible=c.checked&&h.on)};f();c.onchange=f});
+document.querySelectorAll('#n3-vis [data-l]').forEach(c=>{const f=()=>{vis[c.dataset.l]=c.checked;if(L[c.dataset.l]&&c.dataset.l!='cur')L[c.dataset.l].forEach(m=>m.visible=c.checked);if(c.dataset.l=='ch')chans.forEach(h=>h.m.visible=c.checked&&h.on)};f();c.onchange=f});
 function view(t){if(t){cam.position.set(0,75,0.01)}else{cam.position.set(-34,38,46)}ctl.target.set(0,0,0);ctl.update()}
 document.getElementById('n3-top').onclick=()=>view(1);document.getElementById('n3-iso').onclick=()=>view(0);view(0);logic();upd();
 function along(pts,u){const seg=[];let tot=0;for(let i=1;i<pts.length;i++){const a=pts[i-1],b=pts[i];const l=Math.hypot(b[0]-a[0],b[1]-a[1],b[2]-a[2]);seg.push(l);tot+=l}
@@ -68,6 +68,6 @@ const v=new THREE.Vector3();
 const pu=0.55+0.4*Math.sin(t/250);chans.forEach(c=>c.m.material.opacity=pu);
 flows.forEach(fl=>fl.arr.forEach((s,i)=>{if(!fl.pts||vis.cur===false){s.visible=false;return}s.visible=true;const u=((t/5000)+i/N)%1;const p=along(fl.pts,u);s.position.set(p[0]-16,p[2],p[1]-20)}));
 r.render(sc,cam);
-LB.forEach(l=>{const y=l.h+off(l.k2||l.k)+0.8;v.set(l.x,y,l.z).project(cam);l.s.style.left=((v.x+1)/2*W())+'px';l.s.style.top=((1-v.y)/2*H)+'px';l.s.style.display=(v.z<1&&vis[l.k]!==false)?'block':'none'})})();
+LB.forEach(l=>{const y=l.h+off(l.k2||l.k)+0.8;v.set(l.x,y,l.z).project(cam);l.s.style.left=((v.x+1)/2*W())+'px';l.s.style.top=((1-v.y)/2*H)+'px';l.s.style.display=(vis.rot!==false&&v.z<1&&vis[l.k]!==false)?'block':'none'})})();
 addEventListener('resize',()=>{cam.aspect=W()/H;cam.updateProjectionMatrix();r.setSize(W(),H)});
 })();

@@ -144,7 +144,8 @@ no mesmo plano.
 
 Daí eu fiz isto. Clica em `A`, `B` e `C` pra mudar as entradas; as partículas
 mostram por onde a corrente anda em cada combinação. O slider separa as camadas
-na vertical, e os checkboxes ligam e desligam cada uma.
+na vertical, e os checkboxes ligam e desligam cada uma — inclusive `Todos os
+rótulos`, que apaga os textos flutuantes quando você quer olhar só a geometria.
 
 <div id="n3-vis">
   <div class="n3-row">
@@ -167,6 +168,7 @@ na vertical, e os checkboxes ligam e desligam cada uma.
     <label><input type="checkbox" data-l="cont" checked> Contatos</label>
     <label><input type="checkbox" data-l="metal" checked> Metal 1</label>
     <label><input type="checkbox" data-l="sdg" checked> Rótulos S/D/G</label>
+    <label><input type="checkbox" data-l="rot" checked> Todos os rótulos</label>
     <label><input type="checkbox" data-l="cur" checked> Corrente</label>
   </div>
 
