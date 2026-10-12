@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Inversor CMOS: tabela verdade, esquemático e o layout em 3D pra girar"
-date:   2026-10-12 20:00:00 -0300
+date:   2026-10-12 11:00:00 -0300
 categories: ci
 lang: pt
 ---
