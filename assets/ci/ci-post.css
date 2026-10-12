@@ -1,6 +1,7 @@
-/* Widget do layout 3D da NAND3. As variaveis abaixo traduzem o tema do blog
-   para os nomes que o script e o markup do visualizador usam. */
-#n3-vis {
+/* Widgets de layout 3D (NAND3 e inversor). As variaveis abaixo traduzem o
+   tema do blog para os nomes que os scripts e o markup dos visualizadores usam. */
+#n3-vis,
+#inv-vis {
   --surface-1: var(--np-panel);
   --surface-2: var(--np-ground);
   --border: var(--np-hairline);
@@ -15,7 +16,8 @@
   font-family: var(--np-mono);
 }
 
-#n3-vis .n3-row {
+#n3-vis .n3-row,
+#inv-vis .n3-row {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -25,7 +27,8 @@
   color: var(--np-text-dim);
 }
 
-#n3-vis button {
+#n3-vis button,
+#inv-vis button {
   padding: 4px 12px;
   background: var(--np-panel);
   border: 1px solid var(--np-hairline);
@@ -36,19 +39,26 @@
   cursor: pointer;
 }
 
-#n3-vis button:hover {
+#n3-vis button:hover,
+#inv-vis button:hover {
   border-color: var(--np-sodium);
   color: var(--np-sodium);
 }
 
-#n3-vis input[type="range"] { flex: 1; accent-color: var(--np-sodium); }
-#n3-vis input[type="checkbox"] { accent-color: var(--np-sodium); }
-#n3-vis label { display: inline-flex; align-items: center; gap: 4px; }
+#n3-vis input[type="range"],
+#inv-vis input[type="range"] { flex: 1; accent-color: var(--np-sodium); }
+#n3-vis input[type="checkbox"],
+#inv-vis input[type="checkbox"] { accent-color: var(--np-sodium); }
+#n3-vis label,
+#inv-vis label { display: inline-flex; align-items: center; gap: 4px; }
 
-#n3-out { font-size: 15px; color: var(--np-sodium); margin-left: 8px; }
-#n3-path { font-size: 13px; color: var(--np-text-dim); margin: 0 0 10px; }
+#n3-out,
+#inv-out { font-size: 15px; color: var(--np-sodium); margin-left: 8px; }
+#n3-path,
+#inv-path { font-size: 13px; color: var(--np-text-dim); margin: 0 0 10px; }
 
-#n3-wrap {
+#n3-wrap,
+#inv-wrap {
   position: relative;
   height: 500px;
   border-radius: 4px;
@@ -56,21 +66,25 @@
   overflow: hidden;
 }
 
-#n3-lbl {
+#n3-lbl,
+#inv-lbl {
   position: absolute;
   inset: 0;
   pointer-events: none;
   font-size: 12px;
 }
 
-#n3-vis .n3-legend { font-size: 12px; margin-top: 10px; }
-#n3-vis .n3-swatch {
+#n3-vis .n3-legend,
+#inv-vis .n3-legend { font-size: 12px; margin-top: 10px; }
+#n3-vis .n3-swatch,
+#inv-vis .n3-swatch {
   display: inline-block;
   width: 10px;
   height: 10px;
   margin-right: 4px;
 }
-#n3-vis .n3-swatch--dot { border-radius: 50%; }
+#n3-vis .n3-swatch--dot,
+#inv-vis .n3-swatch--dot { border-radius: 50%; }
 
 /* O esquematico e desenhado com currentColor pra seguir o modo de impressao. */
 .n3-schematic { width: 100%; height: auto; margin: 1.5rem 0; color: var(--np-text); }
