@@ -1,7 +1,9 @@
-/* Widgets de layout 3D (NAND3 e inversor). As variaveis abaixo traduzem o
-   tema do blog para os nomes que os scripts e o markup dos visualizadores usam. */
+/* Widgets de layout 3D (NAND3, inversor e transistor). As variaveis abaixo
+   traduzem o tema do blog para os nomes que os scripts e o markup dos
+   visualizadores usam. */
 #n3-vis,
-#inv-vis {
+#inv-vis,
+#t3-vis {
   --surface-1: var(--np-panel);
   --surface-2: var(--np-ground);
   --border: var(--np-hairline);
@@ -17,7 +19,8 @@
 }
 
 #n3-vis .n3-row,
-#inv-vis .n3-row {
+#inv-vis .n3-row,
+#t3-vis .n3-row {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
@@ -28,7 +31,8 @@
 }
 
 #n3-vis button,
-#inv-vis button {
+#inv-vis button,
+#t3-vis button {
   padding: 4px 12px;
   background: var(--np-panel);
   border: 1px solid var(--np-hairline);
@@ -40,25 +44,32 @@
 }
 
 #n3-vis button:hover,
-#inv-vis button:hover {
+#inv-vis button:hover,
+#t3-vis button:hover {
   border-color: var(--np-sodium);
   color: var(--np-sodium);
 }
 
 #n3-vis input[type="range"],
-#inv-vis input[type="range"] { flex: 1; accent-color: var(--np-sodium); }
+#inv-vis input[type="range"],
+#t3-vis input[type="range"] { flex: 1; accent-color: var(--np-sodium); }
 #n3-vis input[type="checkbox"],
-#inv-vis input[type="checkbox"] { accent-color: var(--np-sodium); }
+#inv-vis input[type="checkbox"],
+#t3-vis input[type="checkbox"] { accent-color: var(--np-sodium); }
 #n3-vis label,
-#inv-vis label { display: inline-flex; align-items: center; gap: 4px; }
+#inv-vis label,
+#t3-vis label { display: inline-flex; align-items: center; gap: 4px; }
 
 #n3-out,
-#inv-out { font-size: 15px; color: var(--np-sodium); margin-left: 8px; }
+#inv-out,
+#t3-out { font-size: 15px; color: var(--np-sodium); margin-left: 8px; }
 #n3-path,
-#inv-path { font-size: 13px; color: var(--np-text-dim); margin: 0 0 10px; }
+#inv-path,
+#t3-path { font-size: 13px; color: var(--np-text-dim); margin: 0 0 10px; }
 
 #n3-wrap,
-#inv-wrap {
+#inv-wrap,
+#t3-wrap {
   position: relative;
   height: 500px;
   border-radius: 4px;
@@ -67,7 +78,8 @@
 }
 
 #n3-lbl,
-#inv-lbl {
+#inv-lbl,
+#t3-lbl {
   position: absolute;
   inset: 0;
   pointer-events: none;
@@ -75,16 +87,19 @@
 }
 
 #n3-vis .n3-legend,
-#inv-vis .n3-legend { font-size: 12px; margin-top: 10px; }
+#inv-vis .n3-legend,
+#t3-vis .n3-legend { font-size: 12px; margin-top: 10px; }
 #n3-vis .n3-swatch,
-#inv-vis .n3-swatch {
+#inv-vis .n3-swatch,
+#t3-vis .n3-swatch {
   display: inline-block;
   width: 10px;
   height: 10px;
   margin-right: 4px;
 }
 #n3-vis .n3-swatch--dot,
-#inv-vis .n3-swatch--dot { border-radius: 50%; }
+#inv-vis .n3-swatch--dot,
+#t3-vis .n3-swatch--dot { border-radius: 50%; }
 
 /* O esquematico e desenhado com currentColor pra seguir o modo de impressao. */
 .n3-schematic { width: 100%; height: auto; margin: 1.5rem 0; color: var(--np-text); }
