@@ -34,7 +34,6 @@ baseurl: ""
 github_username:  VitorHolandaI
 
 header_pages:
-  - about.markdown
   - posts.markdown
   - everydaysbugs.markdown
   - ci.markdown
