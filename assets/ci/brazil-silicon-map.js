@@ -75,7 +75,7 @@
     const cat = dados.categorias[emp.cat] || emp.cat;
     li.appendChild(criar('span', 'bsr-cat', cat));
     li.appendChild(criar('p', 'bsr-atividade', emp.atividade));
-    if (emp.url) li.appendChild(linkSeguro(emp.url, 'fonte'));
+    if (emp.url) li.appendChild(linkSeguro(emp.url, 'site oficial'));
     return li;
   }
 

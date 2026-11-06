@@ -67,6 +67,8 @@ Arquivo derivado, editado só por regeneração. Vem de dois lugares:
   paths SVG projetados, por isso o mapa não precisa de D3 nem de projeção.
 
 A fusão reagrupa os polos por unidade federativa, traduz as categorias para
-português e guarda a procedência na chave `fonte` do próprio JSON. Para
+português e guarda a procedência na chave `fonte` do próprio JSON. O link de
+cada organização tem que ser o site oficial dela, e é o que o card mostra; a
+chave `fonte.linksConferidos` diz quando eles foram checados pela última vez. Para
 atualizar, baixe os dois arquivos de origem de novo e refaça o agrupamento; a
 chave `fonte.gerado` diz de que data é o dataset que está no ar.
