@@ -39,8 +39,16 @@ cartográfica.
 O estado fica mais claro quanto mais organizações ele tem, e a divisa é
 desenhada com a cor do fundo da página, pra que dois cinzas vizinhos nunca
 encostem um no outro. O painel do lado lista os polos daquele estado com o logo,
-a atividade e o link da fonte de cada empresa. No celular o painel desce pra
+a atividade e o site oficial de cada empresa. No celular o painel desce pra
 baixo do mapa, e tocar num estado fixa ele, senão não dava pra clicar nos links.
+
+Depois de montar o mapa eu fui conferir uma a uma se essas organizações ainda
+existem, abrindo o site oficial de cada uma. Sete links apontavam pro lugar
+errado e eu troquei: a LSI-TEC estava num domínio que não resolve mais, a página
+da SIATT dava 404, a Macnica DHW tinha sido absorvida pela matriz. Aproveitei e
+acrescentei cinco organizações que faltavam, achadas na lista de associadas da
+ABISEMI e em anúncios de 2025 e 2026. O mapa está com 53 organizações e 71
+registros, contra as 48 e 66 do dataset original.
 
 <div id="bsr"
   data-src="{{ '/assets/ci/brazil-silicon.json' | relative_url }}"
@@ -58,10 +66,11 @@ baixo do mapa, e tocar num estado fixa ele, senão não dava pra clicar nos link
 
 ## O que o mapa mostra
 
-Nove estados aparecem. São Paulo sozinho leva 27 dos 66 registros, espalhados
-entre Campinas, o interior e São José dos Campos. Campinas isolada já tem 14,
-mais que qualquer outro estado inteiro. Depois vem o Rio Grande do Sul com 12 e
-o Amazonas com 8, esse último quase todo na Zona Franca de Manaus.
+Nove estados aparecem. São Paulo sozinho leva 29 dos 71 registros, espalhados
+entre Campinas, o interior, São José dos Campos e a capital. Campinas isolada já
+tem 15, mais que qualquer outro estado inteiro. Depois vêm o Rio Grande do Sul
+com 13, Minas Gerais com 10 e o Amazonas com 8, esse último quase todo na Zona
+Franca de Manaus.
 
 Do outro lado da lista estão a Paraíba, com uma única organização, e Bahia,
 Paraná e Distrito Federal com duas cada. Dezoito estados não têm nenhum
@@ -75,7 +84,7 @@ dos estados vêm do [click_that_hood][cth], sob licença MIT, que é de onde o
 projeto original também tirou. Os logos são o favicon do site de cada empresa,
 baixado uma vez e guardado junto com o resto do site, pra o post não sair
 pedindo imagem a terceiro na hora que alguém abre a página. Quem não tinha
-favicon legível, 9 das 48, aparece com a inicial no lugar. Eu reorganizei o
+favicon legível, 9 das 53, aparece com a inicial no lugar. Eu reorganizei o
 dataset por unidade federativa e escrevi o visualizador.
 
 [repo]: https://github.com/MattGrossi12/brazil_silicon_roadmap
