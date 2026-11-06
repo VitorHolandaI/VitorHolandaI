@@ -115,3 +115,156 @@
   vertical-align: middle;
   white-space: nowrap;
 }
+
+/* Mapa do ecossistema de semicondutores (brazil-silicon-map.js). O painel fica
+   ao lado do mapa no desktop e embaixo no celular. */
+#bsr {
+  /* Sai da coluna de texto porque o mapa so fica legivel com area. A largura
+     parte de 100% (a coluna) em vez de vw: assim a barra de rolagem nao entra
+     na conta e a pagina nunca ganha rolagem horizontal. Sem transform, que o
+     tema zera em filho de .post-content. */
+  --bsr-larg: min(1160px, 100% + 340px);
+  box-sizing: border-box;
+  width: var(--bsr-larg);
+  margin: 1.5rem 0 1.5rem calc(50% - var(--bsr-larg) / 2);
+  padding: 1rem;
+  background: var(--np-void);
+  border: 1px solid var(--np-hairline);
+  border-radius: 4px;
+  font-family: var(--np-mono);
+  color: var(--np-text);
+}
+
+.bsr-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr);
+  gap: 1.5rem;
+  align-items: start;
+}
+
+#bsr-mapa svg { width: 100%; height: auto; display: block; }
+/* A divisa e' desenhada com a cor do fundo da pagina: vira um vao entre os
+   estados, que e' o que separa dois tons de cinza vizinhos. */
+#bsr-mapa path {
+  stroke: var(--np-void);
+  stroke-width: 1.6;
+  stroke-linejoin: round;
+}
+#bsr-mapa path.bsr-ativo { cursor: pointer; transition: fill 120ms linear; }
+#bsr-mapa path.bsr-ativo:hover,
+#bsr-mapa path.bsr-ativo:focus {
+  stroke: var(--np-sodium);
+  stroke-width: 2.4;
+  outline: none;
+}
+#bsr-mapa path.bsr-fixado { stroke: var(--np-sodium); stroke-width: 2.8; }
+
+#bsr-painel {
+  max-height: 640px;
+  overflow-y: auto;
+  padding-right: 0.4rem;
+  font-size: 13px;
+}
+
+.bsr-cab {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.6rem;
+  border-bottom: 1px solid var(--np-hairline);
+  padding-bottom: 0.4rem;
+}
+.bsr-cab h3 { margin: 0; font-size: 16px; color: var(--np-sodium); }
+.bsr-contagem { color: var(--np-text-dim); font-size: 12px; }
+.bsr-dica { color: var(--np-text-dim); font-size: 12px; margin: 0.6rem 0; }
+.bsr-erro { color: var(--np-sodium); }
+
+.bsr-polo {
+  margin: 0.9rem 0 0.3rem;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--np-ice);
+}
+.bsr-lista { list-style: none; margin: 0; padding: 0; }
+.bsr-empresa {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--np-hairline);
+}
+.bsr-empresa strong { display: block; color: var(--np-text); font-size: 13px; }
+.bsr-cat { color: var(--np-text-dim); font-size: 11px; }
+.bsr-atividade {
+  margin: 0.3rem 0 0.2rem;
+  color: var(--np-text-dim);
+  font-size: 12px;
+  line-height: 1.5;
+}
+.bsr-fonte { font-size: 11px; }
+
+.bsr-ranking { list-style: none; margin: 0.6rem 0 0; padding: 0; }
+.bsr-ranking li {
+  display: grid;
+  grid-template-columns: 2.2rem minmax(0, 1fr) 2rem;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+.bsr-uf { color: var(--np-text-dim); font-size: 12px; }
+.bsr-barra { height: 10px; border-radius: 2px; min-width: 3px; }
+.bsr-n { color: var(--np-text-dim); font-size: 12px; text-align: right; }
+
+#bsr-legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  align-items: center;
+  margin-top: 0.8rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--np-hairline);
+  font-size: 12px;
+  color: var(--np-text-dim);
+}
+.bsr-chave { display: inline-flex; align-items: center; gap: 0.35rem; }
+.bsr-amostra {
+  display: inline-block;
+  width: 16px;
+  height: 12px;
+  border-radius: 2px;
+  border: 1px solid var(--np-void);
+}
+
+/* O logo vem do favicon do proprio site da empresa, baixado em assets/ci/logos.
+   Quem nao tinha favicon legivel cai no monograma. */
+.bsr-empresa {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  gap: 0.6rem;
+}
+.bsr-empresa > :not(.bsr-logo):not(.bsr-mono) { grid-column: 2; }
+.bsr-logo,
+.bsr-mono {
+  grid-row: 1 / span 4;
+  width: 28px;
+  height: 28px;
+  border-radius: 3px;
+  margin-top: 0.15rem;
+}
+.bsr-logo { object-fit: contain; background: var(--np-panel); padding: 2px; }
+.bsr-mono {
+  display: grid;
+  place-items: center;
+  background: var(--np-panel);
+  border: 1px solid var(--np-hairline);
+  color: var(--np-text-dim);
+  font-size: 13px;
+}
+
+@media (max-width: 1000px) {
+  /* abaixo disso nao sobra margem pra sair da coluna */
+  #bsr { --bsr-larg: 100%; margin-left: 0; }
+}
+
+@media (max-width: 800px) {
+  .bsr-grid { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
+  #bsr-painel { max-height: 420px; }
+}

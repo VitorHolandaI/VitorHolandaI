@@ -66,6 +66,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
   - README.md
+  - assets/ci/README.md
   - Session.vim
   - docker-compose.dev.yml
   - docker-compose.yml
