@@ -120,6 +120,47 @@
     target.innerHTML = visibleRepos(repos).map(repoMarkup).join("");
   };
 
+  // O github-readme-stats.vercel.app que servia este grafico respondeu
+  // 503 DEPLOYMENT_PAUSED, entao as barras saem dos mesmos repositorios que a
+  // pagina ja busca. E' a linguagem principal de cada repositorio: contagem de
+  // bytes exigiria uma requisicao por repo e estoura o limite nao autenticado.
+  const hiddenLanguages = new Set(["html", "css"]);
+  const languageLimit = 8;
+
+  const countLanguages = (repos) => {
+    const counts = new Map();
+    for (const repo of repos) {
+      const name = repo.language;
+      if (!name || hiddenLanguages.has(name.toLowerCase())) continue;
+      counts.set(name, (counts.get(name) || 0) + 1);
+    }
+    return [...counts].sort((a, b) => b[1] - a[1]).slice(0, languageLimit);
+  };
+
+  const languageRow = ([name, count], total) => {
+    const share = Math.round((count / total) * 100);
+    const repos = count === 1 ? "1 repo" : `${count} repos`;
+    return `
+      <li class="github-lang">
+        <span class="github-lang__name">${escapeHtml(name)}</span>
+        <span class="github-lang__track"><span class="github-lang__bar" style="width:${share}%"></span></span>
+        <span class="github-lang__share">${escapeHtml(repos)}</span>
+      </li>
+    `;
+  };
+
+  const renderLanguages = (repos) => {
+    const target = document.querySelector("[data-github-langs]");
+    if (!target) return;
+    const ranked = countLanguages(repos);
+    if (!ranked.length) {
+      target.textContent = "No language is set on the public repositories.";
+      return;
+    }
+    const total = ranked.reduce((sum, item) => sum + item[1], 0);
+    target.innerHTML = `<ul class="github-lang-list">${ranked.map((item) => languageRow(item, total)).join("")}</ul>`;
+  };
+
   const requestGitHub = async () => {
     const [profileResponse, reposResponse] = await Promise.all([
       fetch(`https://api.github.com/users/${username}`),
@@ -138,6 +179,7 @@
     setText("[data-github-bio]", profile.bio || "Linux, DevOps, networking, embedded systems, and practical tools.");
     renderFeatured(ownRepos);
     renderRepoList(ownRepos);
+    renderLanguages(ownRepos);
   };
 
   const renderGitHubError = (error) => {
@@ -145,6 +187,10 @@
     const target = document.querySelector("[data-github-repos]");
     if (target) {
       target.textContent = "GitHub API data is temporarily unavailable. Featured repository links above still work.";
+    }
+    const langs = document.querySelector("[data-github-langs]");
+    if (langs) {
+      langs.textContent = "Language data is temporarily unavailable.";
     }
   };
 

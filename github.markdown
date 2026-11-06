@@ -55,10 +55,10 @@ permalink: /github/
   <section class="github-section">
     <div class="github-section__heading">
       <h2>Top languages</h2>
-      <p>Generated from public repositories, with HTML and CSS hidden so the chart focuses on programming languages.</p>
+      <p>Counted from the primary language of each public repository, leaving out HTML and CSS.</p>
     </div>
-    <div class="github-stats-cards">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=VitorHolandaI&langs_count=8&layout=compact&hide=html,css&theme=default&hide_border=true" alt="Most used programming languages on Vitor Holanda's GitHub profile" loading="lazy">
+    <div class="github-stats-cards" data-github-langs>
+      <p class="github-loading">Loading language data from GitHub...</p>
     </div>
   </section>
 </section>
