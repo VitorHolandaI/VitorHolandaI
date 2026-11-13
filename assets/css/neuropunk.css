@@ -501,6 +501,11 @@ hr,
 @media print {
   body::before, body::after { display: none !important; }
   html, body { background: #fff !important; color: #000 !important; }
+  /* Spectral 400 tem traço fino demais e sai cinza no papel: o texto corrido
+     imprime numa sans do sistema; os títulos seguem no IBM Plex Mono */
+  body, .post-content p, .post-content li {
+    font-family: "Helvetica Neue", Arial, "Liberation Sans", sans-serif !important;
+  }
   h1, h2, h3, h4, h5, h6 { color: #000 !important; }
   .post-content h2 { border-bottom: 1px solid #bbb; }
   .post-content h2::before { display: none; }
