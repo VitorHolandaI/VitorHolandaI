@@ -35,7 +35,7 @@ Bacharel em Ciência da Computação (UFCG). Hoje sou residente do CI Inovador, 
 
 - Agentes de LLM para o suporte ao cliente da Dell em Python (LangChain, LangGraph, tool calling, MCP), com CI/CD, saídas estruturadas em Pydantic e testes de prompt-injection.
 - FAQ corporativo com RAG: busca híbrida (BM25 + vetorial, fundidos com RRF) e reranking com BGE-reranker.
-- Avaliação de LLMs no Arize Phoenix e em benchmarks públicos (MMMLU, MGSM); o dataset interno de avaliação passou de 42 para mais de 120 questões.
+- Avaliação de LLMs no Arize Phoenix e em benchmarks públicos (MMMLU, MGSM); ampliei o dataset interno de avaliação com questões novas.
 
 **Administrador de Sistemas / Engenheiro de Confiabilidade (único operador on-call)** – SPLab, UFCG · *Nov 2023 – Abr 2025 (meio período)*
 

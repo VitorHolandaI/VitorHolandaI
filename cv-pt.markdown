@@ -94,7 +94,7 @@ Parte de uma equipe multifuncional construindo **agentes baseados em LLM** para 
   - Análise de **comportamento dos agentes**, **qualidade de resposta**, **throughput** e trade-offs de **custo em tokens**.
   - Tracing detalhado de execuções para depuração de chamadas de ferramentas e rotas de recuperação.
 - Avaliei modelos em benchmarks públicos (**MMMLU** para conhecimento geral multilíngue, **MGSM** para raciocínio matemático multilíngue) para guiar a seleção de modelos baseada em dados.
-- Criei novas questões expandindo o dataset de avaliação interno de **42 para mais de 120 questões**, aumentando a cobertura e variabilidade dos testes.
+- Escrevi novas questões para o dataset de avaliação interno e ampliei bastante o número de casos, cobrindo mais situações e variações nos testes.
 
 ### **Administrador de Sistemas / Engenheiro de Confiabilidade (Único operador on-call)** – SPLab, UFCG (Meio período)
 *Nov 2023 – Abril 2025*  

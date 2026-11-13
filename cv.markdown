@@ -83,7 +83,7 @@ Part of a cross-functional team building **LLM-powered agents** for Dell custome
   - Analyzed **agent behavior**, **response quality**, **throughput**, and **token-cost** trade-offs.
   - Profiled execution tracing across agent steps to debug tool-use and retrieval paths.
 - Evaluated open and proprietary models on public benchmarks (**MMMLU** for multilingual general knowledge, **MGSM** for multilingual math reasoning) to guide data-driven model selection.
-- Authored new questions expanding the internal evaluation dataset from **42 to over 120 questions**, increasing evaluation coverage and test variability.
+- Wrote new questions for the internal evaluation dataset and substantially expanded the number of test cases, covering more scenarios and variations.
 
 ### **System Administrator / Reliability Engineer (Sole on-call operator)** – SPLab, UFCG (Part-time)
 *Nov 2023 – April 2025*  
