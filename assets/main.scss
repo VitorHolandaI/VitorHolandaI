@@ -375,6 +375,11 @@
     text-decoration: none;
   }
 
+  /* o tema pinta strong de #ddd8cc (neuropunk.css), quase branco no papel */
+  .post-content strong {
+    color: #000;
+  }
+
   h2, h3, h4 {
     page-break-after: avoid;
   }
@@ -385,5 +390,15 @@
 
   @page {
     margin: 14mm 14mm;
+  }
+
+  /* a versão curta (cv-pt-curto.markdown) tem de caber em duas páginas */
+  .post-content:has(.cv-curto) {
+    font-size: 10pt;
+    line-height: 1.3;
+  }
+
+  .post-content:has(.cv-curto) h3 {
+    margin: 0.5rem 0 0.15rem;
   }
 }

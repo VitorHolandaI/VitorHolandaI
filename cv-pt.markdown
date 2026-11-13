@@ -21,7 +21,8 @@ Bacharel em Ciência da Computação (UFCG) com trajetória que une infraestrutu
 
 - **Infraestrutura, SRE & Confiabilidade (1 ano e 5 meses):** Como único administrador de sistemas e operador on-call de um prédio de pesquisa de ~20 salas (SPLab), construí a infraestrutura que não existia. Projetei e implantei ~20 VLANs em uma rede anteriormente plana, cabeamento estruturado para 1 Gb/s estável, servidores físicos com Proxmox/KVM, rotinas de backup criptografado e desduplicado com Restic e ZFS RAID 10 (com restore drills periódicos), firewall pfSense em cold-standby e monitoramento proativo com Checkmk e dashboard customizado de telemetria de no-breaks (NUT) com mais de 255 mil logs reais em quedas de energia. Cobri todo o espectro operacional: do suporte presencial e helpdesk até a resposta a incidentes críticos e elaboração de runbooks.
 - **Engenharia de IA & LLMs em Produção (1 ano):** Atuei no LSD-DELL desenvolvendo agentes baseados em LLMs para suporte corporativo. Entreguei Python em produção com integração contínua (CI/CD), tool calling, servidores MCP, pipelines avançados de RAG com busca híbrida (BM25 + vetorial + RRF) e reranking (BGE-reranker), além de observabilidade e tracing ponta a ponta com Arize Phoenix e testes de segurança contra prompt-injection.
-- **Liderança Técnica (Atual):** Atualmente lidero tecnicamente um time de engenharia de IA em projeto do setor público, definindo a arquitetura de sistemas multi-agentes orquestrados com LangGraph, inferência de modelos locais auto-hospedados (Ollama e llama.cpp), padrões de qualidade de código, cobertura de testes e mentoria técnica da equipe.
+- **Microeletrônica e Projeto de Chips (Atual):** residente do CI Inovador (MCTI/Softex) na Trilha de Sistemas Digitais da UFCG, em período integral: RTL em SystemVerilog, síntese, verificação e projeto físico.
+- **Liderança Técnica (5 meses):** Liderei tecnicamente um time de engenharia de IA em projeto do setor público, definindo a arquitetura de sistemas multi-agentes orquestrados com LangGraph, inferência de modelos locais auto-hospedados (Ollama e llama.cpp), padrões de qualidade de código, cobertura de testes e mentoria técnica da equipe.
 
 Domínio completo da pilha: monto o rack e a rede física embaixo, opero a confiabilidade e os serviços no meio, e construo os sistemas de IA que rodam em cima.
 
@@ -37,6 +38,7 @@ Domínio completo da pilha: monto o rack e a rede física embaixo, opero a confi
 - **Segurança:** Políticas de firewall default-deny, Suricata (IDS/IPS), OpenVAS, Bitwarden (gestão de credenciais e segredos), higiene de segredos, testes de prompt-injection
 - **Nuvem & Plataformas:** Sistemas on-premise / auto-hospedados, Linux (Debian, Ubuntu, Rocky Linux), FreeBSD (pfSense), AWS (VPC, IAM, EC2, S3 em progresso)
 - **Linguagens de Programação:** Python (produção), Bash, C++, Rust, TypeScript, Java; Go (em progresso)
+- **Projeto Digital & Microeletrônica:** SystemVerilog/Verilog, máquinas de estado, Cadence Virtuoso (esquemático, layout, DRC, LVS), Cadence Genus (síntese), Icarus Verilog, Verilator, Yosys, GTKWave
 - **Engenharia de IA & LLM:** LangChain, LangGraph (sistemas multi-agentes), modelos locais (Ollama, llama.cpp), MCP (Model Context Protocol), RAG, busca híbrida (BM25 + vetorial denso + RRF), BGE-reranker, bancos de dados vetoriais, structured outputs com Pydantic, Arize Phoenix (avaliação e tracing)
 
 
@@ -44,11 +46,21 @@ Domínio completo da pilha: monto o rack e a rede física embaixo, opero a confi
 
 ---
 
+### **Residente em Microeletrônica, Trilha de Sistemas Digitais** – CI Inovador (MCTI/Softex), polo UFCG
+*Out 2026 – Atual (período integral, presencial)*  
+**Stack:** SystemVerilog/Verilog · Cadence Virtuoso · Cadence Genus · Icarus Verilog · Verilator · Yosys · GTKWave
+
+O [CI Inovador](https://ciinovador.softex.br/o-programa/) é a residência em microeletrônica do MCTI, coordenada pela Softex com universidades do país, para formar quem projeta circuitos integrados no Brasil. Faço a [Trilha de Sistemas Digitais](https://ciinovador.softex.br/trilhaci/trilha-de-sistemas-digitais/) no polo da UFCG: são 720 h em 24 semanas, que vão da física do transistor ao tape-out e incluem um módulo de gestão e empreendedorismo.
+
+- No módulo de Introdução à Microeletrônica, projetei um inversor CMOS no Cadence Virtuoso: esquemático, simulação e layout, conferido com DRC e LVS.
+- No Projeto de Sistemas Digitais (480 h), escrevo RTL em SystemVerilog (lógica combinacional e sequencial, máquinas de estado), faço a síntese lógica no Cadence Genus e verifico com testbenches que se conferem sozinhos. O módulo cobre também projeto físico e arquiteturas de ASIC e FPGA.
+- Projeto final em andamento: o processador Neander em Verilog, com a instrução SUB a mais e uma multiplicação de matrizes 3x3 lida da BRAM, simulado antes da síntese e de novo com os atrasos dela.
+
 ### **Líder Técnico, Engenharia de IA** – LSD, UFCG (projeto com órgão do governo)
-*Maio 2026 – Atual*  
+*Maio 2026 – Setembro 2026*  
 **Stack:** Python · LangGraph (Sistemas Multi-Agentes) · Ollama · llama.cpp · Modelos Locais · Pydantic · Git
 
-Liderança técnica de um time pequeno de engenharia de IA num projeto do setor público, atuando junto de um professor e de um gerente de projeto. O domínio e os dados do projeto estão sob confidencialidade.
+Liderei tecnicamente um time pequeno de engenharia de IA num projeto do setor público, junto de um professor e de um gerente de projeto. O domínio e os dados do projeto estão sob confidencialidade.
 
 - Arquitetura e definição da stack técnica do projeto: desenvolvimento em **Python**, inferência de **modelos locais** auto-hospedados via **Ollama** e **llama.cpp**, e orquestração de **sistemas multi-agentes com LangGraph**.
 - Definição da direção técnica, design de sistemas e decisões de arquitetura para confiabilidade dos pipelines de execução dos agentes.
@@ -174,7 +186,8 @@ Ser a única pessoa significava que engenharia de plataforma e operação físic
 ### Formação
 
 ---
-**Bacharelado em Ciência da Computação** · Universidade Federal de Campina Grande · 2022 – 2026
+**Bacharelado em Ciência da Computação** · Universidade Federal de Campina Grande · 2022 – 2026  
+**Residência em Microeletrônica, Trilha de Sistemas Digitais** · CI Inovador (MCTI/Softex), polo UFCG · 2026 – Atual
 
 
 ### Idiomas
@@ -196,8 +209,11 @@ Ser a única pessoa significava que engenharia de plataforma e operação físic
 <div class="cv-no-print" markdown="1">
 ### 📄 Download
 
-<button type="button" class="cv-print-btn" onclick="window.print()">Salvar como PDF</button>
+<button type="button" class="cv-print-btn" data-cv-pdf="">PDF completo</button>
+<button type="button" class="cv-print-btn" data-cv-pdf="/cv-pt/curto/?imprimir">PDF curto (2 páginas)</button>
 
-Dica: no diálogo de impressão do navegador, escolha "Salvar como PDF" e desabilite cabeçalhos/rodapés para um resultado limpo.
+Dica: no diálogo de impressão do navegador, escolha "Salvar como PDF" e desabilite cabeçalhos/rodapés para um resultado limpo. A versão curta também pode ser lida em [/cv-pt/curto/](/cv-pt/curto/).
 
 </div>
+
+<script src="{{ '/assets/cv-pdf.js' | relative_url }}" defer></script>

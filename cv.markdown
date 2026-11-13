@@ -197,9 +197,10 @@ Being the sole person meant platform engineering and physical operations were th
 <div class="cv-no-print" markdown="1">
 ### 📄 Download
 
-<button type="button" class="cv-print-btn" onclick="window.print()">Save as PDF</button>
+<button type="button" class="cv-print-btn" data-cv-pdf="">Save as PDF</button>
 
 Tip: in the browser print dialog, choose "Save as PDF" and disable headers/footers for a clean output.
 
 </div>
 
+<script src="{{ '/assets/cv-pdf.js' | relative_url }}" defer></script>
