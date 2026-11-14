@@ -105,11 +105,11 @@ pveum user token add terradorm2@pve token -privsep 0
 >
 > ```
 > full-tokenid   terradorm2@pve!token
-> value          b412d05a-2661-446e-8f7e-9e31c72cd3ca   <- o secret, salva AGORA
+> value          <uuid-do-secret>   <- o secret, salva AGORA
 > ```
 
 O formato que o Terraform espera é `USER@REALM!TOKENID=UUID`, ou seja:
-`terradorm2@pve!token=b412d05a-2661-446e-8f7e-9e31c72cd3ca`.
+`terradorm2@pve!token=<uuid-do-secret>`.
 
 > Pra conferir o que ficou aplicado: `pveum acl list` mostra cada `path` com seu
 > `roleid`, o `type` (user/group) e o `ugid` (quem recebeu).
@@ -225,7 +225,7 @@ variable "vm_password"       { type = string, sensitive = true }
 
 ```hcl
 proxmox_api_token = "terradorm2@pve!token2=<SECRET-AQUI>"
-proxmox_api_url   = "https://10.66.66.19:8006/"
+proxmox_api_url   = "https://<ip-do-proxmox>:8006/"
 vm_password       = "<senha>"
 ```
 

@@ -54,7 +54,7 @@ For more details: [iptables-options](https://www.linux.co.cr/distributions/revie
 
 After that, run:
 
-docker swarm join --token SWMTKN-1-4tkqpfwvmidz3ip3eibkkf03fhynhtsu4kky1iwuzl74kjwdoy-b3vz3te6txomfh7rkr52gjzvr 192.168.0.39:2377
+docker swarm join --token SWMTKN-1-&lt;token-do-cluster&gt; &lt;ip-do-manager&gt;:2377
 
 Well, probably better to make a script to pass this command through all the hosts. Sending that command can be done in Bash using a list of IPs, or in a more sophisticated way using Ansible. For this setup, Bash is better since I don’t want to use vaults and the more complex setup of Ansible — especially because I’d have to use a different combination of user and password for each node (so more config to go on each of the nodes).
 
@@ -65,7 +65,7 @@ A simple Bash script:
 file=ips.txt
 for i in $(cat $file)
 do
-  ssh user@$i "docker swarm join --token SWMTKN-1-4tkqpfwvmidz3ip3eibkkf03fhynhtsu4kky1iwuzl74kjwdoy-b3vz3te6txomfh7rkr52gjzvr 192.168.0.39:2377"
+  ssh user@$i "docker swarm join --token SWMTKN-1-<token-do-cluster> <ip-do-manager>:2377"
 done
 ```
 
