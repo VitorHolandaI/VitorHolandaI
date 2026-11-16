@@ -49,9 +49,18 @@ legível sem 2 mil linhas de JavaScript no meio.
   `id` para arquivo vive na chave `logos` do `brazil-silicon.json`; as 9
   organizações que ficaram de fora caem no monograma montado em `marca()`.
 
-Os quatro visualizadores seguem o mesmo contrato: um IIFE que sai calado se o
+- `nota-afp.js` + `nota-afp-placa.jpg` — o circuito de 2023 que lê a nota em 4
+  bits e acende `A`, `F` ou `R` num display de sete segmentos (post de
+  2026-11-16). O script avalia as duas equações booleanas originais e deduz a
+  letra pelo conjunto de segmentos que acende, em vez de reimplementar a regra
+  das faixas: assim o widget mostra o que a placa faz, inclusive nas cinco
+  entradas de 11 a 15 que nunca deveriam acontecer. Os `<polygon data-seg>` do
+  display e as `<input data-bit>` das chaves ficam no markup do post, dentro de
+  `#afp`. A foto é a placa real, reduzida para 1400px.
+
+Os cinco visualizadores seguem o mesmo contrato: um IIFE que sai calado se o
 elemento raiz não existe na página, nenhuma variável global, ids namespaceados
-por post (`n3-`, `inv-`, `t3-`, `bsr-`) para que dois widgets possam conviver.
+por post (`n3-`, `inv-`, `t3-`, `bsr-`, `afp-`) para que dois widgets possam conviver.
 
 ## Origem de `brazil-silicon.json`
 

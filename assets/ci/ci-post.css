@@ -268,3 +268,57 @@
   .bsr-grid { grid-template-columns: minmax(0, 1fr); gap: 1rem; }
   #bsr-painel { max-height: 420px; }
 }
+
+/* Circuito nota -> A/F/R (nota-afp.js). O display e' um SVG de sete
+   segmentos; so os segmentos b e c mudam com a entrada. */
+#afp {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background: var(--np-void);
+  border: 1px solid var(--np-hairline);
+  border-radius: 4px;
+  font-family: var(--np-mono);
+  color: var(--np-text);
+}
+
+.afp-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 140px;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.afp-chaves {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.2rem;
+  margin-bottom: 1rem;
+}
+.afp-chave {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 12px;
+  color: var(--np-text-dim);
+}
+.afp-chave input { accent-color: var(--np-sodium); width: 18px; height: 18px; }
+.afp-chave b { color: var(--np-text); font-size: 13px; }
+
+.afp-leitura { font-size: 13px; line-height: 1.8; color: var(--np-text-dim); }
+.afp-leitura strong { color: var(--np-sodium); font-size: 15px; }
+#afp-eq { color: var(--np-ice); }
+
+.afp-display { width: 100%; height: auto; max-width: 140px; }
+.afp-display polygon {
+  fill: #1a1d20;
+  transition: fill 120ms linear;
+}
+.afp-display polygon.afp-on { fill: var(--np-sodium); }
+
+.afp-foto { width: 100%; height: auto; border-radius: 3px; margin: 1.5rem 0 0.4rem; }
+.afp-legenda { font-size: 12px; color: var(--np-text-dim); font-family: var(--np-mono); }
+
+@media (max-width: 600px) {
+  .afp-grid { grid-template-columns: minmax(0, 1fr); justify-items: center; }
+}
