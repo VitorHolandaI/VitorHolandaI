@@ -7,7 +7,7 @@ permalink: /cv-pt/curto/
 <span class="cv-curto"></span>
 
 <div class="cv-no-print" markdown="1">
-Versão curta, de duas páginas. [Versão completa](/cv-pt/) · 🇺🇸 [English version](/cv/)
+Versão curta, de duas páginas. [Versão completa](/cv-pt/) · 🇺🇸 [English version](/cv/short/)
 </div>
 
 ## Vitor Holanda
@@ -15,6 +15,8 @@ Versão curta, de duas páginas. [Versão completa](/cv-pt/) · 🇺🇸 [Englis
 Contato: vitor.holanda@ccc.ufcg.edu.br · bartmoss77@tutanota.com
 
 [GitHub](https://github.com/VitorHolandaI) · [LinkedIn](https://www.linkedin.com/in/vitor-holanda-465b20259/) · [Blog](https://bitssand.blog/) · [Projetos](https://bitssand.blog/projects/)
+
+Currículo completo, com o detalhe por trás de cada linha: [bitssand.blog/cv-pt](https://bitssand.blog/cv-pt/)
 
 ### Resumo
 

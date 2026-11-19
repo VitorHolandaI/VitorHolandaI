@@ -6,7 +6,7 @@ lang: en
 ---
 
 <div class="cv-no-print" markdown="1">
-🇧🇷 [Versão em Português](/cv-pt/)
+Full version. [Short version, two pages](/cv/short/) · 🇧🇷 [Versão em Português](/cv-pt/)
 </div>
 
 ## Vitor Holanda
@@ -210,9 +210,10 @@ Being the sole person meant platform engineering and physical operations were th
 <div class="cv-no-print" markdown="1">
 ### 📄 Download
 
-<button type="button" class="cv-print-btn" data-cv-pdf="">Save as PDF</button>
+<button type="button" class="cv-print-btn" data-cv-pdf="">Full PDF</button>
+<button type="button" class="cv-print-btn" data-cv-pdf="/cv/short/?imprimir">Short PDF (2 pages)</button>
 
-Tip: in the browser print dialog, choose "Save as PDF" and disable headers/footers for a clean output.
+Tip: in the browser print dialog, choose "Save as PDF" and disable headers/footers for a clean output. The short version can also be read at [/cv/short/](/cv/short/).
 
 </div>
 
