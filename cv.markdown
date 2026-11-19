@@ -22,7 +22,8 @@ Computer Science graduate (UFCG) combining deep hands-on expertise across critic
 
 - **Infrastructure, SRE & Reliability (~1.5 years):** As the sole sysadmin and primary on-call operator of a ~20-room research facility (SPLab), I built the infrastructure from zero. Designed and deployed ~20 VLANs across a previously flat network, upgraded cabling to stable 1 Gb/s, assembled physical servers on Proxmox/KVM, implemented deduplicated encrypted backup pipelines with Restic and ZFS RAID 10 (with recurring restore validation drills), maintained pfSense cold-standby failover, and operated observability via Checkmk and a custom NUT telemetry dashboard with 255k+ log lines collected during real power outages. Owned the full operational lifecycle: from hands-on helpdesk and hardware repairs to critical incident response and postmortem runbooks.
 - **Production AI & LLM Engineering (1 year):** Worked at LSD-DELL building enterprise-grade LLM agents for customer support. Shipped production Python integrated into corporate CI/CD pipelines, implementing tool calling, MCP servers, advanced RAG architectures with hybrid retrieval (BM25 + dense vector + RRF) and cross-encoder reranking, full tracing and evaluation via Arize Phoenix, and prompt-injection security hardening.
-- **Technical Leadership (Present):** Currently tech lead of an AI engineering team on a public-sector initiative, driving the architecture of multi-agent workflows orchestrated with LangGraph, self-hosted local LLM inference (Ollama and llama.cpp), code review standards, test coverage, and hands-on technical mentoring.
+- **Microelectronics & Chip Design (Current):** Resident of CI Inovador (MCTI/Softex) on the Digital Systems track at UFCG, full time: RTL in SystemVerilog, logic synthesis, verification, and physical design.
+- **Technical Leadership (5 months):** Tech lead of an AI engineering team on a public-sector project, setting the architecture of multi-agent systems orchestrated with LangGraph, self-hosted local LLM inference (Ollama and llama.cpp), code review standards, test coverage, and hands-on technical mentoring.
 
 Complete ownership from the ground up: I build the physical rack and network underneath, operate the platform reliability in the middle, and engineer the production AI systems on top.
 
@@ -38,6 +39,7 @@ Complete ownership from the ground up: I build the physical rack and network und
 - **Security:** Default-deny firewall policies, Suricata (IDS/IPS), OpenVAS, Bitwarden (secrets management), secrets hygiene, prompt-injection testing
 - **Cloud & Platforms:** On-prem / self-hosted systems, Linux (Debian, Ubuntu, Rocky Linux), FreeBSD (pfSense), AWS (VPC, IAM, EC2, S3 in progress)
 - **Programming Languages:** Python (production), Bash, C++, Rust, TypeScript, Java; Go (in progress)
+- **Digital Design & Microelectronics:** SystemVerilog/Verilog, finite state machines, Cadence Virtuoso (schematic, layout, DRC, LVS), Cadence Genus (synthesis), Icarus Verilog, Verilator, Yosys, GTKWave
 - **AI & LLM Engineering:** LangChain, LangGraph (multi-agent systems), local models (Ollama, llama.cpp), MCP (Model Context Protocol), RAG, hybrid search (BM25 + dense + RRF), BGE-reranker, vector databases, Pydantic structured outputs, Arize Phoenix (evals & tracing)
 
 
@@ -45,16 +47,26 @@ Complete ownership from the ground up: I build the physical rack and network und
 
 ---
 
+### **Microelectronics Resident, Digital Systems Track** – CI Inovador (MCTI/Softex), UFCG hub
+*Oct 2026 – Present (full time, on site)*  
+**Stack:** SystemVerilog/Verilog · Cadence Virtuoso · Cadence Genus · Icarus Verilog · Verilator · Yosys · GTKWave
+
+[CI Inovador](https://ciinovador.softex.br/o-programa/) is the Brazilian Ministry of Science and Technology's microelectronics residency, run by Softex with universities across the country to train the people who design integrated circuits in Brazil. I am on the [Digital Systems track](https://ciinovador.softex.br/trilhaci/trilha-de-sistemas-digitais/) at the UFCG hub: 720 hours over 24 weeks, from transistor physics to tape-out, including a module on management and entrepreneurship.
+
+- In the Introduction to Microelectronics module, designed a CMOS inverter in Cadence Virtuoso: schematic, simulation, and layout, checked with DRC and LVS.
+- In Digital Systems Design (480 hours), writing RTL in SystemVerilog (combinational and sequential logic, finite state machines), running logic synthesis in Cadence Genus, and verifying with self-checking testbenches. The module also covers physical design plus ASIC and FPGA architectures.
+- Final project in progress: the Neander processor in Verilog, with an added SUB instruction and a 3x3 matrix multiplication read from BRAM, simulated before synthesis and again with post-synthesis delays.
+
 ### **Tech Lead, AI Engineering** – LSD, UFCG (project with a Brazilian government agency)
-*May 2026 – Present*  
+*May 2026 – September 2026*  
 **Stack:** Python · LangGraph (Multi-Agent Systems) · Ollama · llama.cpp · Local LLMs · Pydantic · Git
 
 Technical lead of a small AI engineering team on a public-sector project, working alongside a professor and a project manager. Domain and internal project details are under confidentiality.
 
 - Architected and guided the project's technical stack: **Python**, **local LLMs**, self-hosted inference via **Ollama** and **llama.cpp**, and **multi-agent systems orchestrated with LangGraph**.
 - Set technical direction, system design, and architectural decisions for agent execution and pipeline reliability.
-- Conduct thorough code reviews across the codebase to ensure consistency, test coverage, and reliability.
-- Manage task breakdowns, sprint planning, and provide direct technical guidance to the engineering team.
+- Conducted thorough code reviews across the codebase to ensure consistency, test coverage, and reliability.
+- Managed task breakdowns and sprint planning, and gave direct technical guidance to the engineering team.
 
 ### **AI / LLM Engineer & Applied Researcher** – LSD-DELL, UFCG
 *April 2025 – April 2026 (Part-time)*  
@@ -175,7 +187,8 @@ Being the sole person meant platform engineering and physical operations were th
 ### Education
 
 ---
-**BSc in Computer Science** · Universidade Federal de Campina Grande · 2022 – 2026
+**BSc in Computer Science** · Universidade Federal de Campina Grande · 2022 – 2026  
+**Microelectronics Residency, Digital Systems Track** · CI Inovador (MCTI/Softex), UFCG hub · 2026 – Present
 
 
 ### Languages
