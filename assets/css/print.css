@@ -1,0 +1,169 @@
+/* Folha de impressão do site, usada pelos botões "Save as PDF" do currículo
+   (assets/cv-pdf.js chama window.print()).
+
+   Carregada DEPOIS de main.css e de neuropunk.css no _includes/head.html, e
+   esse lugar na ordem é o motivo deste arquivo existir. As regras de tela
+   cravam `body { font-size: 17px; line-height: 1.75 }` e margem de 2.8rem em
+   `.post-content h2` com a MESMA especificidade das regras de impressão.
+   Empate resolve por ordem de carregamento: enquanto o `@media print` morava
+   no main.scss, a tela ganhava e o PDF saía com corpo de tela, 14 páginas em
+   /cv/ no lugar de 8. Regra nova aqui não precisa de !important para vencer o
+   tema; precisa só chegar por último. */
+
+@media print {
+  .site-header,
+  .site-footer,
+  .post-list-heading,
+  .post-list,
+  .rss-subscribe,
+  .cv-no-print,
+  .cv-print-btn {
+    display: none !important;
+  }
+
+  /* O grão e a vinheta do tema são position:fixed: sairiam impressos por cima
+     do texto em todas as páginas. */
+  body::before,
+  body::after {
+    display: none !important;
+  }
+
+  html,
+  body {
+    background: #fff !important;
+    color: #000 !important;
+  }
+
+  body {
+    font-size: 10.5pt;
+    line-height: 1.4;
+  }
+
+  /* Spectral 400 tem traço fino demais e sai cinza no papel: o texto corrido
+     imprime numa sans do sistema; os títulos seguem no IBM Plex Mono. */
+  body,
+  .post-content p,
+  .post-content li {
+    font-family: "Helvetica Neue", Arial, "Liberation Sans", sans-serif !important;
+  }
+
+  .page-content {
+    padding: 0 !important;
+  }
+
+  .wrapper {
+    max-width: none !important;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #000 !important;
+  }
+
+  .post-title,
+  .post-content h1 {
+    font-size: 18pt;
+    margin: 0 0 0.4rem;
+  }
+
+  .post-content h2 {
+    font-size: 13pt;
+    margin: 0.9rem 0 0.3rem;
+    border-bottom: 1px solid #888;
+    padding-bottom: 2px;
+  }
+
+  /* a marca de sódio na margem do h2 não tem o que fazer em papel */
+  .post-content h2::before {
+    display: none;
+  }
+
+  .post-content h3 {
+    font-size: 11pt;
+    margin: 0.7rem 0 0.2rem;
+  }
+
+  .post-content h4 {
+    font-size: 10.5pt;
+    margin: 0.5rem 0 0.15rem;
+    color: #333;
+  }
+
+  .post-content p,
+  .post-content li {
+    margin: 0.15rem 0;
+  }
+
+  .post-content ul {
+    margin: 0.2rem 0 0.4rem 1.1rem;
+    padding: 0;
+  }
+
+  .post-content hr {
+    border: 0;
+    border-top: 1px solid #bbb;
+    margin: 0.5rem 0;
+  }
+
+  a,
+  .post-content a {
+    color: #000 !important;
+    text-decoration: none;
+  }
+
+  /* o tema pinta strong de #ddd8cc (neuropunk.css), quase branco no papel */
+  .post-content strong {
+    color: #000;
+  }
+
+  pre,
+  div.highlight,
+  figure.highlight {
+    background: #fff !important;
+    border: 1px solid #bbb !important;
+    color: #000 !important;
+  }
+
+  table th {
+    background: #f0f0f0 !important;
+    color: #000 !important;
+  }
+
+  table th,
+  table td {
+    border: 1px solid #bbb !important;
+  }
+
+  h2,
+  h3,
+  h4 {
+    page-break-after: avoid;
+  }
+
+  /* so o item, nunca a lista inteira: com `ul` aqui, a lista de skills (9
+     itens) virava um bloco indivisivel e pulava pra pagina seguinte, deixando
+     meia pagina em branco atras dela. */
+  li {
+    page-break-inside: avoid;
+  }
+
+  @page {
+    margin: 14mm 14mm;
+  }
+
+  /* a versão curta (cv-pt-curto.markdown) tem de caber em duas páginas */
+  .post-content:has(.cv-curto) {
+    font-size: 10pt;
+    line-height: 1.3;
+  }
+
+  .post-content:has(.cv-curto) h3 {
+    margin: 0.5rem 0 0.15rem;
+  }
+}
