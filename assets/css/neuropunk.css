@@ -695,3 +695,14 @@ pre.highlight {
 
 /* titulo-diff */
 .highlight .gh, .highlight .gu { color: var(--np-sodium-dim); }
+
+/* Vídeo hospedado aqui mesmo: o CSP (media-src 'self') não deixa embutir
+   player de terceiro, então o <video> do post é o elemento nativo. */
+.post-video {
+  display: block;
+  width: 100%;
+  max-width: 636px;
+  margin: 1.5rem auto;
+  border: 1px solid var(--np-hairline);
+  background: var(--np-void);
+}
