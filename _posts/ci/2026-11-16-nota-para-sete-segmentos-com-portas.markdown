@@ -55,84 +55,75 @@ b = X̄ + W + Z·Y
 c = X·W̄·Z·Y + W·X̄
 ```
 
-<svg class="n3-schematic" viewBox="0 0 700 330" role="img" aria-labelledby="afp-diag-titulo">
-  <title id="afp-diag-titulo">Diagrama das duas equações: b sai de um OR de três entradas, c sai de um OR de dois ANDs.</title>
-
-  <defs>
-    <g id="afp-and">
-      <path d="M0,-22 H16 A22,22 0 0 1 16,22 H0 Z" fill="none" stroke="currentColor" stroke-width="2"/>
-    </g>
-    <g id="afp-or">
-      <path d="M-2,-22 Q16,-22 38,0 Q16,22 -2,22 Q10,0 -2,-22 Z" fill="none" stroke="currentColor" stroke-width="2"/>
-    </g>
-    <g id="afp-not">
-      <path d="M0,-13 L22,0 L0,13 Z" fill="none" stroke="currentColor" stroke-width="2"/>
-      <circle cx="27" cy="0" r="5" fill="none" stroke="currentColor" stroke-width="2"/>
-    </g>
-  </defs>
-
-  <g font-family="monospace" font-size="15" fill="currentColor">
-    <text x="18" y="60">W</text>
-    <text x="18" y="110">X</text>
-    <text x="18" y="160">Z</text>
-    <text x="18" y="210">Y</text>
-  </g>
-
-  <g stroke="currentColor" stroke-width="2" fill="none">
-    <line x1="34" y1="55" x2="70" y2="55"/>
-    <line x1="34" y1="105" x2="70" y2="105"/>
-    <line x1="34" y1="155" x2="70" y2="155"/>
-    <line x1="34" y1="205" x2="70" y2="205"/>
-  </g>
-
-  <g transform="translate(90,105)"><use href="#afp-not"/></g>
-  <text x="128" y="100" font-family="monospace" font-size="13" fill="currentColor">X̄</text>
-
-  <g transform="translate(200,180)"><use href="#afp-and"/></g>
-  <g stroke="currentColor" stroke-width="2" fill="none">
-    <line x1="70" y1="155" x2="200" y2="168"/>
-    <line x1="70" y1="205" x2="200" y2="192"/>
-    <line x1="238" y1="180" x2="300" y2="180"/>
-  </g>
-  <text x="246" y="172" font-family="monospace" font-size="13" fill="currentColor">Z·Y</text>
-
-  <g transform="translate(320,105)"><use href="#afp-or"/></g>
-  <g stroke="currentColor" stroke-width="2" fill="none">
-    <line x1="122" y1="105" x2="320" y2="88"/>
-    <line x1="70" y1="55" x2="320" y2="105"/>
-    <line x1="300" y1="180" x2="320" y2="122"/>
-    <line x1="358" y1="105" x2="430" y2="105"/>
-  </g>
-  <text x="440" y="111" font-family="monospace" font-size="16" fill="currentColor">b</text>
-
-  <g transform="translate(200,270)"><use href="#afp-and"/></g>
-  <g transform="translate(200,320)"><use href="#afp-and"/></g>
-  <g stroke="currentColor" stroke-width="2" fill="none">
-    <line x1="70" y1="105" x2="200" y2="258"/>
-    <line x1="70" y1="155" x2="200" y2="270"/>
-    <line x1="70" y1="205" x2="200" y2="282"/>
-    <line x1="238" y1="270" x2="300" y2="270"/>
-    <line x1="70" y1="55" x2="200" y2="312"/>
-    <line x1="238" y1="320" x2="300" y2="320"/>
-  </g>
-  <text x="246" y="262" font-family="monospace" font-size="13" fill="currentColor">X·W̄·Z·Y</text>
-  <text x="246" y="312" font-family="monospace" font-size="13" fill="currentColor">W·X̄</text>
-
-  <g transform="translate(320,295)"><use href="#afp-or"/></g>
-  <g stroke="currentColor" stroke-width="2" fill="none">
-    <line x1="300" y1="270" x2="320" y2="278"/>
-    <line x1="300" y1="320" x2="320" y2="312"/>
-    <line x1="358" y1="295" x2="430" y2="295"/>
-  </g>
-  <text x="440" y="301" font-family="monospace" font-size="16" fill="currentColor">c</text>
-
-  <g font-family="monospace" font-size="12" fill="currentColor" opacity="0.65">
-    <text x="480" y="80">a, e, f, g = 1</text>
-    <text x="480" y="100">d = 0</text>
-    <text x="480" y="130">os cinco segmentos</text>
-    <text x="480" y="148">constantes vão direto</text>
-    <text x="480" y="166">pro trilho</text>
-  </g>
+<svg class="n3-schematic" viewBox="0 0 840 520" role="img" aria-labelledby="afp-diag-titulo">
+  <title id="afp-diag-titulo">Esquemático das duas equações: b sai de um OR de três entradas e c sai de um OR de dois ANDs.</title>
+  <text class="afp-sinal" x="22" y="51">W</text>
+  <path class="afp-fio" d="M40,46 L86,46"/>
+  <text class="afp-sinal" x="22" y="97">X</text>
+  <path class="afp-fio" d="M40,92 L108,92"/>
+  <text class="afp-sinal" x="22" y="143">Z</text>
+  <path class="afp-fio" d="M40,138 L130,138"/>
+  <text class="afp-sinal" x="22" y="189">Y</text>
+  <path class="afp-fio" d="M40,184 L152,184"/>
+  <path class="afp-porta" d="M190,77 L216,92 L190,107 Z"/>
+  <circle class="afp-porta" cx="221" cy="92" r="5"/>
+  <path class="afp-fio" d="M108,92 L190,92"/>
+  <path class="afp-fio" d="M221,92 L252,92"/>
+  <text class="afp-sinal" x="228" y="84">X̄</text>
+  <path class="afp-porta" d="M190,31 L216,46 L190,61 Z"/>
+  <circle class="afp-porta" cx="221" cy="46" r="5"/>
+  <path class="afp-fio" d="M86,46 L190,46"/>
+  <path class="afp-fio" d="M221,46 L274,46"/>
+  <text class="afp-sinal" x="281" y="40">W̄</text>
+  <path class="afp-porta" d="M400,164 H434 A26,26 0 0 1 434,216 H400 Z"/>
+  <path class="afp-fio" d="M152,181.33333333333334 L400,181.33333333333334"/>
+  <circle class="afp-no" cx="152" cy="181.33333333333334" r="3"/>
+  <path class="afp-fio" d="M130,198.66666666666666 L400,198.66666666666666"/>
+  <circle class="afp-no" cx="130" cy="198.66666666666666" r="3"/>
+  <path class="afp-fio" d="M460,190 L600,190"/>
+  <text class="afp-termo" x="474" y="182">Z·Y</text>
+  <path class="afp-porta" d="M400,274 H434 A46,46 0 0 1 434,366 H400 Z"/>
+  <path class="afp-fio" d="M274,292.4 L400,292.4"/>
+  <circle class="afp-no" cx="274" cy="292.4" r="3"/>
+  <path class="afp-fio" d="M152,310.8 L400,310.8"/>
+  <circle class="afp-no" cx="152" cy="310.8" r="3"/>
+  <path class="afp-fio" d="M130,329.2 L400,329.2"/>
+  <circle class="afp-no" cx="130" cy="329.2" r="3"/>
+  <path class="afp-fio" d="M108,347.6 L400,347.6"/>
+  <circle class="afp-no" cx="108" cy="347.6" r="3"/>
+  <path class="afp-fio" d="M480,320 L600,320"/>
+  <text class="afp-termo" x="494" y="312">X·W̄·Z·Y</text>
+  <path class="afp-porta" d="M400,404 H434 A26,26 0 0 1 434,456 H400 Z"/>
+  <path class="afp-fio" d="M252,421.3333333333333 L400,421.3333333333333"/>
+  <circle class="afp-no" cx="252" cy="421.3333333333333" r="3"/>
+  <path class="afp-fio" d="M86,438.6666666666667 L400,438.6666666666667"/>
+  <circle class="afp-no" cx="86" cy="438.6666666666667" r="3"/>
+  <path class="afp-fio" d="M460,430 L600,430"/>
+  <text class="afp-termo" x="474" y="422">W·X̄</text>
+  <path class="afp-porta" d="M640,104 Q664.3,104 694,150 Q664.3,196 640,196 Q656.2,150 640,104 Z"/>
+  <path class="afp-fio" d="M252,127.0 L652.0,127.0"/>
+  <circle class="afp-no" cx="252" cy="127.0" r="3"/>
+  <path class="afp-fio" d="M86,150.0 L656.0,150.0"/>
+  <circle class="afp-no" cx="86" cy="150.0" r="3"/>
+  <path class="afp-fio" d="M600,190 L600,173.0"/>
+  <path class="afp-fio" d="M600,173.0 L652.0,173.0"/>
+  <path class="afp-fio" d="M694,150 L760,150"/>
+  <text class="afp-saida" x="770" y="157">b</text>
+  <path class="afp-porta" d="M640,360 Q664.3,360 694,400 Q664.3,440 640,440 Q656.2,400 640,360 Z"/>
+  <path class="afp-fio" d="M600,320 L600,386.6666666666667"/>
+  <path class="afp-fio" d="M600,386.6666666666667 L654.2222222222222,386.6666666666667"/>
+  <path class="afp-fio" d="M600,430 L600,413.3333333333333"/>
+  <path class="afp-fio" d="M600,413.3333333333333 L654.2222222222222,413.3333333333333"/>
+  <path class="afp-fio" d="M694,400 L760,400"/>
+  <text class="afp-saida" x="770" y="407">c</text>
+  <path class="afp-fio" d="M86,46 L86,438.6666666666667"/>
+  <path class="afp-fio" d="M108,92 L108,347.6"/>
+  <path class="afp-fio" d="M130,138 L130,329.2"/>
+  <path class="afp-fio" d="M152,184 L152,310.8"/>
+  <path class="afp-fio" d="M252,92 L252,421.3333333333333"/>
+  <path class="afp-fio" d="M274,46 L274,292.4"/>
+  <text class="afp-nota" x="22" y="482">a, e, f, g = 1    d = 0</text>
+  <text class="afp-nota" x="22" y="502">os cinco segmentos constantes vão direto pro trilho</text>
 </svg>
 
 ## Mexe nas chaves

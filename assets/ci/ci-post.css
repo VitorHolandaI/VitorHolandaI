@@ -105,6 +105,16 @@
 .n3-schematic { width: 100%; height: auto; margin: 1.5rem 0; color: var(--np-text); }
 .n3-schematic text { font-family: var(--np-mono); fill: currentColor; }
 
+/* Esquematico do post de 2026-11-16: fio e corpo de porta usam o mesmo traco,
+   e o no' marca onde um fio sai do barramento (so' onde ha' conexao de fato). */
+.afp-fio,
+.afp-porta { fill: none; stroke: currentColor; stroke-width: 2; stroke-linejoin: round; }
+.afp-no { fill: currentColor; stroke: none; }
+.afp-sinal { font-size: 15px; }
+.afp-termo { font-size: 13px; }
+.afp-saida { font-size: 17px; }
+.afp-nota { font-size: 12px; opacity: 0.65; }
+
 /* Tabela de dados densa (tabela verdade): digito monoespacado e linha baixa,
    em vez do espacamento de tabela de texto corrido. */
 .truth-table { font-family: var(--np-mono); }
